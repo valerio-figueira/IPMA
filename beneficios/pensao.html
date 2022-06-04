@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pensão - IPMA</title>
+    <link rel="shortcut icon" href="../imgs/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/page.css">
+
+</head>
+
+<body>
+
+    <header>
+        <a href="../index.html" target="_self" rel="_self"><img src="../imgs/brasão.png" alt="brasão" class="brasão"></a>
+        <a href="../index.html" target="_self" rel="_self">
+            <h1>IPMA</h1>
+        </a>
+        <a href="../index.html" target="_self" rel="_self">
+            <p>Instituto de Previdência Municipal de Monte Alegre de Minas</p>
+        </a>
+        
+    </header>
+
+    <nav class="navbar">
+        <a href="../index.html" rel="next" class="nav fa fa-home" id="home"></a>
+        <a href="../legislacao.html" rel="next" class="nav">Legislação</a>
+        <nav class="dropdown">
+          <div class="dropbtn">Convênios
+            <div class="arrow">&#9698;</div>
+          </div>
+          <nav class="dropdown-content">
+            <a href="../convenios/unimed.html" rel="next">Unimed</a>
+            <a href="../convenios/uniodonto.html" rel="next">Uniodonto</a>
+            <a href="../convenios/odontocompany.html" rel="next">Odonto Company</a>
+          </nav>
+        </nav>
+        <nav class="dropdown active">
+            <div class="dropbtn">Benefícios
+              <div class="arrow">&#9698;</div>
+            </div>
+            <nav class="dropdown-content">
+              <a href="pensao.html" rel="_self" class="active">Pensão</a>
+              <a href="aposentadoria.html" rel="next">Aposentadoria</a>
+              <a href="dependentes.html" rel="next">Dependentes</a>
+            </nav>
+          </nav>
+        <a href="../licitacoes.html" rel="next" class="nav">Licitações</a>
+        <a href="../diretoria.html" rel="next" class="nav">Diretoria</a>
+        <a href="../contato.html" rel="next" class="nav">Contato</a>
+      </nav>
+
+
+    <main class="container">
+
+        <section class="contents">
+
+
+            <article class="page">
+                <h1>PENSÃO</h1>
+                <button type="button" class="folder">Benefícios</button>
+                    <div class="content">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis voluptatem, adipisci, fugit doloribus quas iure expedita cum repellat accusamus mollitia fugiat nam ab sed, eligendi tenetur culpa beatae sint? Dolor.</p>
+                    </div>
+                <button type="button" class="folder">Cônjuge</button>
+                    <div class="content">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis voluptatem, adipisci, fugit doloribus quas iure expedita cum repellat accusamus mollitia fugiat nam ab sed, eligendi tenetur culpa beatae sint? Dolor.</p>
+                    </div>
+                <button type="button" class="folder">Cônjuge divorciado ou separado judicialmente credor de pensão alimentícia</button>
+                    <div class="content">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis voluptatem, adipisci, fugit doloribus quas iure expedita cum repellat accusamus mollitia fugiat nam ab sed, eligendi tenetur culpa beatae sint? Dolor.</p>
+                    </div>
+                <button type="button" class="folder">Companheiro (a)</button>
+                    <div class="content">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis voluptatem, adipisci, fugit doloribus quas iure expedita cum repellat accusamus mollitia fugiat nam ab sed, eligendi tenetur culpa beatae sint? Dolor.</p>
+                    </div>
+                <button type="button" class="folder">Filho menor</button>
+                    <div class="content">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis voluptatem, adipisci, fugit doloribus quas iure expedita cum repellat accusamus mollitia fugiat nam ab sed, eligendi tenetur culpa beatae sint? Dolor.</p>
+                    </div>
+                <button type="button" class="folder">Filho inválido / incapaz</button>
+                    <div class="content">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis voluptatem, adipisci, fugit doloribus quas iure expedita cum repellat accusamus mollitia fugiat nam ab sed, eligendi tenetur culpa beatae sint? Dolor.</p>
+                    </div>
+                <button type="button" class="folder">Como proceder</button>
+                    <div class="content">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis voluptatem, adipisci, fugit doloribus quas iure expedita cum repellat accusamus mollitia fugiat nam ab sed, eligendi tenetur culpa beatae sint? Dolor.</p>
+                    </div>
+            </article>
+            
+            
+            <script>
+                //Desdobrar itens da div oculta
+                var folder = document.getElementsByClassName("folder");
+                var i;
+                
+                for (i = 0; i < folder.length; i++) {
+                    folder[i].addEventListener("click", function() {
+                    this.classList.toggle("active");
+                    var content = this.nextElementSibling;
+                    if (content.style.display === "block") {
+                      content.style.display = "none";
+                    } else {
+                      content.style.display = "block";
+                    }
+                  });
+                }
+            </script>
+
+
+        </section>
+
+
+        <section class="sidebar">
+                <div class="transparencia">
+                    <img src="../imgs/loupe.png" alt="transparencia">
+                    <a href="#">Transparência Pública</a>
+                </div>
+                <div class="holerite">
+                    <h1>Holerite</h1>
+                    <iframe class="embed-responsive-item" src="../contracheque/login.html" scrolling="no" width="256" height="240" frameborder="0"></iframe>
+                </div>
+                <article>
+                    <img src="../imgs/pexels-jimmy-chan-1635907.jpg" alt="pixabay">
+                </article>
+        </section>
+    </main>
+
+
+
+    <section class="downbar">
+        <article>
+            <h1>Title</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto, aliquid. Minima possimus harum explicabo! Tempora reiciendis architecto ex accusantium enim. Totam et numquam ut accusantium, molestias atque natus quam veritatis!</p>
+        </article>
+        <article>
+            <h1>Title</h1>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Non laborum neque animi ipsum magnam sunt, saepe optio recusandae quam itaque? Hic rerum officia pariatur neque numquam voluptatem quam molestiae eum.</p>
+        </article>
+        <article>
+            <h1>Title</h1>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Architecto officia doloribus ea. Quis consequuntur mollitia recusandae explicabo officiis dignissimos deserunt ipsam consectetur quibusdam atque nihil dicta voluptatum eligendi, nobis nesciunt.</p>
+        </article>
+    </section>
+
+
+
+    <footer>
+        <p>Direitos Autorais</p>
+        <p>&copy; 2022 - IPMA</p>
+    </footer>
+
+</body>
+</html>

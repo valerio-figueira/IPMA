@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IPMA - Instituto de Previdência Municipal de Monte Alegre de Minas</title>
+    <link rel="shortcut icon" href="imgs/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+    <header id="header">
+        <a href="index.html" target="_self" rel="_self"><img src="imgs/brasão.png" alt="brasão" class="brasão"></a>
+        <a href="index.html" target="_self" rel="_self">
+            <h1>IPMA</h1>
+        </a>
+        
+        <a href="index.html" target="_self" rel="_self">
+            <p>Instituto de Previdência Municipal de Monte Alegre de Minas</p>
+        </a>
+        
+    </header>
+
+
+    <nav class="navbar">
+        <a href="index.html" rel="next" class="nav fa fa-home" id="home"></a>
+        <a href="legislacao.html" rel="next" class="nav">Legislação</a>
+        <nav class="dropdown">
+          <div class="dropbtn">Convênios
+            <div class="arrow">&#9698;</div>
+          </div>
+          <nav class="dropdown-content">
+            <a href="convenios/unimed.html" rel="next">Unimed</a>
+            <a href="convenios/uniodonto.html" rel="next">Uniodonto</a>
+            <a href="convenios/odontocompany.html" rel="next">Odonto Company</a>
+          </nav>
+        </nav>
+        <nav class="dropdown">
+            <div class="dropbtn">Benefícios
+              <div class="arrow">&#9698;</div>
+            </div>
+            <nav class="dropdown-content">
+                <a href="beneficios/pensao.html" rel="next">Pensão</a>
+              <a href="beneficios/aposentadoria.html" rel="next">Aposentadoria</a>
+              <a href="beneficios/dependentes.html" rel="next">Dependentes</a>
+            </nav>
+          </nav>
+        <a href="licitacoes.html" rel="next" class="nav">Licitações</a>
+        <a href="diretoria.html" rel="next" class="nav">Diretoria</a>
+        <a href="contato.html" rel="next" class="nav">Contato</a>
+      </nav>
+
+
+
+
+
+    <main class="container">
+
+        <section class="contents">
+
+
+
+
+             <!-- Slideshow container -->
+            <div class="slideshow-container">
+
+                <!-- Full-width images with number and caption text -->
+                <div class="slides fade">
+                <div class="numbertext">1 / 3</div>
+                <img src="imgs/pexels-daria-obymaha-1684916.jpg" style="width:100%">
+                <div class="text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vel ab cupiditate ex, molestias molestiae debitis quo quidem? Aliquid velit placeat autem nesciunt vitae in, aliquam nemo exercitationem consequuntur, totam molestiae.</div>
+                </div>
+            
+                <div class="slides fade">
+                <div class="numbertext">2 / 3</div>
+                <img src="imgs/pexels-hasan-albari-1652340.jpg" style="width:100%">
+                <div class="text">Caption Two</div>
+                </div>
+            
+                <div class="slides fade">
+                <div class="numbertext">3 / 3</div>
+                <img src="imgs/pexels-rodnae-productions-5637842.jpg" style="width:100%">
+                <div class="text">Caption Three</div>
+                </div>
+            
+                <!-- Next and previous buttons -->
+                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                <a class="next" onclick="plusSlides(1)">&#10095;</a>
+            </div>
+            <br>
+            
+            <!-- The dots/circles -->
+            <div style="text-align:center">
+                <span class="dot" onclick="currentSlide(1)"></span>
+                <span class="dot" onclick="currentSlide(2)"></span>
+                <span class="dot" onclick="currentSlide(3)"></span>
+            </div>
+
+            <script>
+                let slideIndex = 1;
+                showSlides(slideIndex);
+
+                // Next/previous controls
+                function plusSlides(n) {
+                showSlides(slideIndex += n);
+                }
+
+                // Thumbnail image controls
+                function currentSlide(n) {
+                showSlides(slideIndex = n);
+                }
+
+                function showSlides(n) {
+                let i;
+                let slides = document.getElementsByClassName("slides");
+                let dots = document.getElementsByClassName("dot");
+                if (n > slides.length) {slideIndex = 1}
+                if (n < 1) {slideIndex = slides.length}
+                for (i = 0; i < slides.length; i++) {
+                    slides[i].style.display = "none";
+                }
+                for (i = 0; i < dots.length; i++) {
+                    dots[i].className = dots[i].className.replace(" active", "");
+                }
+                slides[slideIndex-1].style.display = "block";
+                dots[slideIndex-1].className += " active";
+                } 
+            </script>
+
+
+
+            <article class="postagem">
+                <h1>Title</h1>
+                <img src="imgs/pexels-andrea-piacquadio-3783255.jpg" alt="img">
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sed facilis ullam enim error dicta veniam eveniet inventore aut similique perferendis neque consectetur, ad unde doloremque assumenda nemo? Fuga, debitis deserunt! Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi alias ipsum deserunt dolorum. Omnis libero, iste perspiciatis id labore nesciunt rerum aliquam odio pariatur laudantium minus neque quod illo aut.</p>
+                <aside>Write by Fulanus</aside>
+            </article>
+            <article class="postagem">
+                <h1>Title</h1>
+                <img src="imgs/pexels-edu-carvalho-2050994.jpg" alt="jeremy">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit fugiat repellat reiciendis nesciunt suscipit necessitatibus illo enim alias dolor ipsum. Explicabo, delectus ex aut excepturi aperiam assumenda commodi. Quam, in.</p>
+                <aside>Write by Ciclanus</aside>
+            </article>
+            <article class="postagem">
+                <h1>Title</h1>
+                <img src="imgs/pexels-steshka-willems-3018993.jpg" alt="tulin">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis voluptas neque id voluptatum alias natus quae recusandae, vel sed itaque voluptates iste odit dolores magnam aut suscipit praesentium beatae cumque. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facere quaerat ipsum nihil suscipit unde dolore, provident corporis autem velit quis iusto, magnam sint iste dolores quo fugit, alias reprehenderit non.</p>
+                <aside>Write by Cipranus</aside>
+            </article>
+        </section>
+
+
+        <section class="sidebar">
+                <div class="transparencia">
+                    <img src="imgs/loupe.png" alt="transparencia">
+                    <a href="#">Transparência Pública</a>
+                </div>
+                <div class="holerite">
+                    <h1>Holerite</h1>
+                    <iframe class="embed-responsive-item" src="contracheque/login.html" scrolling="no" width="256" height="240" frameborder="0"></iframe>
+                </div>
+        </section>
+    </main>
+
+
+
+    <section class="downbar">
+        <article>
+            <h1>Title</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto, aliquid. Minima possimus harum explicabo! Tempora reiciendis architecto ex accusantium enim. Totam et numquam ut accusantium, molestias atque natus quam veritatis!</p>
+        </article>
+        <article>
+            <h1>Title</h1>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Non laborum neque animi ipsum magnam sunt, saepe optio recusandae quam itaque? Hic rerum officia pariatur neque numquam voluptatem quam molestiae eum.</p>
+        </article>
+        <article>
+            <h1>Title</h1>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Architecto officia doloribus ea. Quis consequuntur mollitia recusandae explicabo officiis dignissimos deserunt ipsam consectetur quibusdam atque nihil dicta voluptatum eligendi, nobis nesciunt.</p>
+        </article>
+    </section>
+
+
+
+    <footer>
+        <div>
+            <p>Direitos Autorais</p>
+            <p>&copy; 2022 - IPMA</p>
+        </div>
+        <a class="backtotop" href="#header">Voltar ao topo</a>
+    </footer>
+
+</body>
+</html>
