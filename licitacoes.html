@@ -9,6 +9,17 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/page.css">
+
+    <script>
+        function showList() {
+        var x = document.getElementById("navbar");
+            if (x.className === "navbar") {
+                    x.className += " responsive";
+            } else {
+                    x.className = "navbar";
+            }
+        }
+    </script>
     
 </head>
 
@@ -25,9 +36,9 @@
         
     </header>
 
-    <nav class="navbar">
-        <a href="index.html" rel="next" class="nav fa fa-home" id="home"></a>
-        <a href="legislacao.html" rel="next" class="nav">Legislação</a>
+    <nav class="navbar" id="navbar">
+        <a href="index.html" rel="next" class="nav fa fa-home mobile" id="home"></a>
+        <a href="legislacao.html" rel="next" class="nav mobile">Legislação</a>
         <nav class="dropdown">
           <div class="dropbtn">Convênios
             <div class="arrow">&#9698;</div>
@@ -43,14 +54,17 @@
               <div class="arrow">&#9698;</div>
             </div>
             <nav class="dropdown-content">
-                <a href="beneficios/pensao.html" rel="next">Pensão</a>
+              <a href="beneficios/pensao.html" rel="next">Pensão</a>
               <a href="beneficios/aposentadoria.html" rel="next">Aposentadoria</a>
               <a href="beneficios/dependentes.html" rel="next">Dependentes</a>
             </nav>
           </nav>
-        <a href="licitacoes.html" rel="next" class="nav active">Licitações</a>
-        <a href="diretoria.html" rel="next" class="nav">Diretoria</a>
-        <a href="contato.html" rel="next" class="nav">Contato</a>
+        <a href="licitacoes.html" rel="next" class="nav mobile active">Licitações</a>
+        <a href="diretoria.html" rel="next" class="nav mobile">Diretoria</a>
+        <a href="contato.html" rel="next" class="nav mobile">Contato</a>
+        <a href="#" class="nav icon mobile" id="icon-bar" onclick="showList()">
+            <i class="fa fa-bars"></i>
+          </a>
       </nav>
 
 

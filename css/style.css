@@ -8,9 +8,10 @@
     --fifth-color: #21774e;
     --background-color: azure;
     --sooth-gray: #f1f9fc;
+    --thick-gray: #555;
     --article-background: white;
     --max-width: 960px;
-    --min-width: 740px;
+    --min-width: 450px;
     --solid-border: 1px solid #0000005a;
     --shadow: 0px 0px 4px 2px #00000040;
     --blue-shadow: 0px 0px 4px 3px #2b9ecc8e;
@@ -48,7 +49,6 @@ HEADER
 */
 header{
     padding: 16px;
-    margin-top: 6px;
     margin-bottom: 10px;
     background-color: var(--prime-color);
     box-shadow: var(--shadow);
@@ -99,10 +99,13 @@ GRID AND FLEX STRUCTURE
     grid-template-columns: 2fr 1fr;
 }
 .contents{
+    overflow: hidden;
+    grid-auto-flow: dense;
     padding: 0px 8px 0px 8px;
     margin: 14px 12px 0px 10px;
 }
 .sidebar{
+    grid-auto-flow: dense;
     padding: 0px 8px 0px 8px;
     margin: 14px 12px 0px 10px;
 }
@@ -119,30 +122,7 @@ GRID AND FLEX STRUCTURE
 }
 
 
-@media screen and (max-width: 960px) {
-    .container  {
-      grid-template-columns: 2fr 1fr;
-    }
-}
-@media screen and (max-width: 640px) {
-    .container{
-        grid-template-columns: 1fr;
-    }
-    .sidebar{
-        grid-row: 1;
-    }
-    .contents{
-        grid-row: 2;
-    }
-    .sidebar-img{
-        display: none;
-    }
-}
-@media (max-width:640px){
-    .holerite, iframe{
-        width: 100%;
-    }
-}
+
 
 
 /*
@@ -338,7 +318,7 @@ HOLERITE
 
 /* Number text (1/3 etc) */
 .numbertext {
-  color: #f2f2f2;
+  color: var(--second-color);
   font-size: 14px;
   padding: 8px 12px;
   position: absolute;
@@ -357,9 +337,9 @@ HOLERITE
   transition: background-color 0.6s ease;
 }
 
-.active, .dot:hover {
-  background-color: #717171;
-}
+.dot:hover {
+    background-color: #717171;
+  }
 
 /* Fading animation */
 .fade {
@@ -387,8 +367,13 @@ NAVBAR WITH DROPDOWN
 /* INDEX MENU */
 a#home{
     font-size: 26px;
-    padding: 10px 16px;
+    padding: 11px 16px;
 }
+
+/* Hide icon */
+.navbar .icon {
+    display: none;
+} 
 
 /* Navbar container */
 .navbar {
@@ -402,7 +387,7 @@ margin-bottom: 10px;
 /* Links inside the navbar */
 .navbar a {
 float: left;
-font-size: 16px;
+font-size: 17px;
 color: var(--second-color);
 text-align: center;
 padding: 14px 16px;
@@ -417,12 +402,8 @@ overflow: hidden;
 
 /* Dropdown button */
 .dropdown .dropbtn {
-display: flex;
-flex-direction: row;
 position: relative;
-font-size: 16px;
-border: none;
-outline: none;
+font-size: 17px;
 color: var(--second-color);
 padding: 14px 16px;
 background-color: inherit;
@@ -430,7 +411,6 @@ font-family: inherit; /* Important for vertical align on mobile phones */
 margin: 0; /* Important for vertical align on mobile phones */
 }
 
-/* Add a red background color to navbar links on hover */
 .navbar a:hover, .dropdown:hover .dropbtn {
 color: var(--prime-color);
 background-color: var(--second-color);
@@ -473,10 +453,10 @@ display: block;
 /*DROPDOWN ARROW*/
 .arrow{
     transform: rotate(45deg);
-    font-size: 10px;
+    font-size: 9px;
     position: absolute;
-    left: 96px;
-    top: 15px;
+    left: 99px;
+    top: 16px;
 }
 
 /*
@@ -507,6 +487,7 @@ footer{
     box-shadow: var(--shadow);
 }
 footer > p{
+    margin-left: 7px;
     padding: 0px;
 }
 .backtotop{
@@ -523,3 +504,132 @@ footer > p{
     box-shadow: var(--blue-shadow);
     transition: var(--transition-delay);
 }
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+/*
+RESPONSIVE COLUMNS
+*/
+@media screen and (max-width: 960px) {
+    .container  {
+        grid-template-columns: 2fr 1fr;
+    }
+}
+@media screen and (max-width: 850px) {
+    .container{
+        grid-template-columns: 1fr;
+    }
+    .sidebar{
+        grid-row: 1;
+    }
+    .content{
+        grid-row: 2;
+    }
+    .sidebar-img{
+        display: none;
+    }
+    .holerite, iframe{
+        width: 100%;
+        margin: auto;
+    }
+    .transparencia{
+        text-align: center;
+    }
+    .transparencia img{
+        display: none;
+    }
+}
+@media screen and (max-width: 720px){
+    .downbar{
+        flex-direction: column;
+    }
+    header > a > p{
+        margin-right: 15px;
+    }
+    header{
+        padding-bottom: 23px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-width: 720px) {
+    .navbar a:not(:first-child), .dropdown .dropbtn {
+      display: none;
+    }
+    .navbar a.icon {
+      float: right;
+      display: block;
+    }
+  }
+  
+  /* The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon. This class makes the navbar look good on small screens (display the links vertically instead of horizontally) */
+  @media screen and (max-width: 720px) {
+    .navbar.responsive {position: relative;}
+    .navbar.responsive a.icon {
+      position: absolute;
+      right: 0;
+      top: 0;
+    }
+    .navbar.responsive a {
+      float: none;
+      display: block;
+      text-align: left;
+    }
+    .navbar.responsive .dropdown {float: none;}
+    .navbar.responsive .dropdown-content {position: relative;}
+    .navbar.responsive .dropdown .dropbtn {
+      display: block;
+      width: 100%;
+      text-align: left;
+    }
+    #icon-bar:hover i {
+        color: var(--second-color);
+    }
+    #icon-bar:hover{
+        background-color: var(--thick-gray);
+    }
+    #home:hover{
+        background-color: var(--thick-gray);
+        color: var(--second-color);
+    }
+    .topnav a:hover, .dropdown:hover .dropbtn {
+        background-color: var(--thick-gray);
+        color: var(--second-color);
+    }
+    .mobile.nav:hover{
+        background-color: var(--thick-gray);
+        color: var(--second-color);
+    }
+    .dropdown-content a:hover {
+        background-color: rgb(201, 201, 201);
+        color: black;
+    }
+  } 
