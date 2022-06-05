@@ -80,7 +80,9 @@ GLOBE CODE:
 
 
 
-
+table{
+    overflow-x: auto;
+}
 table{
     font-family: Arial, Helvetica, sans-serif;
     text-align: center;
@@ -98,7 +100,7 @@ td:hover{
 th{
     background-color: var(--primary-color);
     color: var(--secondary-color);
-    padding: 9px;
+    padding: 6px;
 }
 th:hover{
     box-shadow: var(--blue-shadow);

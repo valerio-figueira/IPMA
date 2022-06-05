@@ -47,6 +47,7 @@ body {
   border-radius: 6px;
   border: none;
   padding: 12px 69px 12px 69px;
+  width: 100%;
 }
 .button:hover{
   transition: 0.4s ease;
