@@ -654,12 +654,19 @@ RESPONSIVE NAVBAR
   CONFIG FOR MOBILES 360px
   */
   @media screen and (max-width: 360px){
-    header{
-        padding-bottom: 38px;
-    }
     body{
         margin: 0;
     }
+    header{
+        padding-bottom: 38px;
+    }
+    header p{
+        font-size: 12px;
+    }
+    header img{
+        margin-top: 12px;
+    }
+    
     /* SLIDE TEXT */
     .text {
         font-size: 14px;
