@@ -11,7 +11,7 @@
 
     <script>
         function showList() {
-        var x = document.getElementById("navbar");
+        var x = document.getElementById("mobile");
             if (x.className === "navbar") {
                     x.className += " responsive";
             } else {
@@ -36,7 +36,7 @@
     </header>
 
 
-    <nav class="navbar" id="navbar">
+    <nav class="navbar" id="mobile">
         <a href="index.html" rel="_self" class="nav fa fa-home mobile active" id="home"></a>
         <a href="login.html" rel="next" class="nav mobile login">Login</a>
         <a href="legislacao.html" rel="next" class="nav mobile">Legislação</a>
@@ -74,7 +74,7 @@
 
     <main class="container">
 
-        <section class="contents">
+        <section class="main-column">
 
 
 
@@ -147,19 +147,19 @@
 
 
 
-            <article class="postagem">
+            <article id="post-03">
                 <h1>Title</h1>
                 <img src="imgs/pexels-andrea-piacquadio-3783255.jpg" alt="img">
                 <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sed facilis ullam enim error dicta veniam eveniet inventore aut similique perferendis neque consectetur, ad unde doloremque assumenda nemo? Fuga, debitis deserunt! Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi alias ipsum deserunt dolorum. Omnis libero, iste perspiciatis id labore nesciunt rerum aliquam odio pariatur laudantium minus neque quod illo aut.</p>
                 <aside>Write by Fulanus</aside>
             </article>
-            <article class="postagem">
+            <article id="post-02">
                 <h1>Title</h1>
                 <img src="imgs/pexels-edu-carvalho-2050994.jpg" alt="jeremy">
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit fugiat repellat reiciendis nesciunt suscipit necessitatibus illo enim alias dolor ipsum. Explicabo, delectus ex aut excepturi aperiam assumenda commodi. Quam, in.</p>
                 <aside>Write by Ciclanus</aside>
             </article>
-            <article class="postagem">
+            <article id="post-01">
                 <h1>Title</h1>
                 <img src="imgs/pexels-steshka-willems-3018993.jpg" alt="tulin">
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis voluptas neque id voluptatum alias natus quae recusandae, vel sed itaque voluptates iste odit dolores magnam aut suscipit praesentium beatae cumque. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facere quaerat ipsum nihil suscipit unde dolore, provident corporis autem velit quis iusto, magnam sint iste dolores quo fugit, alias reprehenderit non.</p>
@@ -168,7 +168,7 @@
         </section>
 
 
-        <section class="sidebar">
+        <section class="side-column">
                 <div class="transparencia">
                     <img src="imgs/loupe.png" alt="transparencia">
                     <a href="#">Transparência Pública</a>
@@ -204,7 +204,7 @@
             <p>Direitos Autorais</p>
             <p>&copy; 2022 - IPMA</p>
         </div>
-        <a class="scrolltotop" href="#header"><p>&#9698;</p></a>
+        <a class="scrolltop" href="#header"><p>&#9698;</p></a>
     </footer>
 
 </body>

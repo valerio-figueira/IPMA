@@ -12,7 +12,7 @@
 
     <script>
         function showList() {
-        var x = document.getElementById("navbar");
+        var x = document.getElementById("mobile");
             if (x.className === "navbar") {
                     x.className += " responsive";
             } else {
@@ -36,7 +36,7 @@
         
     </header>
 
-    <nav class="navbar" id="navbar">
+    <nav class="navbar" id="mobile">
         <a href="index.html" rel="next" class="nav fa fa-home mobile" id="home"></a>
         <a href="login.html" rel="next" class="nav mobile login">Login</a>
         <a href="legislacao.html" rel="_self" class="nav mobile active">Legislação</a>
@@ -71,17 +71,17 @@
 
     <main class="container">
 
-        <section class="contents">
+        <section class="main-column">
 
 
             <article class="page">
                 <h1>LEGISLAÇÃO</h1>
                 <button type="button" class="folder">LEI DE CRIAÇÃO</button>
-                    <div class="content">
+                    <div class="file">
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis voluptatem, adipisci, fugit doloribus quas iure expedita cum repellat accusamus mollitia fugiat nam ab sed, eligendi tenetur culpa beatae sint? Dolor.</p>
                     </div>
                 <button type="button" class="folder">LEIS DE 1992 A 2020</button>
-                <div class="content">
+                <div class="file">
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis voluptatem, adipisci, fugit doloribus quas iure expedita cum repellat accusamus mollitia fugiat nam ab sed, eligendi tenetur culpa beatae sint? Dolor.</p>
                 </div>
             </article>
@@ -109,7 +109,7 @@
         </section>
 
 
-        <section class="sidebar">
+        <section class="side-column">
                 <div class="transparencia">
                     <img src="imgs/loupe.png" alt="transparencia">
                     <a href="#">Transparência Pública</a>
@@ -118,7 +118,7 @@
                     <h1>Holerite</h1>
                     <iframe class="embed-responsive-item" src="contracheque/login.html" scrolling="no" width="256" height="240" frameborder="0"></iframe>
                 </div>
-                <article class="sidebar-img">
+                <article class="side-column-img">
                     <img src="imgs/pexels-jimmy-chan-1635907.jpg" alt="pixabay">
                 </article>
         </section>
@@ -148,7 +148,7 @@
             <p>Direitos Autorais</p>
             <p>&copy; 2022 - IPMA</p>
         </div>
-        <a class="scrolltotop" href="#header"><p>&#9698;</p></a>
+        <a class="scrolltop" href="#header"><p>&#9698;</p></a>
     </footer>
 
 </body>

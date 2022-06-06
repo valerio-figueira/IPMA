@@ -11,7 +11,7 @@
 
     <script>
         function showList() {
-        var x = document.getElementById("navbar");
+        var x = document.getElementById("mobile");
             if (x.className === "navbar") {
                     x.className += " responsive";
             } else {
@@ -36,7 +36,7 @@
     </header>
 
 
-    <nav class="navbar" id="navbar">
+    <nav class="navbar" id="mobile">
         <a href="index.html" rel="next" class="nav fa fa-home mobile" id="home"></a>
         <a href="login.html" rel="_self" class="nav mobile active login">Login</a>
         <a href="legislacao.html" rel="next" class="nav mobile">Legislação</a>
@@ -74,7 +74,7 @@
 
     <main class="container" style="grid-template-columns: 1fr;">
 
-        <section class="contents">
+        <section class="main-column">
 
             <article class="postagem" class="login" style="width:100%;">
                 <h1>Login</h1>
@@ -108,7 +108,7 @@
             <p>Direitos Autorais</p>
             <p>&copy; 2022 - IPMA</p>
         </div>
-        <a class="scrolltotop" href="#header"><p>&#9698;</p></a>
+        <a class="scrolltop" href="#header"><p>&#9698;</p></a>
     </footer>
 
 </body>
