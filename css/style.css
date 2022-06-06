@@ -62,7 +62,7 @@ header a{
 header h1{
     margin: 16px;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    line-height: 26px;
+    line-height: 12px;
     color: var(--second-color);
 }
 header h1:hover{
@@ -74,7 +74,7 @@ header h1:hover{
 header p{
     color: var(--second-color);
     position: absolute;
-    top: 58px;
+    top: 48px;
     left: 112px;
 }
 header p:hover{
@@ -562,14 +562,14 @@ RESPONSIVE COLUMNS
     }
 }
 @media screen and (max-width: 720px){
-    .downbar{
-        flex-direction: column;
-    }
     header > a > p{
         margin-right: 15px;
     }
-    header{
+    /*header{
         padding-bottom: 23px;
+    }*/
+    .downbar{
+        flex-direction: column;
     }
     .scrolltop{
         left: 85%;
@@ -651,17 +651,90 @@ RESPONSIVE NAVBAR
 
 
   /*
-  CONFIG FOR MOBILES 360px
+  MOBILES 450px until 562px
   */
-  @media screen and (max-width: 360px){
+  @media screen and (max-width: 562px){
     body{
         margin: 0;
     }
     header{
-        padding-bottom: 38px;
+        padding-top: 6px;
+        padding-bottom: 16px;
+    }
+    header h1{
+        line-height: 25px;
     }
     header p{
-        font-size: 12px;
+        font-size: 16px;
+        line-height: 20px;
+        top: 42px;
+    }
+    header img{
+        margin-top: 12px;
+    }
+    
+    /* SLIDE TEXT */
+    .text {
+        font-size: 18px;
+        padding: 8px 12px;
+    }
+    .scrolltop{
+        left: 80%;
+    }
+  }
+
+  /*
+  MOBILES 400px until 450px
+  */
+  @media screen and (max-width: 450px){
+    body{
+        margin: 0;
+    }
+    header{
+        padding-top: 6px;
+        padding-bottom: 16px;
+    }
+    header h1{
+        line-height: 25px;
+    }
+    header p{
+        font-size: 16px;
+        line-height: 18px;
+        top: 42px;
+    }
+    header img{
+        margin-top: 12px;
+    }
+    
+    /* SLIDE TEXT */
+    .text {
+        font-size: 16px;
+        padding: 8px 12px;
+    }
+    .scrolltop{
+        left: 80%;
+    }
+  }
+
+
+  /*
+  MOBILES any size until 400px
+  */
+  @media screen and (max-width: 400px){
+    body{
+        margin: 0;
+    }
+    header{
+        padding-top: 6px;
+        padding-bottom: 16px;
+    }
+    header h1{
+        line-height: 25px;
+    }
+    header p{
+        font-size: 14px;
+        line-height: 15px;
+        top: 48px;
     }
     header img{
         margin-top: 12px;
