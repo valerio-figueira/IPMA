@@ -479,6 +479,7 @@ color: var(--second-color);
 
 
 footer{
+    position: relative;
     display: flex;
     flex-direction: row;
     margin: 12px 0px 20px 0px;
@@ -490,16 +491,22 @@ footer > p{
     margin-left: 7px;
     padding: 0px;
 }
-.backtotop{
+.scrolltotop > p{
+    transform: rotate(225deg);
+    margin-top: 22px;
+}
+.scrolltotop{
     background-color: var(--prime-color);
     color: var(--second-color);
-    margin: 22px 22px 22px 70%;
-    padding: 12px;
+    position: absolute;
+    top: 26px;
+    left: 90%;
+    padding: 1px 22px;
     text-decoration: none;
     border-radius: 4px;
     box-shadow: var(--shadow);
 }
-.backtotop:hover{
+.scrolltotop:hover{
     color: var(--third-color);
     box-shadow: var(--blue-shadow);
     transition: var(--transition-delay);
@@ -511,13 +518,12 @@ footer > p{
 
 
 
-
-
-
   
 
-
-
+/*HIDE LOGIN IN NAV*/
+.login{
+    display: none;
+}
 
 
 
@@ -543,8 +549,7 @@ RESPONSIVE COLUMNS
         display: none;
     }
     .holerite, iframe{
-        width: 100%;
-        margin: auto;
+        display: none;
     }
     .transparencia{
         text-align: center;
@@ -563,6 +568,9 @@ RESPONSIVE COLUMNS
     header{
         padding-bottom: 23px;
     }
+    .scrolltotop{
+        left: 85%;
+    }
 }
 
 
@@ -570,15 +578,9 @@ RESPONSIVE COLUMNS
 
 
 
-
-
-
-
-
-
-
-
-
+/*
+RESPONSIVE NAVBAR
+*/
 
 @media screen and (max-width: 720px) {
     .navbar a:not(:first-child), .dropdown .dropbtn {
