@@ -260,7 +260,7 @@ HOLERITE
 /* Slideshow container */
 .slideshow-container {
     position: relative;
-    margin: auto;
+    margin-top: 6px;
 }
 .slideshow-container img{
     transition: 0.4s ease;
@@ -536,9 +536,6 @@ RESPONSIVE COLUMNS
     }
 }
 @media screen and (max-width: 720px) {
-    .slideshow-container{
-        margin-top: 6px;
-    }
     .container{
         grid-template-columns: 1fr;
     }

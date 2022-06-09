@@ -10,17 +10,6 @@
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/page.css">
 
-    <script>
-        function showList() {
-        var x = document.getElementById("mobile");
-            if (x.className === "navbar") {
-                    x.className += " responsive";
-            } else {
-                    x.className = "navbar";
-            }
-        }
-    </script>
-
 </head>
 
 <body>
@@ -79,25 +68,6 @@
                 <h2>Informações do Plano</h2>
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed dolore magnam ratione officiis molestias ab veritatis consectetur nam, odio neque recusandae reiciendis magni eius? Aspernatur veritatis veniam ipsam in expedita. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quaerat inventore ipsa cumque magnam accusantium, ab fuga id praesentium cupiditate quidem excepturi provident expedita autem eligendi aliquam, obcaecati aspernatur adipisci recusandae!</p>
             </article>
-            
-            
-            <script>
-                //Desdobrar itens da div oculta
-                var folder = document.getElementsByClassName("folder");
-                var i;
-                
-                for (i = 0; i < folder.length; i++) {
-                    folder[i].addEventListener("click", function() {
-                    this.classList.toggle("active");
-                    var content = this.nextElementSibling;
-                    if (content.style.display === "block") {
-                      content.style.display = "none";
-                    } else {
-                      content.style.display = "block";
-                    }
-                  });
-                }
-            </script>
 
 
         </section>
@@ -145,5 +115,7 @@
         <a class="scrolltop" href="#header"><p>&#9698;</p></a>
     </footer>
 
+    <script src="../script/mobilenav.js"></script>
+    <script src="../script/folder.js"></script>
 </body>
 </html>
