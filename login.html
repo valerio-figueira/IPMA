@@ -8,26 +8,29 @@
     <link rel="shortcut icon" href="imgs/favicon.png" type="image/x-icon">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="css/style.css">
-
+    <link rel="stylesheet" href="css/login.css">
+    <script src="script/script.js" defer></script>
+    <script src="script/folder.js" defer></script>
 </head>
 
 <body>
+    
     <header id="header">
-        <a href="index.html" target="_self" rel="_self"><img src="imgs/brasão.png" alt="brasão" class="brasão"></a>
-        <a href="index.html" target="_self" rel="_self">
+        <a href="index.html" target="_self">
+            <img src="imgs/brasão.png" alt="brasão" class="brasão">
+        </a>
+        <a href="index.html" target="_self">
             <h1>IPMA</h1>
         </a>
-        
-        <a href="index.html" target="_self" rel="_self">
+        <a href="index.html" target="_self">
             <p>Instituto de Previdência Municipal de Monte Alegre de Minas</p>
         </a>
-        
     </header>
 
 
     <nav class="navbar" id="mobile">
         <a href="index.html" rel="next" class="nav fa fa-home mobile" id="home"></a>
-        <a href="login.html" rel="_self" class="nav mobile active login">Login</a>
+        <a href="login.html" rel="_self" class="active login">Login</a>
         <a href="legislacao.html" rel="next" class="nav mobile">Legislação</a>
         <nav class="dropdown">
           <div class="dropbtn">Convênios
@@ -49,10 +52,10 @@
               <a href="beneficios/dependentes.html" rel="next">Dependentes</a>
             </nav>
           </nav>
-        <a href="licitacoes.html" rel="next" class="nav mobile">Licitações</a>
-        <a href="diretoria.html" rel="next" class="nav mobile">Diretoria</a>
-        <a href="contato.html" rel="next" class="nav mobile">Contato</a>
-        <a href="#" class="nav icon mobile" id="icon-bar" onclick="showList()">
+        <a href="licitacoes.html" rel="next">Licitações</a>
+        <a href="diretoria.html" rel="next">Diretoria</a>
+        <a href="contato.html" rel="next">Contato</a>
+        <a href="#" class="icon" id="icon-bar" onclick="showList()">
             <i class="fa fa-bars"></i>
           </a>
       </nav>
@@ -65,31 +68,29 @@
 
         <section class="main-column">
 
+            <form class="form-signin" method="POST" name="WFRLogon" action="#URL"  target="_blank">
+
+                <input name="dataConnection" type="hidden" value="MonteAlegreDeMinas"/>
+                <input name="sys" type="hidden" value="AUT"/>
+                <label for="inputEmail" class="sr-only">CPF</label>
+                <input type="text" id="user" name="user" class="form-control" placeholder="Digite o CPF" required>
+                <label for="inputPassword" class="sr-only">Senha</label>
+                <input type="password" name="password" class="form-control" placeholder="Digite a Senha" required>          
+                <button class="button" type="submit">Acessar</button>
+            </form>
+
+            <!--
+
             <article class="postagem" class="login" style="width:100%;">
                 <h1>Login</h1>
                 <iframe class="embed-responsive-item login" src="contracheque/login.html" scrolling="no" width="100%" height="240" frameborder="0" style="display: block;"></iframe>
             </article>
+
+            -->
+            
         </section>
 
     </main>
-
-
-
-    <section class="downbar">
-        <article>
-            <h1>Title</h1>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto, aliquid. Minima possimus harum explicabo! Tempora reiciendis architecto ex accusantium enim. Totam et numquam ut accusantium, molestias atque natus quam veritatis!</p>
-        </article>
-        <article>
-            <h1>Title</h1>
-            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Non laborum neque animi ipsum magnam sunt, saepe optio recusandae quam itaque? Hic rerum officia pariatur neque numquam voluptatem quam molestiae eum.</p>
-        </article>
-        <article>
-            <h1>Title</h1>
-            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Architecto officia doloribus ea. Quis consequuntur mollitia recusandae explicabo officiis dignissimos deserunt ipsam consectetur quibusdam atque nihil dicta voluptatum eligendi, nobis nesciunt.</p>
-        </article>
-    </section>
-
 
 
     <footer>
@@ -100,6 +101,5 @@
         <a class="scrolltop" href="#header"><p>&#9698;</p></a>
     </footer>
 
-    <script src="script/mobilenav.js"></script>
 </body>
 </html>

@@ -1,4 +1,5 @@
 //Desdobrar itens da div oculta
+
 var folder = document.getElementsByClassName("folder");
 var i;
 

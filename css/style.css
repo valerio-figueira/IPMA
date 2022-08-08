@@ -15,7 +15,7 @@
     --solid-border: 1px solid #0000005a;
     --shadow: 0px 0px 4px 2px #00000040;
     --blue-shadow: 0px 0px 4px 3px #2b9ecc8e;
-    --transition-delay: 0.4s;
+    --transition-delay: 0.5s;
 }
 /*CORES INTERESSANTES*/
 /*21774e    (white green (fifth-color))*/
@@ -31,7 +31,6 @@ body{
     margin: auto;
     background-color: var(--background-color);
 }
-
 
 
 main{
@@ -64,11 +63,11 @@ header h1{
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     line-height: 12px;
     color: var(--second-color);
+    transition: var(--transition-delay);
 }
 header h1:hover{
     color: var(--third-color);
     text-decoration: none;
-    transition: var(--transition-delay);
 }
 /*SUBTITLE*/
 header p{
@@ -76,9 +75,9 @@ header p{
     position: absolute;
     top: 48px;
     left: 112px;
-}
-header p:hover{
     transition: var(--transition-delay);
+}
+header p:hover{    
     color: var(--third-color);
 }
 header img{
@@ -107,7 +106,7 @@ GRID AND FLEX STRUCTURE
 .side-column{
     grid-auto-flow: dense;
     padding: 0px 8px 0px 8px;
-    margin: 14px 12px 0px 10px;
+    margin: 20px 12px 0px 10px;
 }
 .downbar{
     display: flex;
@@ -121,6 +120,10 @@ GRID AND FLEX STRUCTURE
     margin: 12px;
 }
 
+.info{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
 
 
 
@@ -139,35 +142,35 @@ section article h1{
     padding: 4px;
     padding-left: 6px;
     border-radius: 2px;
+    transition: var(--transition-delay);
 }
 section article h1:hover{
-    color: var(--third-color);
-    transition: var(--transition-delay);
+    color: var(--third-color);    
     box-shadow: var(--blue-shadow);
 }
 article{
     background-color: var(--article-background);
     box-shadow: var(--shadow);
     display: inline-block;
-}
-article:hover{
     transition: var(--transition-delay);
+}
+article:hover{    
     box-shadow: var(--blue-shadow);
 }
 article p{
     text-indent: 22px;
 }
-.main-column article img{
+.main-column article img, .info article img{
     float: left;
     margin-bottom: 16px;
     margin-right: 10px;
-    width: 40%;
+    width: 50%;
     height: 100%;
     box-shadow: var(--shadow);
-}
-.main-column article img:hover{
-    box-shadow: 0px 0px 6px 2px #00000070;
     transition: 0.7s;
+}
+.main-column article img:hover, .info article img:hover{
+    box-shadow: 0px 0px 6px 2px #00000070;
 }
 aside{
     padding: 12px;
@@ -190,7 +193,7 @@ HOLERITE
 */
 .holerite{
     padding: 0px 16px 0px 16px;
-    margin-top: 12px;
+    margin-top: 18px;
     margin-bottom: 28px;
 }
 .holerite h1{
@@ -199,56 +202,44 @@ HOLERITE
     border-radius: 2px;
     background-color: var(--prime-color);
     color: var(--second-color);
+    transition: var(--transition-delay);
 }
 .holerite h1:hover{
     color: var(--third-color);
-    transition: var(--transition-delay);
     box-shadow: var(--blue-shadow);
 }
 .holerite{
     background-color: var(--article-background);
     box-shadow: var(--shadow);
     display: inline-block;
-}
-.holerite:hover{
     transition: var(--transition-delay);
+}
+.holerite:hover{    
     box-shadow: var(--blue-shadow);
 }
 
 
 
-.transparencia{
+.transparencia a{
+    display: block;
     position: relative;
     font-size: 20px;
     background-color: var(--prime-color);
     padding: 18px;
-    margin-top: 12px;
-    margin-bottom: 8px;
     border-radius: 4px;
     box-shadow: var(--shadow);
-}
-.transparencia a{
+
+    text-align: center;
     text-decoration: none;
     color: var(--second-color);
     margin: auto;
     padding: 18px;
+    transition: var(--transition-delay);
 }
 .transparencia a:hover{
-    color: var(--third-color);
-    transition: var(--transition-delay);
-}
-.transparencia:hover{
+    color: var(--third-color); 
     background-color: var(--fifth-color);
-    box-shadow: var(--blue-shadow);
-    transition: var(--transition-delay);
-}
-.transparencia img{
-    position: absolute;
-    top: 9px;
-    left: 196px;
-    width: 56px;
-    height: 49px;
-    overflow: hidden;
+    box-shadow: var(--blue-shadow);    
 }
 
 
@@ -263,11 +254,10 @@ HOLERITE
     margin-top: 6px;
 }
 .slideshow-container img{
-    transition: 0.4s ease;
+    transition: var(--transition-delay);
     box-shadow: var(--shadow);
 }
 .slideshow-container img:hover{
-    transition: 0.4s ease;
     box-shadow: var(--blue-shadow);
 }
 
@@ -448,7 +438,7 @@ box-shadow: none;
 /* Show the dropdown menu on hover */
 .dropdown:hover .dropdown-content {
 display: block;
-} 
+}
 
 /*DROPDOWN ARROW*/
 .arrow{
@@ -456,13 +446,13 @@ display: block;
     font-size: 9px;
     position: absolute;
     left: 99px;
-    top: 16px;
+    top: 17px;
 }
 
 /*
 ACTIVE CLASS
 */
-.active, .nav:hover{
+.active, nav a:hover{
 background-color: var(--fourth-color);
 }
 a.active{
@@ -482,7 +472,7 @@ footer{
     position: relative;
     display: flex;
     flex-direction: row;
-    margin: 12px 0px 20px 0px;
+    margin: 12px 0px 0px 0px;
     padding: 12px;
     background-color: var(--sooth-gray);
     box-shadow: var(--shadow);
@@ -505,11 +495,11 @@ footer > p{
     text-decoration: none;
     border-radius: 4px;
     box-shadow: var(--shadow);
+    transition: var(--transition-delay);
 }
 .scrolltop:hover{
     color: var(--third-color);
-    box-shadow: var(--blue-shadow);
-    transition: var(--transition-delay);
+    box-shadow: var(--blue-shadow);    
 }
 
 
@@ -534,6 +524,33 @@ RESPONSIVE COLUMNS
     .container  {
         grid-template-columns: 2fr 1fr;
     }
+    .main-column{
+        transition: 0.4s;
+    }
+    .side-column{
+        transition: 0.4s;
+    }
+}
+@media screen and (max-width: 850px) {
+    .main-column article img{
+        float: left;
+        margin-bottom: 16px;
+        margin-right: 10px;
+        width: 60%;
+        height: 100%;
+        box-shadow: var(--shadow);
+        transition: 0.7s;
+    }
+    .main-column{
+        margin: 10px 0;
+    }
+    .side-column{
+        margin: 20px 0;
+    }
+    th, tr, td{
+        font-size: 10px;
+    }
+
 }
 @media screen and (max-width: 720px) {
     .container{
@@ -571,6 +588,9 @@ RESPONSIVE COLUMNS
     .scrolltop{
         left: 85%;
     }
+    th, tr, td{
+        font-size: 14px;
+    }
 }
 
 
@@ -594,7 +614,12 @@ RESPONSIVE NAVBAR
   
   /* The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon. This class makes the navbar look good on small screens (display the links vertically instead of horizontally) */
   @media screen and (max-width: 720px) {
-    .navbar.responsive {position: relative;}
+    .icon{
+        cursor: pointer;
+    }
+    .navbar.responsive {
+        position: relative;
+    }
     .navbar.responsive a.icon {
       position: absolute;
       right: 0;
@@ -605,8 +630,12 @@ RESPONSIVE NAVBAR
       display: block;
       text-align: left;
     }
-    .navbar.responsive .dropdown {float: none;}
-    .navbar.responsive .dropdown-content {position: relative;}
+    .navbar.responsive .dropdown {
+        float: none;
+    }
+    .navbar.responsive .dropdown-content {
+        position: relative;
+    }
     .navbar.responsive .dropdown .dropbtn {
       display: block;
       width: 100%;
@@ -626,13 +655,16 @@ RESPONSIVE NAVBAR
         background-color: var(--thick-gray);
         color: var(--second-color);
     }
-    .mobile.nav:hover{
+    #mobile a:hover{
         background-color: var(--thick-gray);
         color: var(--second-color);
     }
     .dropdown-content a:hover {
-        background-color: rgb(201, 201, 201);
+        background-color: #c9c9c9;
         color: black;
+    }
+    .dropdown .active{
+        background-color: #898989;
     }
   } 
 
@@ -677,6 +709,11 @@ RESPONSIVE NAVBAR
     }
     .scrolltop{
         left: 80%;
+    }
+  }
+  @media screen and (max-width: 520px){
+    th, tr, td{
+        font-size: 12px;
     }
   }
 
@@ -738,9 +775,14 @@ RESPONSIVE NAVBAR
     }
     
     /* SLIDE TEXT */
+    .slideshow-container{
+        padding: 0;
+        margin: 0;
+    }
     .text {
         font-size: 14px;
         padding: 8px 12px;
+        margin-bottom: 0;
     }
     .scrolltop{
         left: 80%;

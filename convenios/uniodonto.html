@@ -9,52 +9,52 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/page.css">
-
+    <script src="../script/script.js" defer></script>
+    <script src="../script/folder.js" defer></script>
 </head>
 
 <body>
 
     <header id="header">
-        <a href="../index.html" target="_self" rel="_self"><img src="../imgs/brasão.png" alt="brasão" class="brasão"></a>
-        <a href="../index.html" target="_self" rel="_self">
+        <a href="../index.html" target="_self"><img src="../imgs/brasão.png" alt="brasão" class="brasão"></a>
+        <a href="../index.html" target="_self">
             <h1>IPMA</h1>
         </a>
-        <a href="../index.html" target="_self" rel="_self">
+        <a href="../index.html" target="_self">
             <p>Instituto de Previdência Municipal de Monte Alegre de Minas</p>
-        </a>
-        
+        </a>        
     </header>
 
     <nav class="navbar" id="mobile">
-        <a href="../index.html" rel="next" class="nav fa fa-home mobile" id="home"></a>
-        <a href="../login.html" rel="next" class="nav mobile login">Login</a>
-        <a href="../legislacao.html" rel="next" class="nav mobile">Legislação</a>
-        <nav class="dropdown active">
+        <a href="../index.html" class="fa fa-home" id="home"></a>
+        <a href="../login.html" class="login">Login</a>
+        <a href="../legislacao.html">Legislação</a>
+        <div class="dropdown">
           <div class="dropbtn">Convênios
             <div class="arrow">&#9698;</div>
           </div>
-          <nav class="dropdown-content">
-            <a href="unimed.html" rel="next">Unimed</a>
-            <a href="uniodonto.html" rel="_self" class="active">Uniodonto</a>
-            <a href="odontocompany.html" rel="next">Odonto Company</a>
-          </nav>
-        </nav>
-        <nav class="dropdown">
+          <div class="dropdown-content">
+            <a href="../convenios/unimed.html">Unimed</a>
+            <a href="../convenios/uniodonto.html" class="active">Uniodonto</a>
+            <a href="../convenios/odontocompany.html">Odonto Company</a>
+          </div>
+        </div>
+        <div class="dropdown">
             <div class="dropbtn">Benefícios
               <div class="arrow">&#9698;</div>
             </div>
-            <nav class="dropdown-content">
-              <a href="../beneficios/pensao.html" rel="next">Pensão</a>
-              <a href="../beneficios/aposentadoria.html" rel="next">Aposentadoria</a>
-              <a href="../beneficios/dependentes.html" rel="next">Dependentes</a>
-            </nav>
-          </nav>
-        <a href="../licitacoes.html" rel="next" class="nav mobile">Licitações</a>
-        <a href="../diretoria.html" rel="next" class="nav mobile">Diretoria</a>
-        <a href="../contato.html" rel="next" class="nav mobile">Contato</a>
-        <a href="#" class="nav icon mobile" id="icon-bar" onclick="showList()">
-            <i class="fa fa-bars"></i>
-          </a>
+            <div class="dropdown-content">
+              <a href="../beneficios/pensao.html">Pensão</a>
+              <a href="../beneficios/aposentadoria.html">Aposentadoria</a>
+              <a href="../beneficios/dependentes.html">Dependentes</a>
+            </div>
+          </div>
+        <a href="../licitacoes.html">Licitações</a>
+        <a href="../diretoria.html">Diretoria</a>
+        <a href="../contato.html">Contato</a>
+        <a class="icon" id="icon-bar" onclick="showList()">
+            <span class="fa fa-bars"></span>
+        </a>
       </nav>
 
 
@@ -76,37 +76,17 @@
 
 
         <section class="side-column">
-                <div class="transparencia">
-                    <img src="../imgs/loupe.png" alt="transparencia">
-                    <a href="#">Transparência Pública</a>
-                </div>
-                <div class="holerite">
-                    <h1>Holerite</h1>
-                    <iframe class="embed-responsive-item" src="../contracheque/login.html" scrolling="no" width="256" height="240" frameborder="0"></iframe>
-                </div>
-                <article class="side-column-img">
-                    <img src="../imgs/pexels-jimmy-chan-1635907.jpg" alt="pixabay">
-                </article>
+            <div class="transparencia">
+                <a href="#">Transparência Pública
+                    <span></span>
+                </a>
+            </div>
+            <div class="holerite">
+                <h1>Holerite</h1>
+                <iframe class="embed-responsive-item" src="../contracheque/login.html" scrolling="no" width="256" height="240" frameborder="0"></iframe>
+            </div>
         </section>
     </main>
-
-
-
-    <section class="downbar">
-        <article>
-            <h1>Title</h1>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto, aliquid. Minima possimus harum explicabo! Tempora reiciendis architecto ex accusantium enim. Totam et numquam ut accusantium, molestias atque natus quam veritatis!</p>
-        </article>
-        <article>
-            <h1>Title</h1>
-            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Non laborum neque animi ipsum magnam sunt, saepe optio recusandae quam itaque? Hic rerum officia pariatur neque numquam voluptatem quam molestiae eum.</p>
-        </article>
-        <article>
-            <h1>Title</h1>
-            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Architecto officia doloribus ea. Quis consequuntur mollitia recusandae explicabo officiis dignissimos deserunt ipsam consectetur quibusdam atque nihil dicta voluptatum eligendi, nobis nesciunt.</p>
-        </article>
-    </section>
-
 
 
     <footer>
@@ -117,7 +97,5 @@
         <a class="scrolltop" href="#header"><p>&#9698;</p></a>
     </footer>
 
-    <script src="../script/mobilenav.js"></script>
-    <script src="../script/folder.js"></script>
 </body>
 </html>

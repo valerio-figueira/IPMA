@@ -132,6 +132,16 @@ CLOSED FOLDER WITH FILES INSIDE
     font-size: 15px;
     margin-bottom: 4px;
   }
+.subfolders .file p{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 13px;
+    padding: 0;
+    text-indent: 0;
+}
+.page .subfolders{
+    padding-bottom: 20px;
+}
+
   article > .active, .collapsible:hover {
     background-color: #555;
   }
@@ -152,51 +162,68 @@ CLOSED FOLDER WITH FILES INSIDE
         font-family: Arial, Helvetica, sans-serif;
         font-size: 14px;
         font-weight: lighter;
-        padding: 2px;
-        margin: 6px;
+        padding: 0;
+        margin: 0;
     }
 
+    @media screen and (max-width: 600px){
+        table{
+            font-family: Arial, Helvetica, sans-serif;
+            text-align: center;
+            font-size: 12px;
+            margin: 0;
+        }
+    }
 
+    @media screen and (max-width: 530px){
+        table{
+            font-family: Arial, Helvetica, sans-serif;
+            text-align: center;
+            font-size: 12px;
+        }
+        .main-column{
+            transition: 0.4s;
+        }
+        .page{
+            margin: 5px 0 0;
+            padding: 0 8px 8px;
+        }
+        .main-column, .side-column{
+            margin: 30px 0 0;
+            padding: 0;
+            transition: 0.4s;
+        }
+        .transparencia{
+            margin: 0 5px;
+        }
+        .page h1{
+            border-radius: 0;
+        }
 
+        .downbar{
+            margin-top: 20px;
+            padding: 20px 0 20px;
+        }
+        .downbar article{
+            margin: 15px 0;
+        }
+    }
 
-
-
-
-/*TOOLTIP TEXTS*/
-.tooltip{
-    position: relative;
-    display: inline-block;
-    border-bottom: 1px dotted black;
-}
-.tooltip .tooltiptext{
-    visibility: hidden;
-    width: 120px;
-    background-color: #555;
-    color: white;
-    box-shadow: 0px 0px 5px 1px #ffffff7e;
-    text-align: center;
-    font-size: 14px;
-    border-radius: 6px;
-    padding: 5px 0;
-    position: absolute;
-    z-index: 1;
-    bottom: 125%;
-    left: 50%;
-    margin-left: -60px;
-    opacity: 0;
-    transition: opacity 0.3s;
-}
-.tooltip .tooltiptext::after{
-    content: "";
-    position: absolute;
-    top: 100%;
-    left: 50%;
-    margin-left: -5px;
-    border-width: 5px;
-    border-style: solid;
-    border-color: #555 transparent transparent transparent;
-}
-.tooltip:hover .tooltiptext {
-    visibility: visible;
-    opacity: 1;
-  }
+    @media screen and (max-width: 450px){
+        .main-column, .side-column{
+            margin: 30px 0 0;
+            padding: 0;
+            transition: 0.4s;
+        }
+        .page{
+            margin-top: 5px;
+        }    
+    }
+    @media screen and (max-width: 400px){
+        td{
+            font-size: 10px;
+        }
+        .page{
+            padding: 0 0 8px;
+        }
+    }
