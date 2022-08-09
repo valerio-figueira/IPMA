@@ -95,18 +95,28 @@ GRID AND FLEX STRUCTURE
 */
 .container{
     display: grid;
+    grid-template-areas: 
+    "main-column side-column"
+    "content-column content-column";
     grid-template-columns: 2fr 1fr;
 }
 .main-column{
+    grid-area: main-column;
     overflow: hidden;
     grid-auto-flow: dense;
     padding: 0px 8px 0px 8px;
     margin: 14px 12px 0px 10px;
 }
 .side-column{
+    grid-area: side-column;
     grid-auto-flow: dense;
     padding: 0px 8px 0px 8px;
     margin: 20px 12px 0px 10px;
+}
+.content-column{
+    display: grid;
+    grid-area: content-column;
+    grid-template-columns: 1fr 1fr 1fr;
 }
 .downbar{
     display: flex;
@@ -119,12 +129,6 @@ GRID AND FLEX STRUCTURE
 .downbar article{
     margin: 12px;
 }
-
-.info{
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-}
-
 
 
 
@@ -160,7 +164,7 @@ article:hover{
 article p{
     text-indent: 22px;
 }
-.main-column article img, .info article img{
+.main-column article img{
     float: left;
     margin-bottom: 16px;
     margin-right: 10px;
@@ -169,7 +173,7 @@ article p{
     box-shadow: var(--shadow);
     transition: 0.7s;
 }
-.main-column article img:hover, .info article img:hover{
+.main-column article img:hover, .content-column article img:hover{
     box-shadow: 0px 0px 6px 2px #00000070;
 }
 aside{
@@ -182,8 +186,18 @@ aside{
     height: 100%;
     box-shadow: var(--shadow);
 }
-
-
+.content-column{
+    margin: 10px 10px 30px;
+    transition: 0.7s;
+}
+.content-column article{
+    margin: 10px;
+    transition: 0.7s;
+}
+.content-column article img{
+    width: 100%;
+    transition: 0.7s;
+}
 
 
 
@@ -531,6 +545,14 @@ RESPONSIVE COLUMNS
         transition: 0.4s;
     }
 }
+@media screen and (max-width: 900px) {
+    .content-column{
+        margin: 0;
+    }
+    .content-column article{
+        margin: 5px 10px 30px;
+    }
+}
 @media screen and (max-width: 850px) {
     .main-column article img{
         float: left;
@@ -554,7 +576,13 @@ RESPONSIVE COLUMNS
 }
 @media screen and (max-width: 720px) {
     .container{
-        grid-template-columns: 1fr;
+        grid-template-areas: 
+        "side-column side-column"
+        "main-column main-column"
+        "content-column content-column";
+    }
+    .content-column{
+        grid-template-columns: 1fr 1fr;
     }
     .side-column{
         grid-row: 1;
@@ -592,7 +620,11 @@ RESPONSIVE COLUMNS
         font-size: 14px;
     }
 }
-
+@media screen and (max-width: 600px){
+    .content-column{
+        grid-template-columns: 1fr;
+    }
+}
 
 
 

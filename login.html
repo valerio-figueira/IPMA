@@ -67,17 +67,19 @@
     <main class="container" style="grid-template-columns: 1fr;">
 
         <section class="main-column">
-
-            <form class="form-signin" method="POST" name="WFRLogon" action="#URL"  target="_blank">
-
-                <input name="dataConnection" type="hidden" value="MonteAlegreDeMinas"/>
-                <input name="sys" type="hidden" value="AUT"/>
-                <label for="inputEmail" class="sr-only">CPF</label>
-                <input type="text" id="user" name="user" class="form-control" placeholder="Digite o CPF" required>
-                <label for="inputPassword" class="sr-only">Senha</label>
-                <input type="password" name="password" class="form-control" placeholder="Digite a Senha" required>          
-                <button class="button" type="submit">Acessar</button>
-            </form>
+          <fieldset>
+            <legend>Login</legend>
+            <!-- <h2 class="login-title">Login</h2> -->
+              <form class="form-signin" method="POST" name="WFRLogon" action="#URL"  target="_blank">
+                  <input name="dataConnection" type="hidden" value="MonteAlegreDeMinas"/>
+                  <input name="sys" type="hidden" value="AUT"/>
+                  <label for="inputEmail" class="sr-only">CPF</label>
+                  <input type="text" id="user" name="user" class="form-control" placeholder="Digite o CPF" required>
+                  <label for="inputPassword" class="sr-only">Senha</label>
+                  <input type="password" name="password" class="form-control" placeholder="Digite a Senha" required>
+                  <button class="button" type="submit">Acessar</button>
+              </form>
+          </fieldset>
 
             <!--
 

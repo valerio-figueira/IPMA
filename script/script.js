@@ -43,3 +43,10 @@ function showList() {
                 x.className = "navbar";
         }
 }
+
+
+/*COPYRIGHT DATE*/
+let year = new Date().getFullYear();
+let copyright = document.querySelector(".copyright");
+
+copyright.textContent = `${year} - IPMA`;

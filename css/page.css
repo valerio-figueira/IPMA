@@ -185,8 +185,8 @@ CLOSED FOLDER WITH FILES INSIDE
             transition: 0.4s;
         }
         .page{
-            margin: 5px 0 0;
-            padding: 0 8px 8px;
+            margin: 5px 8px 30px;
+            padding: 0 8px 20px;
         }
         .main-column, .side-column{
             margin: 30px 0 0;
@@ -217,13 +217,13 @@ CLOSED FOLDER WITH FILES INSIDE
         }
         .page{
             margin-top: 5px;
-        }    
+        }
     }
     @media screen and (max-width: 400px){
         td{
             font-size: 10px;
         }
         .page{
-            padding: 0 0 8px;
+            padding: 0 8px 8px;
         }
     }
