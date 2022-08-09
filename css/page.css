@@ -27,6 +27,7 @@
     font-size: 14px;
     padding-top: 4px;
     padding-bottom: 4px;
+    transition: 0.4s ease;
 }
 .page > h1{
     font-size: 22px;
@@ -34,13 +35,13 @@
 .page > h2{
     padding-top: 26px;
     font-size: 20px;
+    color: #252525;
+    transition: 0.4s ease;
 }
 .page > h2:hover{
-    transition: 0.4s ease;
     color: var(--primary-color);
 }
-.page li:hover {
-    transition: 0.4s ease;
+.page li:hover {    
     color: var(--primary-color);
 }
 /*LINK CONFIG*/
@@ -75,10 +76,15 @@ GLOBE CODE:
 .page h2{
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size: 20px;
+    text-align: left;
 }
-
-
-
+main .pensao h2{
+    font-size: 16px;
+    padding: 10px 10px 2px;
+}
+.page p {
+    font-family: Arial, Helvetica, sans-serif;
+}
 
 table{
     overflow-x: auto;
@@ -92,20 +98,20 @@ table{
 td{
     padding: 6px;
     border: var(--solid-border);
-}
-td:hover{
     transition: 0.4s ease;
+}
+td:hover{    
     background-color: var(--tertiary-color);
 }
 th{
     background-color: var(--primary-color);
     color: var(--secondary-color);
     padding: 6px;
+    transition: 0.4s ease;
 }
 th:hover{
     box-shadow: var(--blue-shadow);
-    color: var(--tertiary-color);
-    transition: 0.4s ease;
+    color: var(--tertiary-color);    
 }
 
 
@@ -137,6 +143,10 @@ CLOSED FOLDER WITH FILES INSIDE
     font-size: 13px;
     padding: 0;
     text-indent: 0;
+}
+.file li{
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 10px 0;
 }
 .page .subfolders{
     padding-bottom: 20px;
@@ -185,19 +195,27 @@ CLOSED FOLDER WITH FILES INSIDE
             transition: 0.4s;
         }
         .page{
-            margin: 5px 8px 30px;
+            margin: 5px 0 30px;
             padding: 0 8px 20px;
         }
-        .main-column, .side-column{
-            margin: 30px 0 0;
-            padding: 0;
-            transition: 0.4s;
+        .page p{
+            font-size: 15px;
+        }
+        .page li{
+            font-size: 14px;
+            padding: 7px;
         }
         .transparencia{
             margin: 0 5px;
         }
         .page h1{
             border-radius: 0;
+        }
+        .file{
+            padding: 0 7px;
+        }
+        .file p{
+            font-size: 14px;
         }
 
         .downbar{
@@ -210,11 +228,6 @@ CLOSED FOLDER WITH FILES INSIDE
     }
 
     @media screen and (max-width: 450px){
-        .main-column, .side-column{
-            margin: 30px 0 0;
-            padding: 0;
-            transition: 0.4s;
-        }
         .page{
             margin-top: 5px;
         }
