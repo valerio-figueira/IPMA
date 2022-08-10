@@ -33,6 +33,9 @@ body{
     background-color: var(--background-color);
 }
 
+*{
+    box-sizing: border-box;
+}
 
 main{
     background-color: var(--sooth-gray);
@@ -84,7 +87,7 @@ header p:hover{
 header img{
     width: 80px;
     height: 76px;
-    background-color: rgba(240, 255, 255, 0.72);
+    background-color: #f0ffffb8;
     border-radius: 8px;
     padding: 5px;
 }
