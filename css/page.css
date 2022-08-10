@@ -149,9 +149,6 @@ CLOSED FOLDER WITH FILES INSIDE
     font-family: Arial, Helvetica, sans-serif;
     padding: 10px 0;
 }
-.page .subfolders{
-    padding-bottom: 20px;
-}
 
 article > .active, .collapsible:hover {
     background-color: #555;

@@ -7,12 +7,15 @@ for (i = 0; i < folder.length; i++) {
     folder[i].addEventListener("click", function() {
     this.classList.toggle("active");
     var content = this.nextElementSibling;
-    if (content.className === "file") {
+    if (content.className === "file" || content.className === "file subfolders") {
       content.className += " open";
       content.style.maxHeight = "1000px";
+      content.style.paddingBottom = "20px";
+      content.style.transition += "0.5s";
     } else {
-      content.className = "file";
+      content.className = "file subfolders";
       content.style.maxHeight = "0";
+      content.style.paddingBottom = "0px";
     }
   });
 }
