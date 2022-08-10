@@ -10,6 +10,7 @@
     --sooth-gray: #f1f9fc;
     --thick-gray: #555;
     --article-background: white;
+    --blue-color: #024959;
     --max-width: 960px;
     --min-width: 360px;
     --solid-border: 1px solid #0000005a;
@@ -136,7 +137,7 @@ GRID AND FLEX STRUCTURE
 SECTIONS AND ARTICLES
 */
 section article{
-    padding: 4px 16px 0px 16px;
+    padding: 4px 16px 20px 16px;
     margin-top: 12px;
     margin-bottom: 16px;
 }
@@ -195,11 +196,22 @@ aside{
     transition: 0.7s;
 }
 .content-column article img{
+    box-shadow: var(--shadow);
     width: 100%;
     transition: 0.7s;
 }
 
-
+/*
+LINKS TO CONVEY UNTIL POSTS
+*/
+.read-more{
+    color: var(--prime-color);
+    font-weight: bold;
+    transition: 0.5s;
+}
+.read-more:hover{
+    color: var(--blue-color);
+}
 
 
 /*

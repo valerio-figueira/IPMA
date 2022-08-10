@@ -49,7 +49,9 @@
     text-decoration: none;
     font-size: 20px;
 }
-
+.page li{
+    padding: 5px 0;
+}
 
 
 
@@ -152,79 +154,80 @@ CLOSED FOLDER WITH FILES INSIDE
     padding-bottom: 20px;
 }
 
-  article > .active, .collapsible:hover {
+article > .active, .collapsible:hover {
     background-color: #555;
-  }
-  .file {
+}
+.file{  
     margin-top: -4px;
     margin-bottom: 6px;
     padding: 0 18px;
-    display: none;
     overflow: hidden;
     background-color: #f1f1f1;
     border: 1px solid #00000050;
-  }
-  /*INSIDE THE FOLDER*/
-    .file > button{
-        padding: 4px;
-    }
-    .file > .content p{
+    max-height: 0;
+    transition: max-height 0.7s;
+}
+/*INSIDE THE FOLDER*/
+.file > button{
+    padding: 4px;
+}
+.file > .content p{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    font-weight: lighter;
+    padding: 0;
+    margin: 0;
+}
+
+@media screen and (max-width: 600px){
+    table{
         font-family: Arial, Helvetica, sans-serif;
-        font-size: 14px;
-        font-weight: lighter;
-        padding: 0;
+        text-align: center;
+        font-size: 12px;
         margin: 0;
     }
+}
 
-    @media screen and (max-width: 600px){
-        table{
-            font-family: Arial, Helvetica, sans-serif;
-            text-align: center;
-            font-size: 12px;
-            margin: 0;
-        }
+@media screen and (max-width: 530px){
+    table{
+        font-family: Arial, Helvetica, sans-serif;
+        text-align: center;
+        font-size: 12px;
+    }
+    .main-column{
+        transition: 0.4s;
+    }
+    .page{
+        margin: 5px 0 30px;
+        padding: 0 8px 20px;
+    }
+    .page p{
+        font-size: 15px;
+    }
+    .page li{
+        font-size: 14px;
+        padding: 7px;
+    }
+    .transparencia{
+        margin: 0 5px;
+    }
+    .page h1{
+        border-radius: 0;
+    }
+    .file{
+        padding: 0 7px;
+    }
+    .file p{
+        font-size: 14px;
     }
 
-    @media screen and (max-width: 530px){
-        table{
-            font-family: Arial, Helvetica, sans-serif;
-            text-align: center;
-            font-size: 12px;
-        }
-        .main-column{
-            transition: 0.4s;
-        }
-        .page{
-            margin: 5px 0 30px;
-            padding: 0 8px 20px;
-        }
-        .page p{
-            font-size: 15px;
-        }
-        .page li{
-            font-size: 14px;
-            padding: 7px;
-        }
-        .transparencia{
-            margin: 0 5px;
-        }
-        .page h1{
-            border-radius: 0;
-        }
-        .file{
-            padding: 0 7px;
-        }
-        .file p{
-            font-size: 14px;
-        }
-
-        .downbar{
-            margin-top: 20px;
-            padding: 20px 0 20px;
-        }
-        .downbar article{
-            margin: 15px 0;
-        }
+    .downbar{
+        margin-top: 20px;
+        padding: 20px 0 20px;
+    }
+    .downbar article{
+        margin: 15px 0;
+    }
     }
 
     @media screen and (max-width: 450px){
