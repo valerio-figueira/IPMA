@@ -19,11 +19,11 @@
     --transition-delay: 0.5s;
 }
 
-.download-table{
+.bordero-bancario, .legislacao{
     margin: 15px 0;
     width: 100%;
 }
-.download-table th{
+.bordero-bancario th, .legislacao th{
     background-color: var(--blue-color);
     padding: 20px;
 }

@@ -7,6 +7,7 @@
     --background-color: azure;
     --sooth-gray: #f1f9fc;
     --article-background: white;
+    --blue-color: #024959;
     --solid-border: 1px solid #0000005a;
     --shadow: 0px 0px 4px 2px #00000040;
     --blue-shadow: 0px 0px 4px 3px #2b9ecc8e;
@@ -15,6 +16,7 @@
 
 
 .page{
+    width: 100%;
     font-family: Georgia, 'Times New Roman', Times, serif;
     padding: 12px 26px 58px 26px;
 }
@@ -52,6 +54,17 @@
     padding: 5px 0;
 }
 
+
+.page p a{
+    color: var(--primary-color);
+    text-decoration: underline;
+    font-size: 17px;
+    font-weight: bold;
+    transition: 0.5s;
+}
+.page p a:hover{
+    color: var(--blue-color);
+}
 
 
 
@@ -174,6 +187,18 @@ article > .active, .collapsible:hover {
     padding: 0;
     margin: 0;
 }
+
+
+
+
+/*
+LOCATION
+*/
+.map-location{
+    margin: 20px 0;
+    box-shadow: var(--shadow);
+}
+
 
 @media screen and (max-width: 600px){
     table{

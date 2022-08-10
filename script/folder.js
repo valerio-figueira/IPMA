@@ -9,7 +9,7 @@ for (i = 0; i < folder.length; i++) {
     var content = this.nextElementSibling;
     if (content.className === "file" || content.className === "file subfolders") {
       content.className += " open";
-      content.style.maxHeight = "1000px";
+      content.style.maxHeight = "3000px";
       content.style.paddingBottom = "20px";
       content.style.transition += "0.5s";
     } else {
