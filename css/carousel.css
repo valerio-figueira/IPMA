@@ -90,7 +90,7 @@
   top: 0;
 }
 
-/* The dots/bullets/indicators */
+/* The dots/indicators */
 .dot {
   cursor: pointer;
   height: 15px;
@@ -137,7 +137,6 @@
   /* SLIDE TEXT */
   .slideshow-container{
     padding: 0;
-    margin: 0;
 }
 .main-column .text a{
     font-size: 14px;

@@ -428,10 +428,6 @@ footer > p{
 
 
 
-
-
-  
-
 /*HIDE LOGIN IN NAV*/
 .login{
     display: none;
@@ -501,7 +497,7 @@ RESPONSIVE COLUMNS
     .side-column-img{
         display: none;
     }
-    .holerite, iframe{
+    .holerite, .holerite > iframe{
         display: none;
     }
     .transparencia{
@@ -552,7 +548,7 @@ RESPONSIVE NAVBAR
     }
   }
   
-  /* The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon. This class makes the navbar look good on small screens (display the links vertically instead of horizontally) */
+
   @media screen and (max-width: 720px) {
     .icon{
         cursor: pointer;
@@ -581,10 +577,7 @@ RESPONSIVE NAVBAR
       width: 100%;
       text-align: left;
     }
-    #icon-bar:hover i {
-        color: var(--second-color);
-    }
-    #icon-bar:hover{
+    .icon.active{
         background-color: var(--thick-gray);
     }
     #home:hover{

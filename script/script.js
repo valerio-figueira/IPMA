@@ -36,11 +36,14 @@ dots[slideIndex-1].className += " active";
 MOBILE NAV
 */
 function showList() {
-    var x = document.getElementById("mobile");
+    let x = document.getElementById("mobile");
+    let y = document.getElementsByClassName("icon")[0];
         if (x.className === "navbar") {
                 x.className += " responsive";
+                y.className += " active";
         } else {
                 x.className = "navbar";
+                y.className = "icon";
         }
 }
 
