@@ -170,8 +170,8 @@ article p{
 }
 .main-column article img{
     float: left;
-    margin-bottom: 16px;
-    margin-right: 10px;
+    margin-bottom: 0px;
+    margin-right: 15px;
     width: 50%;
     height: 100%;
     box-shadow: var(--shadow);
@@ -460,8 +460,8 @@ RESPONSIVE COLUMNS
 @media screen and (max-width: 850px) {
     .main-column article img{
         float: left;
-        margin-bottom: 16px;
-        margin-right: 10px;
+        margin-bottom: 0px;
+        margin-right: 15px;
         width: 60%;
         height: 100%;
         box-shadow: var(--shadow);

@@ -191,9 +191,21 @@ article > .active, .collapsible:hover {
     padding: 0;
     margin: 0;
 }
+.file .margin-fix p{
+    margin: 3px;
+}
 
-
-
+/*UNIMED*/
+.page .unimed-info .unimed{
+    display: block;
+    margin: auto;
+    box-shadow: none;
+    width: 150px;
+}
+.page .unimed-info p{
+    text-indent: 0;
+    text-align: center;
+}
 
 /*
 LOCATION
