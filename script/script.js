@@ -1,3 +1,11 @@
+/*COPYRIGHT DATE*/
+let year = new Date().getFullYear();
+let copyright = document.querySelector(".copyright");
+
+copyright.textContent = `Direitos Autorais \u00A9 ${year} - IPMA`;
+
+
+
 /*
 SLIDE
 */
@@ -48,8 +56,3 @@ function showList() {
 }
 
 
-/*COPYRIGHT DATE*/
-let year = new Date().getFullYear();
-let copyright = document.querySelector(".copyright");
-
-copyright.textContent = `${year} - IPMA`;

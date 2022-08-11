@@ -403,6 +403,13 @@ footer > p{
     margin-left: 7px;
     padding: 0px;
 }
+footer p > a{
+    color: var(--prime-color);
+    font-style: italic;
+}
+footer p > a:hover{
+    color: var(--blue-color);
+}
 .scrolltop > p{
     transform: rotate(225deg);
     margin-top: 22px;
