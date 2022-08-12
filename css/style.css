@@ -215,7 +215,9 @@ LINKS TO CONVEY UNTIL POSTS
 .read-more:hover{
     color: var(--blue-color);
 }
-
+.h1-anchor{
+    text-decoration: none;
+}
 
 /*
 HOLERITE
@@ -391,17 +393,14 @@ color: var(--second-color);
 
 
 footer{
-    position: relative;
     display: flex;
     flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
     margin: 12px 0px 0px 0px;
-    padding: 12px;
+    padding: 12px 20px;
     background-color: var(--sooth-gray);
     box-shadow: var(--shadow);
-}
-footer > p{
-    margin-left: 7px;
-    padding: 0px;
 }
 footer p > a{
     color: var(--prime-color);
@@ -410,17 +409,11 @@ footer p > a{
 footer p > a:hover{
     color: var(--blue-color);
 }
-.scrolltop > p{
-    transform: rotate(225deg);
-    margin-top: 22px;
-}
 .scrolltop{
+    font-size: 25px;
     background-color: var(--prime-color);
     color: var(--second-color);
-    position: absolute;
-    top: 26px;
-    left: 90%;
-    padding: 1px 22px;
+    padding: 15px 20px 20px;    
     text-decoration: none;
     border-radius: 4px;
     box-shadow: var(--shadow);
@@ -430,7 +423,6 @@ footer p > a:hover{
     color: var(--third-color);
     box-shadow: var(--blue-shadow);    
 }
-
 
 
 
@@ -518,14 +510,8 @@ RESPONSIVE COLUMNS
     header > a > p{
         margin-right: 15px;
     }
-    /*header{
-        padding-bottom: 23px;
-    }*/
     .downbar{
         flex-direction: column;
-    }
-    .scrolltop{
-        left: 85%;
     }
     th, tr, td{
         font-size: 14px;
@@ -641,9 +627,6 @@ RESPONSIVE NAVBAR
     header img{
         margin-top: 12px;
     }
-    .scrolltop{
-        left: 80%;
-    }
   }
   @media screen and (max-width: 520px){
     th, tr, td{
@@ -673,9 +656,6 @@ RESPONSIVE NAVBAR
     header img{
         margin-top: 12px;
     }
-    .scrolltop{
-        left: 80%;
-    }
   }
 
 
@@ -700,8 +680,5 @@ RESPONSIVE NAVBAR
     }
     header img{
         margin-top: 12px;
-    }
-    .scrolltop{
-        left: 80%;
     }
   }

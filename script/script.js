@@ -4,7 +4,17 @@ let copyright = document.querySelector(".copyright");
 
 copyright.textContent = `Direitos Autorais \u00A9 ${year} - IPMA`;
 
+function addIcon(){
+    let icon = document.querySelector("footer div a");
+    icon.className = "fa fa-linkedin-square";
+    icon.style.fontSize = "15px";
+    icon.style.transition = "font-size 0.5s";
 
+    icon.addEventListener('mouseleave', function(){
+        icon.style.fontSize = "17px";
+        icon.className = null;
+    })
+}
 
 /*
 SLIDE
