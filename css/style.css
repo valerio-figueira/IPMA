@@ -405,8 +405,10 @@ footer{
 footer p > a{
     color: var(--prime-color);
     font-style: italic;
+    animation: fadeIn 0.7s;
 }
 footer p > a:hover{
+    animation: fadeOut 0.7s;
     color: var(--blue-color);
 }
 .scrolltop{
@@ -423,7 +425,14 @@ footer p > a:hover{
     color: var(--third-color);
     box-shadow: var(--blue-shadow);    
 }
-
+@keyframes fadeIn {
+    0% {opacity: 0.2;}
+    100% {opacity: 1;}
+}
+@keyframes fadeOut {
+    100% {opacity: 1;}
+    0% {opacity: 0.2;}
+}
 
 
 
