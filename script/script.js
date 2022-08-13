@@ -4,21 +4,27 @@ let copyright = document.querySelector(".copyright");
 
 copyright.textContent = `Direitos Autorais \u00A9 ${year} - IPMA`;
 
-function addLink(){
+
+
+/*
+PORTFOLIUM LINK IN WEBSITE FOOTER
+*/
+function addLink(){ 
     let link = document.querySelector("footer div a");
-    link.className = "fa fa-external-link-square";
-    link.style.fontSize = "15px";
-    link.style.fontWeight = "bold";
-    link.style.transition = "font-size 0.5s";
 
     link.setAttribute("href", "https://valerio-figueira.github.io/portfolio/");
 
-    link.addEventListener('mouseleave', function(){
-        link.style.fontSize = "17px";
+    link.className = "fa fa-external-link-square";
+    link.style.fontSize = "normal";
+    link.style.transition = "font-size 0.5s";
+
+    link.addEventListener("mouseleave", function(){
+        link.style.fontSize = "normal";
         link.style.fontWeight = "normal";
         link.className = null;
     })
 }
+
 
 /*
 SLIDE

@@ -401,6 +401,7 @@ footer{
     padding: 12px 20px;
     background-color: var(--sooth-gray);
     box-shadow: var(--shadow);
+    transition: 0.5s;
 }
 footer p > a{
     color: var(--prime-color);
@@ -664,6 +665,11 @@ RESPONSIVE NAVBAR
     }
     header img{
         margin-top: 12px;
+    }
+
+
+    footer{
+        padding: 12px 10px;
     }
   }
 
