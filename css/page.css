@@ -174,7 +174,7 @@ article > .active, .collapsible:hover {
 .file{  
     margin-top: -4px;
     margin-bottom: 6px;
-    padding: 0 18px;
+    padding: 0px 18px;
     overflow: hidden;
     background-color: #f1f1f1;
     border: 1px solid #00000050;
@@ -193,7 +193,7 @@ article > .active, .collapsible:hover {
     margin: 0;
 }
 .file .margin-fix p{
-    margin: 3px;
+    margin: 15px 3px;
 }
 
 /*UNIMED*/
