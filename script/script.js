@@ -27,55 +27,60 @@ function addLink(){
 
 
 /*
-SLIDE
+CAROUSEL
 */
-let slideIndex = 1;
-showSlides(slideIndex);
+if(document.querySelector(".slideshow-container")){
+    let slideIndex = 1;
+    showSlides(slideIndex);
 
-// Next/previous controls
-function plusSlides(n) {
-showSlides(slideIndex += n);
+    // Next/previous controls
+    function plusSlides(n) {
+    showSlides(slideIndex += n);
+    }
+    
+    let dot = document.querySelectorAll(".dot");
+    dot[0].addEventListener("click", () => currentSlide(1));
+    dot[1].addEventListener("click", () => currentSlide(2));
+    dot[2].addEventListener("click", () => currentSlide(3));
+    
+    let prev = document.querySelector(".slideshow-container .prev");
+    let next = document.querySelector(".slideshow-container .next");
+    prev.addEventListener("click", () => plusSlides(-1));
+    next.addEventListener("click", () => plusSlides(1));
+    
+    
+    
+    // Thumbnail image controls
+    function currentSlide(n) {
+    showSlides(slideIndex = n);
+    }
+    
+    function showSlides(n) {
+    let i;
+    let slides = document.getElementsByClassName("slide");
+    let dots = document.getElementsByClassName("dot");
+    if (n > slides.length) {slideIndex = 1}
+    if (n < 1) {slideIndex = slides.length}
+    for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+    }
+    for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+    }
+    slides[slideIndex-1].style.display = "block";
+    dots[slideIndex-1].className += " active";
+    }
 }
 
-let dot = document.querySelectorAll(".dot");
-dot[0].addEventListener("click", () => currentSlide(1));
-dot[1].addEventListener("click", () => currentSlide(2));
-dot[2].addEventListener("click", () => currentSlide(3));
-
-let prev = document.querySelector(".slideshow-container .prev");
-let next = document.querySelector(".slideshow-container .next");
-prev.addEventListener("click", () => plusSlides(-1));
-next.addEventListener("click", () => plusSlides(1));
-
-
-
-// Thumbnail image controls
-function currentSlide(n) {
-showSlides(slideIndex = n);
-}
-
-function showSlides(n) {
-let i;
-let slides = document.getElementsByClassName("slide");
-let dots = document.getElementsByClassName("dot");
-if (n > slides.length) {slideIndex = 1}
-if (n < 1) {slideIndex = slides.length}
-for (i = 0; i < slides.length; i++) {
-    slides[i].style.display = "none";
-}
-for (i = 0; i < dots.length; i++) {
-    dots[i].className = dots[i].className.replace(" active", "");
-}
-slides[slideIndex-1].style.display = "block";
-dots[slideIndex-1].className += " active";
-}
 
 
 
 /*
 MOBILE NAV
 */
-document.querySelector("#mobile .icon").addEventListener("click", () => openNav());
+document.querySelector(".navbar .icon").addEventListener("click", () => {
+    openNav()
+});
 
 function openNav() {
     let x = document.getElementById("mobile");
@@ -90,3 +95,26 @@ function openNav() {
 }
 
 
+
+
+
+//Desdobrar itens da div oculta
+const folder = document.getElementsByClassName("folder");
+let i;
+
+for (i = 0; i < folder.length; i++) {
+    folder[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var content = this.nextElementSibling;
+    if (content.className === "file" || content.className === "file subfolders") {
+      content.className += " open";
+      content.style.maxHeight = "3000px";
+      content.style.paddingBottom = "20px";
+      content.style.transition += "0.5s";
+    } else {
+      content.className = "file subfolders";
+      content.style.maxHeight = "0";
+      content.style.paddingBottom = "0px";
+    }
+  });
+}
