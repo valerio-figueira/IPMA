@@ -37,8 +37,8 @@
 }
 
 /* Hide the images by default */
-.mySlides {
-  display: none;
+.slideshow-container img {
+  width: 100%;
 }
 
 /* Next & previous buttons */
