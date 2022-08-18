@@ -75,7 +75,9 @@ dots[slideIndex-1].className += " active";
 /*
 MOBILE NAV
 */
-function showList() {
+document.querySelector("#mobile .icon").addEventListener("click", () => openNav());
+
+function openNav() {
     let x = document.getElementById("mobile");
     let y = document.getElementsByClassName("icon")[0];
         if (x.className === "navbar") {
