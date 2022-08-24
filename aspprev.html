@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IPMA - Instituto de Previdência Municipal de Monte Alegre de Minas</title>
+    <link rel="shortcut icon" href="imgs/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/login.css">
+    <link rel="stylesheet" href="css/style.css">    
+    <script src="script/script.js" defer></script>
+</head>
+
+<body>
+    
+    <header id="header">
+        <a href="index.html" target="_self">
+            <img src="imgs/brasão.png" alt="brasão" class="brasão">
+        </a>
+        <a href="index.html" target="_self">
+            <h1>IPMA</h1>
+        </a>
+        <a href="index.html" target="_self">
+            <p>Instituto de Previdência Municipal de Monte Alegre de Minas</p>
+        </a>
+    </header>
+
+
+    <nav class="navbar" id="mobile">
+        <a href="index.html" rel="next" class="nav fa fa-home mobile" id="home"></a>
+        <a href="login.html" rel="_self" class="active login">Login</a>
+        <a href="legislacao.html" rel="next" class="nav mobile">Legislação</a>
+        <nav class="dropdown">
+          <div class="dropbtn">Convênios
+            <div class="arrow">&#9698;</div>
+          </div>
+          <nav class="dropdown-content">
+            <a href="convenios/unimed.html" rel="next">Unimed</a>
+            <a href="convenios/uniodonto.html" rel="next">Uniodonto</a>
+            <a href="convenios/odontocompany.html" rel="next">Odonto Company</a>
+          </nav>
+        </nav>
+        <nav class="dropdown">
+            <div class="dropbtn">Benefícios
+              <div class="arrow">&#9698;</div>
+            </div>
+            <nav class="dropdown-content">
+              <a href="beneficios/pensao.html" rel="next">Pensão</a>
+              <a href="beneficios/aposentadoria.html" rel="next">Aposentadoria</a>
+              <a href="beneficios/dependentes.html" rel="next">Dependentes</a>
+            </nav>
+          </nav>
+        <a href="licitacoes.html" rel="next">Licitações</a>
+        <a href="diretoria.html" rel="next">Diretoria</a>
+        <a href="contato.html" rel="next">Contato</a>
+        <a class="icon">
+            <i class="fa fa-bars"></i>
+          </a>
+      </nav>
+
+
+
+
+
+    <main class="container" style="grid-template-columns: 1fr;">
+
+        <section class="main-column">
+          <fieldset>
+            <legend>Login ASPPREV</legend>
+            <!-- <h2 class="login-title">Login</h2> -->
+              <form class="form-signin" method="POST" name="WFRLogon" action="https://aspprevweb.com.br:8097/logon.do"  target="_blank">
+                  <input name="dataConnection" type="hidden" value="MonteAlegreDeMinas"/>
+                  <input name="sys" type="hidden" value="AUT"/>
+                  <label for="inputEmail" class="sr-only">CPF</label>
+                  <input type="text" id="user" name="user" class="form-control" placeholder="Digite o CPF" required>
+                  <label for="inputPassword" class="sr-only">Senha</label>
+                  <input type="password" name="password" class="form-control" placeholder="Digite a Senha" required>
+                  <button class="button" type="submit">Acessar</button>
+              </form>
+          </fieldset>
+            
+        </section>
+
+    </main>
+
+
+    <footer>
+      <div>
+          <p class="copyright"></p>
+          <p>Desenvolvido por <a href="" target="_blank" rel="external" onmouseenter="addLink()"> Valerio Figueira</a></p>
+      </div>
+      <a class="scrolltop fa fa-caret-up" href="#header"></a>
+  </footer>
+
+</body>
+</html>
