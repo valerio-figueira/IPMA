@@ -203,7 +203,7 @@ export default class Legislacao{
             {
                 name: "Lei Nº 1.918, de 15 de Dezembro de 1999",
                 url: "legislacao/LEI-Nº-1.918-DE-15-DE-DEZEMBRO-DE-1999.pdf"
-            },        
+            },
         ]
     }
     static getParagraphs(){

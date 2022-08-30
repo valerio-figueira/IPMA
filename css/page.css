@@ -23,6 +23,10 @@
     width: 100%;
     font-family: Georgia, 'Times New Roman', Times, serif;
     padding: 12px 26px 58px 26px;
+
+    animation-name: fadeInPage;
+    animation-duration: 1.5s;
+    animation-delay: 0s;
 }
 .page p, h2, h3, h4, h5, h6 {
     padding: 4px;
@@ -137,7 +141,7 @@ th:hover{
 
 
 /*
-CLOSED FOLDER WITH FILES INSIDE
+CLOSED FOLDER WITH CONTENT INSIDE
 */
 .folder{
     border: 1px solid black;
@@ -157,13 +161,13 @@ CLOSED FOLDER WITH FILES INSIDE
     font-size: 15px;
     margin-bottom: 4px;
   }
-.subfolders .file p{
+.subfolders .folder_content p{
     font-family: Arial, Helvetica, sans-serif;
     font-size: 13px;
     padding: 0;
     text-indent: 0;
 }
-.file li{
+.folder_content li{
     font-family: Arial, Helvetica, sans-serif;
     padding: 10px 0;
 }
@@ -171,7 +175,7 @@ CLOSED FOLDER WITH FILES INSIDE
 article > .active, .collapsible:hover {
     background-color: #555;
 }
-.file{  
+.folder_content{  
     margin-top: -4px;
     margin-bottom: 6px;
     padding: 0px 18px;
@@ -182,17 +186,17 @@ article > .active, .collapsible:hover {
     transition: max-height 0.7s;
 }
 /*INSIDE THE FOLDER*/
-.file > button{
+.folder_content > button{
     padding: 4px;
 }
-.file > .content p{
+.folder_content > .content p{
     font-family: Arial, Helvetica, sans-serif;
     font-size: 14px;
     font-weight: lighter;
     padding: 0;
     margin: 0;
 }
-.file .margin-fix p{
+.folder_content .margin-fix p{
     margin: 15px 3px;
 }
 
@@ -288,5 +292,15 @@ LOCATION
         }
         .page{
             padding: 0 8px 8px;
+        }
+    }
+
+
+    @keyframes fadeInPage{
+        from{
+            opacity: 0;
+        }
+        to{
+            opacity: 1;
         }
     }

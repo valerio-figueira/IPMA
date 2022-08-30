@@ -41,14 +41,14 @@ document.querySelector(".navbar .icon").addEventListener("click", () => {
 });
 
 function openNav() {
-    let x = document.getElementById("mobile");
-    let y = document.getElementsByClassName("icon")[0];
-        if (x.className === "navbar") {
-                x.className += " responsive";
-                y.className += " active";
+    let navbar = document.getElementById("mobile");
+    let mobileIcon = document.getElementsByClassName("icon")[0];
+        if (navbar.className === "navbar") {
+                navbar.className += " responsive";
+                mobileIcon.className += " active";
         } else {
-                x.className = "navbar";
-                y.className = "icon";
+                navbar.className = "navbar";
+                mobileIcon.className = "icon";
         }
 }
 
@@ -93,7 +93,7 @@ function displaySlides(slides) {
                 <div class="text"><a href="${slide.url}" rel="next">${slide.description}</a>
                 </div>
             </div>
-        `;        
+        `;
     }).join("");
 
     slideshow.innerHTML = html;
@@ -129,6 +129,7 @@ function displayPostagens() {
     content.innerHTML = html;
 };
 
+//CURRENT PATH NAME
 const path = location.pathname;
 
 if(path.match("/index.html")){
@@ -144,7 +145,7 @@ if(path.match("/index.html")){
     function plusSlides(n) {
         showSlides(slideIndex += n);
     }
-    
+
     let dot = document.querySelectorAll(".dot");
     dot[0].addEventListener("click", () => currentSlide(1));
     dot[1].addEventListener("click", () => currentSlide(2));
@@ -192,7 +193,7 @@ if(path.match("/index.html")){
         }).join("");
         table[0].innerHTML += html;
     }
-    function getLeis1992A2020(){        
+    function getLeis1992A2020(){
         const html = Legislacao.getLeis1992A2020().map(lei => {
             return `
                 <tr>
@@ -232,7 +233,7 @@ if(path.match("/index.html")){
             </tr>
             `;
         }).join("");
-        table.innerHTML = html;
+        table.innerHTML += html;
     }
 
     getLicitacoes();
@@ -339,9 +340,25 @@ if(path.match("/index.html")){
 
 
 //Desdobrar itens da div oculta
-const folder = document.getElementsByClassName("folder");
-let i;
-
+const folders = document.getElementsByClassName("folder");
+for (let folder of folders) {
+    folder.addEventListener("click", function() {
+    this.classList.toggle("active");
+    const content = this.nextElementSibling;
+    if (content.className === "folder_content") {
+      content.classList.add("open")
+      content.style.maxHeight = "3000px";
+      content.style.paddingBottom = "20px";
+      content.style.transition += "0.5s";
+    } else {
+      content.classList.remove("open");
+      content.style.maxHeight = "0";
+      content.style.paddingBottom = "0px";
+    }
+  });
+}
+/*
+OLD CODE
 for (i = 0; i < folder.length; i++) {
     folder[i].addEventListener("click", function() {
     this.classList.toggle("active");
@@ -358,6 +375,7 @@ for (i = 0; i < folder.length; i++) {
     }
   });
 }
+*/
 
 
 
