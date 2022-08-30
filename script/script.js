@@ -30,48 +30,42 @@ function addLink(){
 CAROUSEL
 */
 if(document.querySelector(".slideshow-container")){
-    let slideIndex = 1;
-    showSlides(slideIndex);
+    let index = 1;
+    const dots = document.querySelectorAll(".dot");
+    const prev = document.querySelector(".prev");
+    const next = document.querySelector(".next");
 
-    // Next/previous controls
-    function plusSlides(n) {
-    showSlides(slideIndex += n);
-    }
-    
-    let dot = document.querySelectorAll(".dot");
-    dot[0].addEventListener("click", () => currentSlide(1));
-    dot[1].addEventListener("click", () => currentSlide(2));
-    dot[2].addEventListener("click", () => currentSlide(3));
-    
-    let prev = document.querySelector(".slideshow-container .prev");
-    let next = document.querySelector(".slideshow-container .next");
-    prev.addEventListener("click", () => plusSlides(-1));
-    next.addEventListener("click", () => plusSlides(1));
-    
-    
-    
-    // Thumbnail image controls
-    function currentSlide(n) {
-    showSlides(slideIndex = n);
-    }
-    
-    function showSlides(n) {
-    let i;
-    let slides = document.getElementsByClassName("slide");
-    let dots = document.getElementsByClassName("dot");
-    if (n > slides.length) {slideIndex = 1}
-    if (n < 1) {slideIndex = slides.length}
-    for (i = 0; i < slides.length; i++) {
-        slides[i].style.display = "none";
-    }
-    for (i = 0; i < dots.length; i++) {
-        dots[i].className = dots[i].className.replace(" active", "");
-    }
-    slides[slideIndex-1].style.display = "block";
-    dots[slideIndex-1].className += " active";
+    displaySlides(index);
+
+    prev.addEventListener("click", () => displaySlides(--index))
+    next.addEventListener("click", () => displaySlides(++index))    
+
+    dots[0].addEventListener("click", () => displaySlides(index = 1));
+    dots[1].addEventListener("click", () => displaySlides(index = 2));
+    dots[2].addEventListener("click", () => displaySlides(index = 3));
+
+    function displaySlides(indexPosition){
+        const slides = document.querySelectorAll(".slide");        
+
+        if(indexPosition > slides.length){
+            indexPosition = 1;
+        } else if(indexPosition < 1){
+            indexPosition = slides.length;
+        }
+
+        for(const slide of slides){
+            slide.style.display = "none";
+        }
+
+        for(const dot of dots){
+            dot.classList.remove("active");
+        }
+
+        slides[indexPosition - 1].style.display = "block";
+        dots[indexPosition - 1].classList.add("active");
+        return index = indexPosition;
     }
 }
-
 
 
 

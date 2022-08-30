@@ -24,7 +24,7 @@
 }
 
 /* Slideshow container */
-.slideshow-container {
+.slideshow-container {    
     position: relative;
     margin-top: 6px;
 }
@@ -36,12 +36,16 @@
     box-shadow: var(--blue-shadow);
 }
 
-/* Hide the images by default */
+/*HIDE EACH IMG BY DEFAULT*/
+.slideshow-container .slide{
+  display: none;
+}
+
 .slideshow-container img {
   width: 100%;
 }
 
-/* Next & previous buttons */
+/*Next & previous buttons*/
 .prev, .next {
     cursor: pointer;
     position: absolute;
