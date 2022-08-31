@@ -37,8 +37,8 @@ if(document.querySelector(".slideshow-container")){
 
     displaySlides(index);
 
-    prev.addEventListener("click", () => displaySlides(--index))
-    next.addEventListener("click", () => displaySlides(++index))    
+    prev.addEventListener("click", () => displaySlides(--index));
+    next.addEventListener("click", () => displaySlides(++index));
 
     dots[0].addEventListener("click", () => displaySlides(index = 1));
     dots[1].addEventListener("click", () => displaySlides(index = 2));
@@ -73,7 +73,7 @@ if(document.querySelector(".slideshow-container")){
 MOBILE NAV
 */
 document.querySelector(".navbar .icon").addEventListener("click", () => {
-    openNav()
+    openNav();
 });
 
 function openNav() {
