@@ -9,7 +9,7 @@ copyright.textContent = `Direitos Autorais \u00A9 ${year} - IPMA`;
 /*
 PORTFOLIUM LINK IN WEBSITE FOOTER
 */
-function addLink(){ 
+function addLink(){
     let link = document.querySelector("footer div a");
 
     link.setAttribute("href", "https://valerio-figueira.github.io/portfolio/");
@@ -22,7 +22,7 @@ function addLink(){
         link.style.fontSize = "normal";
         link.style.fontWeight = "normal";
         link.className = null;
-    })
+    });
 }
 
 
@@ -77,14 +77,14 @@ document.querySelector(".navbar .icon").addEventListener("click", () => {
 });
 
 function openNav() {
-    let x = document.getElementById("mobile");
-    let y = document.getElementsByClassName("icon")[0];
-        if (x.className === "navbar") {
-                x.className += " responsive";
-                y.className += " active";
+    let navbar = document.getElementById("mobile");
+    let mobileIcon = document.getElementsByClassName("icon")[0];
+        if (navbar.className === "navbar") {
+            navbar.className += " responsive";
+            mobileIcon.className += " active";
         } else {
-                x.className = "navbar";
-                y.className = "icon";
+            navbar.className = "navbar";
+            mobileIcon.className = "icon";
         }
 }
 
@@ -93,22 +93,21 @@ function openNav() {
 
 
 //Desdobrar itens da div oculta
-const folder = document.getElementsByClassName("folder");
-let i;
-
-for (i = 0; i < folder.length; i++) {
-    folder[i].addEventListener("click", function() {
+const folders = document.querySelectorAll(".folder");
+for (const folder of folders) {
+    folder.addEventListener("click", function() {
     this.classList.toggle("active");
-    var content = this.nextElementSibling;
-    if (content.className === "file" || content.className === "file subfolders") {
-      content.className += " open";
-      content.style.maxHeight = "3000px";
-      content.style.paddingBottom = "20px";
-      content.style.transition += "0.5s";
+
+    const content = this.nextElementSibling;
+    if (content.className === "folder_content") {
+        content.classList.add("open");
+        content.style.maxHeight = "3000px";
+        content.style.paddingBottom = "20px";
+        content.style.transition += "0.5s";
     } else {
-      content.className = "file subfolders";
-      content.style.maxHeight = "0";
-      content.style.paddingBottom = "0px";
+        content.classList.remove("open");
+        content.style.maxHeight = "0";
+        content.style.paddingBottom = "0px";
     }
-  });
+    });
 }

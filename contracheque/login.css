@@ -1,0 +1,70 @@
+@charset "UTF-8";
+
+:root{
+    --prime-color: #0c6a3d;
+    --second-color: azure;
+    --third-color: #D6D58E;
+    --fourth-color: seagreen;
+    --fifth-color: #21774e;
+    --background-color: azure;
+    --sooth-gray: #f1f9fc;
+    --thick-gray: #555;
+    --article-background: white;
+    --blue-color: #024959;
+    --max-width: 960px;
+    --min-width: 360px;
+    --solid-border: 1px solid #0000005a;
+    --shadow: 0px 0px 4px 2px #00000040;
+    --blue-shadow: 0px 0px 5px 2px #2b9ecc8e;
+    --transition-delay: 0.5s;
+}
+.container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 200px;
+    margin: auto;
+}
+.container .form-signin{
+    width: 100%;
+}
+
+.form-control{
+    display: block;
+    margin: 0 0 14px;
+    padding: 12px 0;
+    width: 100%;
+    border-radius: 4px;
+    border: 1px solid #c0c0c0;
+    text-indent: 10px;
+    transition: 0.5s;
+}
+.form-control[type=text]:focus{
+    outline: none;
+    box-shadow: 0px 0px 7px 0px #05accd74;
+    border: 1px solid #10a2c3;
+}
+.form-control[type=password]:focus{
+    outline: none;
+    box-shadow: 0px 0px 7px 0px #05accd74;
+    border: 1px solid #10a2c3;
+}
+
+.button{
+    display: block;
+    margin: 18px 0;
+    font-weight: bolder;
+    padding: 14px;
+    width: 100%;
+    border: none;
+    border-radius: 7px;
+    background-color: var(--prime-color);
+    color: white;
+    cursor: pointer;
+    transition: 0.5s;
+}
+.button:hover{
+    color: var(--third-color);
+    background-color: var(--fifth-color);
+    box-shadow: var(--blue-shadow);
+}

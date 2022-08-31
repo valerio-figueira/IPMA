@@ -26,7 +26,7 @@
 /* Slideshow container */
 .slideshow-container {    
     position: relative;
-    margin-top: 6px;
+    margin-top: 6px;    
 }
 .slideshow-container img{
     transition: var(--transition-delay);

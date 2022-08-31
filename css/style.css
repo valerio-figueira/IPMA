@@ -143,6 +143,7 @@ section article{
     padding: 4px 16px 20px 16px;
     margin-top: 12px;
     margin-bottom: 16px;
+    transition: var(--transition-delay);
 }
 section article h1{
     background-color: var(--prime-color);
@@ -226,6 +227,7 @@ HOLERITE
     padding: 0px 16px 0px 16px;
     margin-top: 18px;
     margin-bottom: 28px;
+    transition: var(--transition-delay);
 }
 .holerite h1{
     padding: 2px;
