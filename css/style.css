@@ -605,10 +605,10 @@ RESPONSIVE NAVBAR
     .dropdown .active{
         background-color: #898989;
     }
-    .dropbtn.active{
-        background-color: #21774e;
+    .dropdown.active{
+        background-color: var(--fifth-color);
     }
-  } 
+  }
 
   /*
   RESPONSIVE IMG
