@@ -1,6 +1,6 @@
 /*COPYRIGHT DATE*/
 let year = new Date().getFullYear();
-let copyright = document.querySelector(".copyright");
+const copyright = document.querySelector(".copyright");
 
 copyright.textContent = `Direitos Autorais \u00A9 ${year} - IPMA`;
 
@@ -77,14 +77,14 @@ document.querySelector(".navbar .icon").addEventListener("click", () => {
 });
 
 function openNav() {
-    let navbar = document.getElementById("mobile");
-    let mobileIcon = document.getElementsByClassName("icon")[0];
+    const navbar = document.querySelector(".navbar");
+    const mobileIcon = document.querySelector(".navbar .icon");
         if (navbar.className === "navbar") {
-            navbar.className += " responsive";
-            mobileIcon.className += " active";
+            navbar.classList.add("responsive");
+            mobileIcon.classList.add("active");
         } else {
-            navbar.className = "navbar";
-            mobileIcon.className = "icon";
+            navbar.classList.remove("responsive");
+            mobileIcon.classList.remove("active");
         }
 }
 
@@ -111,3 +111,13 @@ for (const folder of folders) {
     }
     });
 }
+
+
+/*ADD ACTIVE CLASS IN NAVBAR ANCHORs*/
+const currentPath = window.location.href;
+console.log(currentPath)
+document.querySelectorAll(".navbar a").forEach(link => {    
+    if(currentPath.match(link.getAttribute("href"))){
+        link.classList.add("active");
+    }
+});

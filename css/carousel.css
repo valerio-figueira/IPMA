@@ -15,7 +15,7 @@
     --min-width: 360px;
     --solid-border: 1px solid #0000005a;
     --shadow: 0px 0px 4px 2px #00000040;
-    --blue-shadow: 0px 0px 4px 3px #2b9ecc8e;
+    --blue-shadow: 0px 0px 4px 2px #2b9ecc8e;
     --transition-delay: 0.5s;
 }
 
@@ -24,7 +24,7 @@
 }
 
 /* Slideshow container */
-.slideshow-container {    
+.slideshow-container {
     position: relative;
     margin-top: 6px;    
 }

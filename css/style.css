@@ -15,8 +15,9 @@
     --min-width: 360px;
     --solid-border: 1px solid #0000005a;
     --shadow: 0px 0px 4px 2px #00000040;
-    --blue-shadow: 0px 0px 4px 3px #2b9ecc8e;
-    --transition-delay: 0.5s;
+    --blue-shadow: 0px 0px 4px 2px #2b9ecc8e;
+    --short-delay: 0.5s;
+    --long-delay: 0.7s;
 }
 /*CORES INTERESSANTES*/
 /*21774e    (white green (fifth-color))*/
@@ -67,7 +68,7 @@ header h1{
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     line-height: 12px;
     color: var(--second-color);
-    transition: var(--transition-delay);
+    transition: var(--short-delay);
 }
 header h1:hover{
     color: var(--third-color);
@@ -79,7 +80,7 @@ header p{
     position: absolute;
     top: 48px;
     left: 112px;
-    transition: var(--transition-delay);
+    transition: var(--short-delay);
 }
 header p:hover{    
     color: var(--third-color);
@@ -143,7 +144,7 @@ section article{
     padding: 4px 16px 20px 16px;
     margin-top: 12px;
     margin-bottom: 16px;
-    transition: var(--transition-delay);
+    transition: var(--short-delay);
 }
 section article h1{
     background-color: var(--prime-color);
@@ -151,7 +152,7 @@ section article h1{
     padding: 4px;
     padding-left: 6px;
     border-radius: 2px;
-    transition: var(--transition-delay);
+    transition: var(--short-delay);
 }
 section article h1:hover{
     color: var(--third-color);    
@@ -161,7 +162,7 @@ article{
     background-color: var(--article-background);
     box-shadow: var(--shadow);
     display: inline-block;
-    transition: var(--transition-delay);
+    transition: var(--short-delay);
 }
 article:hover{    
     box-shadow: var(--blue-shadow);
@@ -227,7 +228,7 @@ HOLERITE
     padding: 0px 16px 0px 16px;
     margin-top: 18px;
     margin-bottom: 28px;
-    transition: var(--transition-delay);
+    transition: var(--long-delay);
 }
 .holerite h1{
     padding: 2px;
@@ -235,7 +236,7 @@ HOLERITE
     border-radius: 2px;
     background-color: var(--prime-color);
     color: var(--second-color);
-    transition: var(--transition-delay);
+    transition: var(--short-delay);
 }
 .holerite h1:hover{
     color: var(--third-color);
@@ -245,7 +246,7 @@ HOLERITE
     background-color: var(--article-background);
     box-shadow: var(--shadow);
     display: inline-block;
-    transition: var(--transition-delay);
+    transition: var(--short-delay);
 }
 .holerite:hover{    
     box-shadow: var(--blue-shadow);
@@ -267,7 +268,7 @@ HOLERITE
     color: var(--second-color);
     margin: auto;
     padding: 18px;
-    transition: var(--transition-delay);
+    transition: var(--short-delay);
 }
 .transparencia a:hover{
     color: var(--third-color); 
@@ -330,7 +331,7 @@ margin: 0; /* Important for vertical align on mobile phones */
 .navbar a:hover, .dropdown:hover .dropbtn {
 color: var(--prime-color);
 background-color: var(--second-color);
-transition: var(--transition-delay);
+transition: var(--short-delay);
 }
 
 /* Dropdown content (hidden by default) */
@@ -422,7 +423,7 @@ footer p > a:hover{
     text-decoration: none;
     border-radius: 4px;
     box-shadow: var(--shadow);
-    transition: var(--transition-delay);
+    transition: var(--short-delay);
 }
 .scrolltop:hover{
     color: var(--third-color);
@@ -603,6 +604,9 @@ RESPONSIVE NAVBAR
     }
     .dropdown .active{
         background-color: #898989;
+    }
+    .dropbtn.active{
+        background-color: #21774e;
     }
   } 
 
