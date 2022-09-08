@@ -248,6 +248,41 @@ export default class Legislacao{
                 description: ", Instituto de Previdência Municipal de Monte Alegre de Minas, ano 2018.",
                 url: "legislacao/Politica-de-Investimentos-IPMA.pdf"
             }
-        ]
+        ];
+    };
+
+    static getLegislacao(){
+        const page = document.querySelector(".page");  
+        let table = document.querySelectorAll(".legislacao");
+    
+
+            const htmlLeis = Legislacao.getLeis().map(lei => {
+                return `
+                    <tr>
+                        <td>${lei.name}</td>
+                        <td><a href="${lei.url}" target="_blank">📁</a></td>
+                    </tr>
+                `;
+            }).join("");
+            table[0].innerHTML += htmlLeis;
+            
+
+            const htmlLeis1992a2020 = Legislacao.getLeis1992A2020().map(lei => {
+                return `
+                    <tr>
+                        <td>${lei.name}</td>
+                        <td><a href="${lei.url}" target="_blank">📁</a></td>
+                    </tr>
+                `;
+            }).join("");
+            table[1].innerHTML += htmlLeis1992a2020;
+
+            
+            const paragraphs = Legislacao.getParagraphs().map(paragraph => {
+                return `
+                <p><a href="${paragraph.url}" target="_blank">${paragraph.name}</a>${paragraph.description}</p>
+                `;
+            }).join("");
+            page.innerHTML += paragraphs;
     }
 }

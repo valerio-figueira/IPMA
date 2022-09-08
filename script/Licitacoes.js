@@ -48,4 +48,20 @@ export default class Licitacoes{
             }
         ];
     };
+
+    static getLicitacoesHtml(){
+        const table = document.querySelector(".page table")
+        const html = Licitacoes.getLicitacoes().map(licitacao => {
+            return `
+            <tr>
+                <td>${licitacao.processo}</td>
+                <td>${licitacao.modalidade}</td>
+                <td>${licitacao.objeto}</td>
+                <td>${licitacao.status}</td>
+                <td><a href="${licitacao.url}" target="_blank">📁</a></td>
+            </tr>
+            `;
+        }).join("");
+        table.innerHTML += html;
+    }
 };

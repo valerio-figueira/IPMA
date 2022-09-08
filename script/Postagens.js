@@ -22,6 +22,23 @@ export default class Postagens{
                 img: "imgs/pexels-cojanu-alexandru-7389961.jpg",
                 url: "postagens/carteira-do-aposentado.html",
             },
-        ]
-    }
+        ];
+    };
+    
+    static displayPostagens() {
+        const content = document.querySelector(".content-column");
+        const html = Postagens.getPostagens().map(postagem => {
+            return `
+                <article class="post">
+                    <a href="${postagem.url}" class="h1-anchor" rel="next">
+                        <h1>${postagem.name}</h1>
+                    </a>
+                    <img src="${postagem.img}" alt="${postagem.name}">
+                    <p>${postagem.description}</p>
+                    <a href="${postagem.url}" class="read-more">Continue Lendo...</a>
+                </article>
+            `
+        }).join("");
+        content.innerHTML = html;
+    };
 }
