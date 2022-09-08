@@ -7,7 +7,7 @@ export default class Diretoria{
     };
 
 
-    static getDiretoriaHtml(){
+    static getHtml(){
         const page = document.querySelector(".page");
 
         function getName(stringName){

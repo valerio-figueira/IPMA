@@ -251,7 +251,7 @@ export default class Legislacao{
         ];
     };
 
-    static getLegislacao(){
+    static getHtml(){
         const page = document.querySelector(".page");  
         let table = document.querySelectorAll(".legislacao");
     

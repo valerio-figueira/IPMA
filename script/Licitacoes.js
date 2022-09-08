@@ -49,7 +49,7 @@ export default class Licitacoes{
         ];
     };
 
-    static getLicitacoesHtml(){
+    static getHtml(){
         const table = document.querySelector(".page table")
         const html = Licitacoes.getLicitacoes().map(licitacao => {
             return `

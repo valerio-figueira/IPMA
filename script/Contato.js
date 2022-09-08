@@ -2,7 +2,7 @@ export default class Contato{
     constructor() {
     }
 
-    static getContato(){
+    static getHtml(){
 
         const phones = [
             {phone: "(34) 3283-3102"},

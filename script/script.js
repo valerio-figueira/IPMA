@@ -4,6 +4,13 @@ import Postagens from "./Postagens.js";
 import Licitacoes from "./Licitacoes.js";
 import Diretoria from "./Diretoria.js";
 import Contato from "./Contato.js";
+import Unimed from "./convenios/Unimed.js";
+import Uniodonto from "./convenios/Uniodonto.js";
+import OdontoCompany from "./convenios/OdontoCompany.js";
+import Aposentadoria from "./beneficios/Aposentadoria.js";
+import Dependentes from "./beneficios/Dependentes.js";
+import Pensao from "./beneficios/Pensao.js";
+
 
 /*COPYRIGHT DATE*/
 let year = new Date().getFullYear();
@@ -16,9 +23,9 @@ copyright.textContent = `Direitos Autorais \u00A9 ${year} - IPMA`;
 /*
 PORTFOLIUM LINK IN WEBSITE FOOTER
 */
-function addLink(){ 
-    let link = document.querySelector("footer div a");
+let link = document.querySelector("footer div a");
 
+link.addEventListener('mouseenter', () => {
     link.setAttribute("href", "https://valerio-figueira.github.io/portfolio/");
 
     link.className = "fa fa-external-link-square";
@@ -29,9 +36,8 @@ function addLink(){
         link.style.fontSize = "normal";
         link.style.fontWeight = "normal";
         link.className = null;
-    })
-}
-
+    });
+});
 
 
 
@@ -44,15 +50,15 @@ document.querySelector(".navbar .icon").addEventListener("click", () => {
 });
 
 function openNav() {
-    let navbar = document.getElementById("mobile");
-    let mobileIcon = document.getElementsByClassName("icon")[0];
+    const navbar = document.querySelector(".navbar");
+    const mobileIcon = document.querySelector(".navbar .icon");
         if (navbar.className === "navbar") {
-                navbar.className += " responsive";
-                mobileIcon.className += " active";
+            navbar.classList.add("responsive");
+            mobileIcon.classList.add("active");
         } else {
-                navbar.className = "navbar";
-                mobileIcon.className = "icon";
-    }
+            navbar.classList.remove("responsive");
+            mobileIcon.classList.remove("active");
+        }
 }
 
 
@@ -62,6 +68,7 @@ function openNav() {
 //CURRENT PATH NAME
 const path = location.pathname;
 
+
 if(path.match("/index.html")){
 
     Slides.getSlides();
@@ -69,30 +76,52 @@ if(path.match("/index.html")){
 
 } else if(path.match("/legislacao.html")){
 
-    Legislacao.getLegislacao();
+    Legislacao.getHtml();
 
 } else if(path.match("/licitacoes.html")){
 
-    Licitacoes.getLicitacoesHtml();
+    Licitacoes.getHtml();
 
 } else if(path.match("/diretoria.html")){
 
-    Diretoria.getDiretoriaHtml();
+    Diretoria.getHtml();
 
 } else if(path.match("/contato.html")){
 
-    Contato.getContato();
+    Contato.getHtml();
 
-}
+};
 
-//CONVÊNIOS SECTIONS
+//CONVÊNIOS
 if(path.match("/convenios/unimed.html")){
-    
+
+    Unimed.getHtml();
+
 } else if(path.match("/convenios/uniodonto.html")){
+
+    Uniodonto.getHtml();
 
 } else if(path.match("/convenios/odontocompany.html")){
 
-}
+    OdontoCompany.getHtml();
+
+};
+
+
+//BENEFÍCIOS
+if(path.match("/beneficios/aposentadoria.html")){
+
+    Aposentadoria.getHtml();
+
+} else if(path.match("/beneficios/dependentes.html")){
+
+    Dependentes.getHtml();
+
+} else if(path.match("/beneficios/pensao.html")){
+
+    Pensao.getHtml();
+
+};
 
 
 
@@ -113,7 +142,17 @@ function openFolder(){
                     content.classList.remove("open");
                     content.style.maxHeight = "0";
                     content.style.paddingBottom = "0px";
-            }
+            };
         });
-    }
-}
+    };
+};
+
+
+/*ADD ACTIVE CLASS IN NAVBAR ANCHORS*/
+const currentPath = window.location.href;
+document.querySelectorAll(".navbar a").forEach(anchor => {
+    if(currentPath.match(anchor.getAttribute("href"))){
+        console.log("Success")
+        anchor.classList.add("active");
+    };
+});
