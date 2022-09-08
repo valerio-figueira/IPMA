@@ -73,22 +73,27 @@ if(path.match("/index.html")){
 
     Slides.getSlides();
     Postagens.displayPostagens();
+    getLoginForm();
 
 } else if(path.match("/legislacao.html")){
 
     Legislacao.getHtml();
+    getLoginForm();
 
 } else if(path.match("/licitacoes.html")){
 
     Licitacoes.getHtml();
+    getLoginForm();
 
 } else if(path.match("/diretoria.html")){
 
     Diretoria.getHtml();
+    getLoginForm();
 
 } else if(path.match("/contato.html")){
 
     Contato.getHtml();
+    getLoginForm();
 
 };
 
@@ -96,14 +101,17 @@ if(path.match("/index.html")){
 if(path.match("/convenios/unimed.html")){
 
     Unimed.getHtml();
+    getLoginForm();
 
 } else if(path.match("/convenios/uniodonto.html")){
 
     Uniodonto.getHtml();
+    getLoginForm();
 
 } else if(path.match("/convenios/odontocompany.html")){
 
     OdontoCompany.getHtml();
+    getLoginForm();
 
 };
 
@@ -112,14 +120,17 @@ if(path.match("/convenios/unimed.html")){
 if(path.match("/beneficios/aposentadoria.html")){
 
     Aposentadoria.getHtml();
+    getLoginForm();
 
 } else if(path.match("/beneficios/dependentes.html")){
 
     Dependentes.getHtml();
+    getLoginForm();
 
 } else if(path.match("/beneficios/pensao.html")){
 
     Pensao.getHtml();
+    getLoginForm();
 
 };
 
@@ -156,3 +167,23 @@ document.querySelectorAll(".navbar a").forEach(anchor => {
         anchor.classList.add("active");
     };
 });
+
+
+
+/*LOGIN IN SIDECOLUMN*/
+function getLoginForm(){
+    document.querySelector(".holerite").innerHTML = `
+    <h1>Holerite</h1>
+    <div class="login-form">
+        <form class="form-signin" method="POST" name="WFRLogon" action="https://aspprevweb.com.br:8097/logon.do"  target="_blank" >
+          <input name="dataConnection" type="hidden" value="MonteAlegreDeMinas" />
+          <p style="text-align: left;"><input name="sys" type="hidden" value="AUT" />
+          <label for="inputCPF" class="sr-only"></label>
+          <input type="text" id="cpf" name="user" class="form-control" placeholder="Digite o CPF" required>
+          <label for="inputPassword" class="sr-only"></label>
+          <input type="password" name="password" class="form-control" placeholder="Digite a Senha" required>
+          <button class="button" type="submit">Acessar</button>
+        </form>
+    </div>
+    `;
+};
