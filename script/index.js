@@ -42,26 +42,6 @@ link.addEventListener('mouseenter', () => {
 
 
 
-/*
-MOBILE NAV
-*/
-document.querySelector(".navbar .icon").addEventListener("click", () => {
-    openNav()
-});
-
-function openNav() {
-    const navbar = document.querySelector(".navbar");
-    const mobileIcon = document.querySelector(".navbar .icon");
-        if (navbar.className === "navbar") {
-            navbar.classList.add("responsive");
-            mobileIcon.classList.add("active");
-        } else {
-            navbar.classList.remove("responsive");
-            mobileIcon.classList.remove("active");
-        }
-}
-
-
 
 
 
@@ -71,45 +51,56 @@ const path = location.pathname;
 
 if(path.match("/index.html")){
 
+    getNav();
     Slides.getSlides();
     Postagens.displayPostagens();
     getLoginForm();
 
 } else if(path.match("/legislacao.html")){
 
+    getNav();
     Legislacao.getHtml();
     getLoginForm();
+    
 
 } else if(path.match("/licitacoes.html")){
 
+    getNav();
     Licitacoes.getHtml();
     getLoginForm();
 
 } else if(path.match("/diretoria.html")){
 
+    getNav();
     Diretoria.getHtml();
     getLoginForm();
 
 } else if(path.match("/contato.html")){
 
+    getNav();
     Contato.getHtml();
     getLoginForm();
 
-};
+} else if(path.match("/login.html")){
+    getNav();
+}
 
 //CONVÊNIOS
 if(path.match("/convenios/unimed.html")){
 
+    getNav();
     Unimed.getHtml();
     getLoginForm();
 
 } else if(path.match("/convenios/uniodonto.html")){
 
+    getNav();
     Uniodonto.getHtml();
     getLoginForm();
 
 } else if(path.match("/convenios/odontocompany.html")){
 
+    getNav();
     OdontoCompany.getHtml();
     getLoginForm();
 
@@ -119,16 +110,19 @@ if(path.match("/convenios/unimed.html")){
 //BENEFÍCIOS
 if(path.match("/beneficios/aposentadoria.html")){
 
+    getNav();
     Aposentadoria.getHtml();
     getLoginForm();
 
 } else if(path.match("/beneficios/dependentes.html")){
 
+    getNav();
     Dependentes.getHtml();
     getLoginForm();
 
 } else if(path.match("/beneficios/pensao.html")){
 
+    getNav();
     Pensao.getHtml();
     getLoginForm();
 
@@ -186,4 +180,54 @@ function getLoginForm(){
         </form>
     </div>
     `;
+};
+
+
+function getNav(){
+    document.querySelector(".navbar").innerHTML = `
+    <a href="../index.html" class="fa fa-home" id="home"></a>
+    <a href="../login.html" class="login">Login</a>
+    <a href="../legislacao.html">Legislação</a>
+    <div class="dropdown">
+      <div class="dropbtn">Convênios
+        <div class="arrow">&#9698;</div>
+      </div>
+      <div class="dropdown-content">
+        <a href="../convenios/unimed.html">Unimed</a>
+        <a href="../convenios/uniodonto.html">Uniodonto</a>
+        <a href="../convenios/odontocompany.html">Odonto Company</a>
+      </div>
+    </div>
+    <div class="dropdown">
+        <div class="dropbtn">Benefícios
+          <div class="arrow">&#9698;</div>
+        </div>
+        <div class="dropdown-content">
+          <a href="../beneficios/pensao.html">Pensão</a>
+          <a href="../beneficios/aposentadoria.html">Aposentadoria</a>
+          <a href="../beneficios/dependentes.html">Dependentes</a>
+        </div>
+      </div>
+    <a href="../licitacoes.html">Licitações</a>
+    <a href="../diretoria.html">Diretoria</a>
+    <a href="../contato.html">Contato</a>
+    <a class="icon">
+        <span class="fa fa-bars"></span>
+    </a>
+    `;
+    
+    /*
+    MOBILE NAV
+    */
+    document.querySelector(".navbar .icon").addEventListener("click", () => {
+        const navbar = document.querySelector(".navbar");
+        const mobileIcon = document.querySelector(".navbar .icon");
+        if (navbar.className === "navbar") {
+            navbar.classList.add("responsive");
+            mobileIcon.classList.add("active");
+        } else {
+            navbar.classList.remove("responsive");
+            mobileIcon.classList.remove("active");
+        }
+    });
 };
