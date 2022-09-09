@@ -46,7 +46,6 @@ link.addEventListener("mouseleave", function(){
 //CURRENT PATH NAME
 const path = location.pathname;
 
-
 if(path.match("/index.html")){
 
     getHeader("./");
@@ -87,62 +86,65 @@ if(path.match("/index.html")){
 } else if(path.match("/login.html")){
     getHeader("./");
     getNav("./");
+} else {
+    if(path.match("/convenios/unimed.html")){
+
+        getHeader("../");
+        getNav("../");
+        Unimed.getHtml();
+        getLoginForm();
+        pullAllElement(".dropdown")[0].classList.add("active");
+    
+    } else if(path.match("/convenios/uniodonto.html")){
+    
+        getHeader("../");
+        getNav("../");
+        Uniodonto.getHtml();
+        getLoginForm();
+        pullAllElement(".dropdown")[0].classList.add("active");
+    
+    } else if(path.match("/convenios/odontocompany.html")){
+    
+        getHeader("../");
+        getNav("../");
+        OdontoCompany.getHtml();
+        getLoginForm();
+        pullAllElement(".dropdown")[0].classList.add("active");
+    
+    } else if(path.match("/beneficios/aposentadoria.html")){
+
+        getHeader("../");
+        getNav("../");
+        Aposentadoria.getHtml();
+        getLoginForm();
+        pullAllElement(".dropdown")[1].classList.add("active");
+    
+    } else if(path.match("/beneficios/dependentes.html")){
+    
+        getHeader("../");
+        getNav("../");
+        Dependentes.getHtml();
+        getLoginForm();
+        pullAllElement(".dropdown")[1].classList.add("active");
+    
+    } else if(path.match("/beneficios/pensao.html")){
+    
+        getHeader("../");
+        getNav("../");
+        Pensao.getHtml();
+        getLoginForm();
+        pullAllElement(".dropdown")[1].classList.add("active");
+    
+    } else {
+        const backHomePage = (path) => {
+            window.open(path, "_self");
+        }
+        backHomePage("./index.html");
+    }
 }
 
-//CONVÊNIOS
-if(path.match("/convenios/unimed.html")){
-
-    getHeader("../");
-    getNav("../");
-    Unimed.getHtml();
-    getLoginForm();
-    pullAllElement(".dropdown")[0].classList.add("active");
-
-} else if(path.match("/convenios/uniodonto.html")){
-
-    getHeader("../");
-    getNav("../");
-    Uniodonto.getHtml();
-    getLoginForm();
-    pullAllElement(".dropdown")[0].classList.add("active");
-
-} else if(path.match("/convenios/odontocompany.html")){
-
-    getHeader("../");
-    getNav("../");
-    OdontoCompany.getHtml();
-    getLoginForm();
-    pullAllElement(".dropdown")[0].classList.add("active");
-
-};
 
 
-//BENEFÍCIOS
-if(path.match("/beneficios/aposentadoria.html")){
-
-    getHeader("../");
-    getNav("../");
-    Aposentadoria.getHtml();
-    getLoginForm();
-    pullAllElement(".dropdown")[1].classList.add("active");
-
-} else if(path.match("/beneficios/dependentes.html")){
-
-    getHeader("../");
-    getNav("../");
-    Dependentes.getHtml();
-    getLoginForm();
-    pullAllElement(".dropdown")[1].classList.add("active");
-
-} else if(path.match("/beneficios/pensao.html")){
-
-    getHeader("../");
-    getNav("../");
-    Pensao.getHtml();
-    getLoginForm();
-    pullAllElement(".dropdown")[1].classList.add("active");
-
-};
 
 
 
