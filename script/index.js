@@ -59,8 +59,7 @@ if(path.match("/index.html")){
     getHeader("./");
     getNav("./");
     Legislacao.getHtml();
-    getLoginForm();
-    
+    getLoginForm();    
 
 } else if(path.match("/licitacoes.html")){
 
@@ -112,7 +111,7 @@ if(path.match("/index.html")){
         pullAllElement(".dropdown")[0].classList.add("active");
     
     } else if(path.match("/beneficios/aposentadoria.html")){
-
+    
         getHeader("../");
         getNav("../");
         Aposentadoria.getHtml();
@@ -142,6 +141,9 @@ if(path.match("/index.html")){
         backHomePage("./index.html");
     }
 }
+
+
+
 
 
 
