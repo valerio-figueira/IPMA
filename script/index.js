@@ -51,6 +51,7 @@ const path = location.pathname;
 
 if(path.match("/index.html")){
 
+    getHeader();
     getNav();
     Slides.getSlides();
     Postagens.displayPostagens();
@@ -58,6 +59,7 @@ if(path.match("/index.html")){
 
 } else if(path.match("/legislacao.html")){
 
+    getHeader();
     getNav();
     Legislacao.getHtml();
     getLoginForm();
@@ -65,41 +67,48 @@ if(path.match("/index.html")){
 
 } else if(path.match("/licitacoes.html")){
 
+    getHeader();
     getNav();
     Licitacoes.getHtml();
     getLoginForm();
 
 } else if(path.match("/diretoria.html")){
 
+    getHeader();
     getNav();
     Diretoria.getHtml();
     getLoginForm();
 
 } else if(path.match("/contato.html")){
 
+    getHeader();
     getNav();
     Contato.getHtml();
     getLoginForm();
 
 } else if(path.match("/login.html")){
+    getHeader();
     getNav();
 }
 
 //CONVÊNIOS
 if(path.match("/convenios/unimed.html")){
 
+    getHeader();
     getNav();
     Unimed.getHtml();
     getLoginForm();
 
 } else if(path.match("/convenios/uniodonto.html")){
 
+    getHeader();
     getNav();
     Uniodonto.getHtml();
     getLoginForm();
 
 } else if(path.match("/convenios/odontocompany.html")){
 
+    getHeader();
     getNav();
     OdontoCompany.getHtml();
     getLoginForm();
@@ -110,18 +119,21 @@ if(path.match("/convenios/unimed.html")){
 //BENEFÍCIOS
 if(path.match("/beneficios/aposentadoria.html")){
 
+    getHeader();
     getNav();
     Aposentadoria.getHtml();
     getLoginForm();
 
 } else if(path.match("/beneficios/dependentes.html")){
 
+    getHeader();
     getNav();
     Dependentes.getHtml();
     getLoginForm();
 
 } else if(path.match("/beneficios/pensao.html")){
 
+    getHeader();
     getNav();
     Pensao.getHtml();
     getLoginForm();
@@ -231,3 +243,17 @@ function getNav(){
         }
     });
 };
+
+function getHeader(){
+    document.querySelector("header").innerHTML = `
+        <a href="index.html" target="_self">
+            <img src="imgs/brasão.png" alt="brasão" class="brasão">
+        </a>
+        <a href="index.html" target="_self">
+            <h1>IPMA</h1>
+        </a>
+        <a href="index.html" target="_self">
+            <p>Instituto de Previdência Municipal de Monte Alegre de Minas</p>
+        </a>
+    `;
+}
