@@ -31,14 +31,12 @@ link.addEventListener('mouseenter', () => {
     link.className = "fa fa-external-link-square";
     link.style.fontSize = "normal";
     link.style.transition = "font-size 0.5s";
-
-    link.addEventListener("mouseleave", function(){
-        link.style.fontSize = "normal";
-        link.style.fontWeight = "normal";
-        link.className = null;
-    });
 });
-
+link.addEventListener("mouseleave", function(){
+    link.style.fontSize = "normal";
+    link.style.fontWeight = "normal";
+    link.className = null;
+});
 
 
 
@@ -51,67 +49,70 @@ const path = location.pathname;
 
 if(path.match("/index.html")){
 
-    getHeader();
-    getNav();
+    getHeader("./");
+    getNav("./");
     Slides.getSlides();
     Postagens.displayPostagens();
     getLoginForm();
 
 } else if(path.match("/legislacao.html")){
 
-    getHeader();
-    getNav();
+    getHeader("./");
+    getNav("./");
     Legislacao.getHtml();
     getLoginForm();
     
 
 } else if(path.match("/licitacoes.html")){
 
-    getHeader();
-    getNav();
+    getHeader("./");
+    getNav("./");
     Licitacoes.getHtml();
     getLoginForm();
 
 } else if(path.match("/diretoria.html")){
 
-    getHeader();
-    getNav();
+    getHeader("./");
+    getNav("./");
     Diretoria.getHtml();
     getLoginForm();
 
 } else if(path.match("/contato.html")){
 
-    getHeader();
-    getNav();
+    getHeader("./");
+    getNav("./");
     Contato.getHtml();
     getLoginForm();
 
 } else if(path.match("/login.html")){
-    getHeader();
-    getNav();
+    getHeader("./");
+    getNav("./");
 }
 
 //CONVÊNIOS
 if(path.match("/convenios/unimed.html")){
 
-    getHeader();
-    getNav();
+    getHeader("../");
+    getNav("../");
     Unimed.getHtml();
     getLoginForm();
+    pullAllElement(".dropdown")[0].classList.add("active");
 
 } else if(path.match("/convenios/uniodonto.html")){
 
-    getHeader();
-    getNav();
+    getHeader("../");
+    getNav("../");
     Uniodonto.getHtml();
     getLoginForm();
+    pullAllElement(".dropdown")[0].classList.add("active");
 
 } else if(path.match("/convenios/odontocompany.html")){
 
-    getHeader();
-    getNav();
+    getHeader("../");
+    getNav("../");
     OdontoCompany.getHtml();
     getLoginForm();
+    pullAllElement(".dropdown")[0].classList.add("active");
 
 };
 
@@ -119,24 +120,27 @@ if(path.match("/convenios/unimed.html")){
 //BENEFÍCIOS
 if(path.match("/beneficios/aposentadoria.html")){
 
-    getHeader();
-    getNav();
+    getHeader("../");
+    getNav("../");
     Aposentadoria.getHtml();
     getLoginForm();
+    pullAllElement(".dropdown")[1].classList.add("active");
 
 } else if(path.match("/beneficios/dependentes.html")){
 
-    getHeader();
-    getNav();
+    getHeader("../");
+    getNav("../");
     Dependentes.getHtml();
     getLoginForm();
+    pullAllElement(".dropdown")[1].classList.add("active");
 
 } else if(path.match("/beneficios/pensao.html")){
 
-    getHeader();
-    getNav();
+    getHeader("../");
+    getNav("../");
     Pensao.getHtml();
     getLoginForm();
+    pullAllElement(".dropdown")[1].classList.add("active");
 
 };
 
@@ -195,19 +199,19 @@ function getLoginForm(){
 };
 
 
-function getNav(){
+function getNav(path){
     document.querySelector(".navbar").innerHTML = `
-    <a href="../index.html" class="fa fa-home" id="home"></a>
-    <a href="../login.html" class="login">Login</a>
-    <a href="../legislacao.html">Legislação</a>
+    <a href="${path}index.html" class="fa fa-home" id="home"></a>
+    <a href="${path}login.html" class="login">Login</a>
+    <a href="${path}legislacao.html">Legislação</a>
     <div class="dropdown">
       <div class="dropbtn">Convênios
         <div class="arrow">&#9698;</div>
       </div>
       <div class="dropdown-content">
-        <a href="../convenios/unimed.html">Unimed</a>
-        <a href="../convenios/uniodonto.html">Uniodonto</a>
-        <a href="../convenios/odontocompany.html">Odonto Company</a>
+        <a href="${path}convenios/unimed.html">Unimed</a>
+        <a href="${path}convenios/uniodonto.html">Uniodonto</a>
+        <a href="${path}convenios/odontocompany.html">Odonto Company</a>
       </div>
     </div>
     <div class="dropdown">
@@ -215,14 +219,14 @@ function getNav(){
           <div class="arrow">&#9698;</div>
         </div>
         <div class="dropdown-content">
-          <a href="../beneficios/pensao.html">Pensão</a>
-          <a href="../beneficios/aposentadoria.html">Aposentadoria</a>
-          <a href="../beneficios/dependentes.html">Dependentes</a>
+          <a href="${path}beneficios/pensao.html">Pensão</a>
+          <a href="${path}beneficios/aposentadoria.html">Aposentadoria</a>
+          <a href="${path}beneficios/dependentes.html">Dependentes</a>
         </div>
       </div>
-    <a href="../licitacoes.html">Licitações</a>
-    <a href="../diretoria.html">Diretoria</a>
-    <a href="../contato.html">Contato</a>
+    <a href="${path}licitacoes.html">Licitações</a>
+    <a href="${path}diretoria.html">Diretoria</a>
+    <a href="${path}contato.html">Contato</a>
     <a class="icon">
         <span class="fa fa-bars"></span>
     </a>
@@ -244,16 +248,23 @@ function getNav(){
     });
 };
 
-function getHeader(){
+function getHeader(path){
     document.querySelector("header").innerHTML = `
         <a href="index.html" target="_self">
-            <img src="imgs/brasão.png" alt="brasão" class="brasão">
+            <img src="${path}imgs/brasão.png" alt="brasão" class="brasão">
         </a>
-        <a href="index.html" target="_self">
+        <a href="${path}index.html" target="_self">
             <h1>IPMA</h1>
         </a>
-        <a href="index.html" target="_self">
+        <a href="${path}index.html" target="_self">
             <p>Instituto de Previdência Municipal de Monte Alegre de Minas</p>
         </a>
     `;
+}
+
+function pullElement(element){
+    return document.querySelector(element);
+}
+function pullAllElement(element){
+    return document.querySelectorAll(element);
 }
