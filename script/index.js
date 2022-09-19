@@ -1,11 +1,3 @@
-import Header from "./partials/header.js";
-import Footer from "./partials/footer.js";
-
-//HEADER AND FOOTER HTML
-document.querySelector("header").innerHTML = Header.getHtml();
-document.querySelector("footer").innerHTML = Footer.getHtml();
-
-
 /*COPYRIGHT DATE*/
 let year = new Date().getFullYear();
 const copyright = document.querySelector(".copyright");
@@ -17,23 +9,20 @@ copyright.textContent = `Direitos Autorais \u00A9 ${year} - IPMA`;
 /*
 PORTFOLIUM LINK IN WEBSITE FOOTER
 */
-addLink();
 function addLink(){
-    let link = document.querySelector("footer .creator_link");
+    let link = document.querySelector("footer div a");
 
-    link.addEventListener('mouseenter', () => {
-        link.setAttribute("href", "https://valerio-figueira.github.io/portfolio/");
+    link.setAttribute("href", "https://valerio-figueira.github.io/portfolio/");
 
-        link.className = "fa fa-external-link-square";
+    link.className = "fa fa-external-link-square";
+    link.style.fontSize = "normal";
+    link.style.transition = "font-size 0.5s";
+
+    link.addEventListener("mouseleave", function(){
         link.style.fontSize = "normal";
-        link.style.transition = "font-size 0.5s";
-    
-        link.addEventListener("mouseleave", function(){
-            link.style.fontSize = "normal";
-            link.style.fontWeight = "normal";
-            link.className = null;
-        });
-    })
+        link.style.fontWeight = "normal";
+        link.className = null;
+    });
 }
 
 
@@ -132,5 +121,3 @@ document.querySelectorAll(".navbar a").forEach(link => {
         link.classList.add("active");
     }
 });
-
-
