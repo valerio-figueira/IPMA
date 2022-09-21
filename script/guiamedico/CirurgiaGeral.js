@@ -666,25 +666,184 @@ export default class Name{
             },
             {
                 tipo: "Médico",
-                cod: "",
-                nome: "",
+                cod: "43190",
+                nome: "Marcelo de Oliveira Rodrigues da Cunha",
                 especialidade: "Cirurgia Geral",
                 localidade: "Uberlandia - MG",
-                endereço: "",
-                bairro: "",
-                telefone: ""
+                endereço: "R. Rafael Marino Neto, Nº 600",
+                bairro: "Jardim Karaiba",
+                telefone: "34 3233-1500 / 34 99801-1296"
             },
             {
                 tipo: "Médico",
-                cod: "",
-                nome: "",
+                cod: "40096",
+                nome: "Marcelo Ribeiro Lima",
                 especialidade: "Cirurgia Geral",
                 localidade: "Uberlandia - MG",
-                endereço: "",
-                bairro: "",
-                telefone: ""
+                endereço: "Av. Getulio Vargas, Nº 888",
+                bairro: "Martins",
+                telefone: "34 3255-7979"
             },
-
-        ]
-    }
+            {
+                tipo: "Médico",
+                cod: "39324",
+                nome: "Marcelo Takeo Rufato Okano",
+                especialidade: "Cirurgia Geral",
+                localidade: "Uberlandia - MG",
+                endereço: "R. Artur Bernardes, Nº 131",
+                bairro: "Martins",
+                telefone: "34 3219-7777"
+            },
+            {
+                tipo: "Médico",
+                cod: "51028",
+                nome: "Marla Lorena Martins da Silva",
+                especialidade: "Cirurgia Geral",
+                localidade: "Uberlandia - MG",
+                endereço: "R. Rafael Marino Neto, Nº 600",
+                bairro: "Jardim Karaiba",
+                telefone: "34 3253-1225 / 34 998280-6464"
+            },
+            {
+                tipo: "Médico",
+                cod: "13038",
+                nome: "Osvaldo Hernandes Consentino",
+                especialidade: "Cirurgia Geral",
+                localidade: "Uberlandia - MG",
+                endereço: "Av. Nicomedes Alves dos Santos, Nº 142",
+                bairro: "Morada da Colina",
+                telefone: "34 3700-5000"
+            },
+            {
+                tipo: "Médico",
+                cod: "32148",
+                nome: "Presley Aparecido da Silva Ramos",
+                especialidade: "Cirurgia Geral",
+                localidade: "Uberlandia - MG",
+                endereço: "R. Maria Dirce Ribeiro, Nº 560",
+                bairro: "Santa Monica",
+                telefone: "34 3210-7200"
+            },
+            {
+                tipo: "Médico",
+                cod: "14045",
+                nome: "Relton Cunha",
+                especialidade: "Cirurgia Geral",
+                localidade: "Uberlandia - MG",
+                endereço: "Av. Joao Pinheiro, Nº 1180",
+                bairro: "Nossa Senhora Aparecida",
+                telefone: "34 3292-3800"
+            },
+            {
+                tipo: "Médico",
+                cod: "14045",
+                nome: "Relton Cunha",
+                especialidade: "Cirurgia Geral",
+                localidade: "Uberlandia - MG",
+                endereço: "R. Arthur Bernardes, Nº 555",
+                bairro: "Presidente Roosevelt",
+                telefone: "34 3239-0105 / 34 3239-0155"
+            },
+            {
+                tipo: "Médico",
+                cod: "34648",
+                nome: "Renato Hugues Atique Claudio",
+                especialidade: "Cirurgia Geral",
+                localidade: "Uberlandia - MG",
+                endereço: "Av. Getulio Vargas, Nº 689",
+                bairro: "Centro",
+                telefone: "34 3291-2600"
+            },
+            {
+                tipo: "Médico",
+                cod: "60147",
+                nome: "Roberto Mundim Porto Filho",
+                especialidade: "Cirurgia Geral",
+                localidade: "Uberlandia - MG",
+                endereço: "R. Rafael Marino Neto, Nº 600",
+                bairro: "Jardim Karaiba",
+                telefone: "34 3253-1225"
+            },
+            {
+                tipo: "Médico",
+                cod: "60147",
+                nome: "Roberto Mundim Porto Filho",
+                especialidade: "Cirurgia Geral",
+                localidade: "Uberlandia - MG",
+                endereço: "Av. Francisco Ribeiro, Nº 1140",
+                bairro: "Santa Monica",
+                telefone: "34 3239-2200"
+            },
+            {
+                tipo: "Médico",
+                cod: "60147",
+                nome: "Roberto Mundim Porto Filho",
+                especialidade: "Cirurgia Geral",
+                localidade: "Uberlandia - MG",
+                endereço: "Av. Getulio Vargas, Nº 689",
+                bairro: "Centro",
+                telefone: "34 3291-2600 / 34 99779-2600"
+            },
+            {
+                tipo: "Médico",
+                cod: "21860",
+                nome: "Samir Mendes Amui",
+                especialidade: "Cirurgia Geral",
+                localidade: "Uberlandia - MG",
+                endereço: "R. Tenente Reis, Nº 1120",
+                bairro: "Centro",
+                telefone: "34 3431-5299"
+            },
+            {
+                tipo: "Médico",
+                cod: "22648",
+                nome: "Savio de Moraes",
+                especialidade: "Cirurgia Geral",
+                localidade: "Uberlandia - MG",
+                endereço: "Av. Getúlio Vargas, Nº 757",
+                bairro: "Tabajaras",
+                telefone: "34 3236-6836 / 34 3236-8719 / 34 9646-4182"
+            },
+            {
+                tipo: "Médico",
+                cod: "20003",
+                nome: "Sergio Santiago",
+                especialidade: "Cirurgia Geral",
+                localidade: "Uberlandia - MG",
+                endereço: "R. Prof Guaraciaba dos Santos, Nº 145",
+                bairro: "Tabajaras",
+                telefone: "34 3235-3178"
+            },
+            {
+                tipo: "Médico",
+                cod: "72363",
+                nome: "Tulio Fabiano de Oliveira Leite",
+                especialidade: "Cirurgia Geral",
+                localidade: "Uberlandia - MG",
+                endereço: "R. Marques Povoa, Nº 88",
+                bairro: "Osvaldo Rezende",
+                telefone: "34 3236-6600"
+            },
+            {
+                tipo: "Médico",
+                cod: "50651",
+                nome: "Vinicio Marques Martins",
+                especialidade: "Cirurgia Geral",
+                localidade: "Uberlandia - MG",
+                endereço: "Av. Getulio Vargas, Nº 689",
+                bairro: "Centro",
+                telefone: "34 3291-2600"
+            },
+            {
+                tipo: "Médico",
+                cod: "50651",
+                nome: "Vinicio Marques Martins",
+                especialidade: "Cirurgia Geral",
+                localidade: "Uberlandia - MG",
+                endereço: "R. Rafael Marino Neto, Nº 600",
+                bairro: "Jardim Karaiba",
+                telefone: "34 3253-1225 / 34 99280-6464"
+            },
+        ];
+    };
 };
