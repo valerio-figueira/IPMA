@@ -1,3 +1,12 @@
+import { Acupuntura } from './guiamedico/Acupuntura.js';
+import { AlergiaEImunologia } from './guiamedico/AlergiaEImunologia.js';
+import { Anestesiologia } from './guiamedico/Anestesiologia.js';
+import { Angiologia } from './guiamedico/Angiologia.js';
+import { Audiometria } from './guiamedico/Audiometria.js';
+import { Cardiologia } from './guiamedico/Cardiologia.js';
+import { CirurgiaAparelhoDigestivo } from './guiamedico/CirurgiaAparelhoDigestivo.js';
+import { CirurgiaGeral } from './guiamedico/CirurgiaGeral.js';
+
 /*COPYRIGHT DATE*/
 let year = new Date().getFullYear();
 const copyright = document.querySelector(".copyright");
@@ -85,8 +94,8 @@ function openNav() {
         } else {
             navbar.classList.remove("responsive");
             mobileIcon.classList.remove("active");
-        }
-}
+        };
+};
 
 
 
@@ -110,7 +119,7 @@ for (const folder of folders) {
         content.style.paddingBottom = "0px";
     }
     });
-}
+};
 
 
 /*ADD ACTIVE CLASS IN NAVBAR ANCHORs*/
@@ -119,5 +128,91 @@ console.log(currentPath)
 document.querySelectorAll(".navbar a").forEach(link => {    
     if(currentPath.match(link.getAttribute("href"))){
         link.classList.add("active");
-    }
+    };
 });
+
+
+/*UNIMED SECTION*/
+const selectionTag = document.querySelector('#search-unimed')
+if(selectionTag){
+    searchDoctors()
+}
+
+function searchDoctors(){
+    ;
+    const categories = {
+        Acupuntura : Acupuntura,
+        AlergiaEImunologia: AlergiaEImunologia,
+        Anestesiologia: Anestesiologia,
+        Angiologia: Angiologia,
+        Audiometria: Audiometria,
+        Cardiologia: Cardiologia,
+        CirurgiaAparelhoDigestivo: CirurgiaAparelhoDigestivo,
+        CirurgiaGeral: CirurgiaGeral,
+    };
+
+    selectionTag.addEventListener('change', () => {
+        Object.keys(categories).forEach(category => {
+            if(selectionTag.value.match(category)){
+                renderSelectedCategory(categories[category])
+                console.log(categories[category])
+            };
+        });
+    });
+};
+
+function renderSelectedCategory(object){
+    document.querySelector('.medicos')
+    .innerHTML = `
+    <table>
+        <thead>
+            <tr>
+                <th>Código</th>
+                <th>Nome</th>
+                <th>Especialidade</th>
+                <th>Endereço</th>
+                <th>Bairro</th>
+                <th>Telefone</th>
+            </tr>
+        </thead>
+
+        <tbody class="rendered-section"></tbody>
+        
+    </table>
+    `;
+
+    document.querySelector('.medicos .rendered-section')
+    .innerHTML = object.map(doctor => {
+        return `
+        <tr>
+            <td>${doctor.cod}</td>
+            <td>${doctor.nome}</td>
+            <td>${doctor.especialidade}</td>
+            <td>${doctor.endereço}</td>
+            <td>${doctor.bairro}</td>
+            <td>${doctor.telefone}</td>
+        </tr>
+        `;
+    }).join('');
+};
+
+const login = document.querySelector('.holerite');
+if(login){
+    getLoginForm();
+};
+function getLoginForm(){
+    document.querySelector(".holerite").innerHTML = `
+    <h1>Holerite</h1>
+    <div class="login-form">
+        <form class="form-signin" method="POST" name="WFRLogon" action="https://aspprevweb.com.br:8097/logon.do"  target="_blank" >
+          <input name="dataConnection" type="hidden" value="MonteAlegreDeMinas" />
+          <p style="text-align: left;"><input name="sys" type="hidden" value="AUT" />
+          <label for="inputCPF" class="sr-only"></label>
+          <input type="text" id="cpf" name="user" class="form-control" placeholder="Digite o CPF" required>
+          <label for="inputPassword" class="sr-only"></label>
+          <input type="password" name="password" class="form-control" placeholder="Digite a Senha" required>
+          <button class="button" type="submit">Acessar</button>
+        </form>
+    </div>
+    `;
+};

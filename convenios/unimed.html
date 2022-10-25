@@ -8,8 +8,7 @@
     <link rel="shortcut icon" href="../imgs/favicon.png" type="image/x-icon">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="../css/style.css">
-    <link rel="stylesheet" href="../css/page.css">
-    <script src="../script/index.js" defer></script>
+    <script src="../script/index.js" defer type="module"></script>
 </head>
 
 <body>
@@ -110,6 +109,23 @@
                     <p>Em desenvolvimento.</p>
                 </div>
 
+
+                <div class="unimed-container">
+                    <h2>Pesquisar Médicos por Categoria</h2>
+                    <select name="search-unimed" id="search-unimed">
+                        <option value="">Selecione</option>
+                        <option value="Acupuntura">Acupuntura</option>
+                        <option value="AlergiaEImunologia">Alergia e Imunologia</option>
+                        <option value="Anestesiologia">Anestesiologia</option>
+                        <option value="Angiologia">Angiologia</option>
+                        <option value="Audiometria">Audiometria</option>
+                        <option value="Cardiologia">Cardiologia</option>
+                        <option value="CirurgiaAparelhoDigestivo">Cirurgia Aparelho Digestivo</option>
+                        <option value="CirurgiaGeral">Cirurgia Geral</option>
+                    </select>
+                </div>
+
+                <div class="medicos"></div>
                
                 <div class="flex-center">
                     <a href="https://www.unimeduberlandia.coop.br/" rel="external" target="_blank"><img src="../imgs/unimed.svg" alt="unimed" id="unimed-logo"></a>
@@ -128,10 +144,7 @@
             <div class="transparencia">
                 <a href="../transparencia-publica.html">Transparência Pública</a>
             </div>
-            <div class="holerite">
-                <h1>Holerite</h1>
-                <iframe class="embed-responsive-item" src="../contracheque/login.html" scrolling="no" width="256" height="240" frameborder="0"></iframe>
-            </div>
+            <div class="holerite"></div>
         </section>
     </main>
 

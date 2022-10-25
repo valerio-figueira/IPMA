@@ -1,11 +1,11 @@
 @charset "UTF-8";
 
 :root{
-    --prime-color: #0c6a3d;
+    --prime-color: #00684a;
     --second-color: azure;
     --third-color: #D6D58E;
-    --fourth-color: seagreen;
-    --fifth-color: #21774e;
+    --fourth-color: #00946a;
+    --fifth-color: #188b6b;
     --background-color: azure;
     --sooth-gray: #f1f9fc;
     --thick-gray: #555;
@@ -81,7 +81,7 @@
     margin: auto;
     font-size: medium;
     font-weight: bold;
-    background-color: #0c6a3d;
+    background-color: var(--prime-color);
     color: azure;
     border-radius: 6px;
     border: none;
@@ -105,20 +105,20 @@
     width: 250px;
     border-radius: 3px;
 
-    background-color: #0c6a3d;
+    background-color: var(--prime-color);
     color: azure;
   }
 
   fieldset{
     border: none;
-    box-shadow: 0px 0px 10px 0px #0000003b;
+    box-shadow: 0px 0px 10px 2px #0000003b;
     margin: 10px auto 30px;
     width: 50%;
     border-radius: 3px;
     transition: 0.5s;
   }
   fieldset legend{
-    background-color: #0c6a3d;
+    background-color: var(--prime-color);
     color: azure;
     border-radius: 3px;
     padding: 5px;
@@ -126,6 +126,7 @@
     transition: 0.7s;
   }
   fieldset:hover legend{
+    transform: scale(1.1);
     color: #D6D58E;
     box-shadow: 0px 0px 4px 2px #2b9ecc8e;
   }
