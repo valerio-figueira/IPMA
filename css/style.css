@@ -5,8 +5,8 @@
     --prime-color: #00684a;
     --second-color: azure;
     --third-color: #D6D58E;
-    --fourth-color: #00946a;
-    --fifth-color: #188b6b;
+    --fourth-color: #18634e;
+    --fifth-color: #0f7f5f;
     --background-color: azure;
     --sooth-gray: #f1f9fc;
     --thick-gray: #555;
@@ -296,27 +296,28 @@ a#home{
 
 /* Navbar container */
 .navbar {
-overflow: hidden;
-background-color: var(--prime-color);
-font-family: Arial;
-box-shadow: var(--shadow);
-margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    background-color: var(--prime-color);
+    font-family: Arial;
+    box-shadow: var(--shadow);
+    margin-bottom: 10px;
 }
   
 /* Links inside the navbar */
 .navbar a {
-float: left;
-font-size: 17px;
-color: var(--second-color);
-text-align: center;
-padding: 14px 16px;
-text-decoration: none;
+    font-size: 17px;
+    color: var(--second-color);
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
 }
 
 /* The dropdown container */
 .dropdown {
-float: left;
-overflow: hidden;
+    float: left;
+    overflow: hidden;
 }
 
 /* Dropdown button */
@@ -386,6 +387,12 @@ background-color: var(--fourth-color);
 }
 a.active{
 color: var(--second-color);
+}
+.navbar a.active{
+    background-color: var(--fifth-color);
+}
+.navbar a.active:hover{
+    color: var(--third-color);
 }
 .dropdown .active{
     background-color: var(--fifth-color);
@@ -595,12 +602,17 @@ RESPONSIVE NAVBAR
     .navbar a:not(:first-child), .dropdown .dropbtn {
       display: none;
     }
-    .navbar a.icon {
-      float: right;
-      display: block;
+    .navbar{
+        position: relative;
     }
-  }
-  
+    .navbar a.icon {
+        display: block;
+        position: absolute;
+        right: 0;
+        top: 0;
+        height: 100%;
+    }
+  }  
 
   @media screen and (max-width: 720px) {
     .icon{
@@ -608,16 +620,15 @@ RESPONSIVE NAVBAR
     }
     .navbar.responsive {
         position: relative;
-    }
-    .navbar.responsive a.icon {
-      position: absolute;
-      right: 0;
-      top: 0;
+        flex-direction: column;
+        align-items: stretch;
     }
     .navbar.responsive a {
-      float: none;
       display: block;
       text-align: left;
+    }
+    .navbar.responsive a.icon{
+        height: auto;
     }
     .navbar.responsive .dropdown {
         float: none;
@@ -650,10 +661,10 @@ RESPONSIVE NAVBAR
         color: black;
     }
     .dropdown .active{
-        background-color: #898989;
-    }
-    .dropdown.active{
         background-color: var(--fifth-color);
+    }
+    .dropdown a.active{
+        background-color: #777;
     }
   }
 
@@ -837,6 +848,7 @@ GLOBE CODE:
 
 /*UNIMED SECTION: MÉDICOS*/
 .unimed-container{
+    font-family: 'Ubuntu', sans-serif;
     margin: 3rem 0 1rem;
 }
 .unimed-container h2{
@@ -876,6 +888,33 @@ GLOBE CODE:
 .medicos table tbody tr:nth-of-type(even){
     background: #f5f5f5;
 }
+/*SEARCH BAR - UNIMED*/
+.search-bar{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    margin: .5rem .6rem 1rem;
+}
+.search-bar #search-input{
+    font-size: 1.2rem;
+    padding: .7rem .5rem;
+}
+.search-bar #search-input{
+    outline: none;
+}
+.search-bar #search-input:focus{
+    box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.29);
+}
+.search-bar .search-icon{
+    font-size: 1.2rem;
+    position: absolute;
+    right: .5rem;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 100;
+    color: #777;
+}
+
 
 
 
@@ -1109,3 +1148,5 @@ LOCATION
     background-color: var(--blue-color);
     padding: 20px;
 }
+
+

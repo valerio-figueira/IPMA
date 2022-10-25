@@ -18,14 +18,17 @@ copyright.textContent = `Direitos Autorais \u00A9 ${year} - IPMA`;
 /*
 PORTFOLIUM LINK IN WEBSITE FOOTER
 */
-function addLink(){
+setLinkInFooter();
+function setLinkInFooter(){
     let link = document.querySelector("footer div a");
 
-    link.setAttribute("href", "https://valerio-figueira.github.io/portfolio/");
+    link.addEventListener("mouseenter", function(){
+        link.setAttribute("href", "https://valerio-figueira.github.io/portfolio/");
 
-    link.className = "fa fa-external-link-square";
-    link.style.fontSize = "normal";
-    link.style.transition = "font-size 0.5s";
+        link.className = "fa fa-external-link-square";
+        link.style.fontSize = "normal";
+        link.style.transition = "font-size 0.5s";
+    })
 
     link.addEventListener("mouseleave", function(){
         link.style.fontSize = "normal";
@@ -125,9 +128,14 @@ for (const folder of folders) {
 /*ADD ACTIVE CLASS IN NAVBAR ANCHORs*/
 const currentPath = window.location.href;
 console.log(currentPath)
-document.querySelectorAll(".navbar a").forEach(link => {    
+document.querySelectorAll(".navbar a").forEach(link => {
     if(currentPath.match(link.getAttribute("href"))){
         link.classList.add("active");
+        if(currentPath.match('/convenios')){
+            document.querySelectorAll('.dropbtn')[0].classList.add('active');
+        } else if(currentPath.match('/beneficios')){
+            document.querySelectorAll('.dropbtn')[1].classList.add('active');
+        };
     };
 });
 
@@ -154,48 +162,64 @@ function searchDoctors(){
     selectionTag.addEventListener('change', () => {
         Object.keys(categories).forEach(category => {
             if(selectionTag.value.match(category)){
-                renderSelectedCategory(categories[category])
-                console.log(categories[category])
+                renderSelectedCategory(categories[category]);
             };
         });
     });
+    searchByName();
 };
 
-function renderSelectedCategory(object){
-    document.querySelector('.medicos')
+function renderSelectedCategory(medicos){
+    console.log(medicos)
+    document.querySelector('.table-head')
     .innerHTML = `
-    <table>
-        <thead>
-            <tr>
-                <th>Código</th>
-                <th>Nome</th>
-                <th>Especialidade</th>
-                <th>Endereço</th>
-                <th>Bairro</th>
-                <th>Telefone</th>
-            </tr>
-        </thead>
-
-        <tbody class="rendered-section"></tbody>
-        
-    </table>
+        <tr>
+            <th>Médico</th>
+            <th>Especialidade</th>
+            <th>Endereço</th>
+            <th>Bairro</th>
+            <th>Telefone</th>
+        </tr>
     `;
 
-    document.querySelector('.medicos .rendered-section')
-    .innerHTML = object.map(doctor => {
+    document.querySelector('.rendered-section')
+    .innerHTML = medicos.map(medico => {
         return `
         <tr>
-            <td>${doctor.cod}</td>
-            <td>${doctor.nome}</td>
-            <td>${doctor.especialidade}</td>
-            <td>${doctor.endereço}</td>
-            <td>${doctor.bairro}</td>
-            <td>${doctor.telefone}</td>
+            <td>${medico.nome.toUpperCase()}</td>
+            <td>${medico.especialidade}</td>
+            <td>${medico.endereço}</td>
+            <td>${medico.bairro}</td>
+            <td>${medico.telefone}</td>
         </tr>
         `;
     }).join('');
 };
 
+function searchByName(){
+    const input = document.querySelector('#search-input');
+    const medicos = [...Acupuntura, ...AlergiaEImunologia, ...Anestesiologia, ...Angiologia, ...Audiometria, ...Cardiologia, ...CirurgiaAparelhoDigestivo, ...CirurgiaGeral];
+
+    input.addEventListener('keyup', (e) => {
+        const lowerCaseInput = e.target.value;
+        const filteredMedicos = medicos.filter(medico => {            
+            const lowerCaseName = medico.nome.toLowerCase();
+            return lowerCaseName.includes(lowerCaseInput);
+        });
+        renderSelectedCategory(filteredMedicos);
+        if(lowerCaseInput === ''){
+            document.querySelector('.table-head').innerHTML = '';
+            document.querySelector('.rendered-section').innerHTML = '';
+        };
+    });
+};
+
+
+
+
+
+
+/*LOGIN IN SIDEBAR*/
 const login = document.querySelector('.holerite');
 if(login){
     getLoginForm();
