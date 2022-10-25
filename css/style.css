@@ -540,7 +540,7 @@ RESPONSIVE COLUMNS
         margin: 20px 0;
     }
     th, tr, td{
-        font-size: 10px;
+        font-size: 13px;
     }
 
 }
@@ -612,7 +612,7 @@ RESPONSIVE NAVBAR
         top: 0;
         height: 100%;
     }
-  }  
+  }
 
   @media screen and (max-width: 720px) {
     .icon{
@@ -893,7 +893,7 @@ GLOBE CODE:
     position: relative;
     display: flex;
     flex-direction: column;
-    margin: .5rem .6rem 1rem;
+    margin: .5rem .6rem 1.5rem;
 }
 .search-bar #search-input{
     font-size: 1.2rem;
@@ -901,6 +901,8 @@ GLOBE CODE:
 }
 .search-bar #search-input{
     outline: none;
+    margin: .7rem 0;
+    transition: .3s linear;
 }
 .search-bar #search-input:focus{
     box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.29);
@@ -914,8 +916,12 @@ GLOBE CODE:
     z-index: 100;
     color: #777;
 }
-
-
+.page.unimed .box{
+    padding: 0 0 2rem;
+}
+.medicos{
+    margin-bottom: 3rem;
+}
 
 
 
@@ -1104,7 +1110,7 @@ LOCATION
     .downbar article{
         margin: 15px 0;
     }
-    }
+}
 
 @media screen and (max-width: 450px){
         .page{
@@ -1112,6 +1118,9 @@ LOCATION
         }
 }
 @media screen and (max-width: 400px){
+        th{
+            font-size: 10px;
+        }
         td{
             font-size: 10px;
         }

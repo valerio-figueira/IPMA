@@ -19,19 +19,19 @@
     --transition-delay: 0.5s;
 }
 
-.form-signin {
+.holerite-form {
     max-width: 330px;
     padding: 15px;
     margin: 0 auto;
   }
-  .form-signin .form-signin-heading,
-  .form-signin .checkbox {
+  .holerite-form .form-signin-heading,
+  .holerite-form .checkbox {
     margin-bottom: 10px;
   }
-  .form-signin .checkbox {
+  .holerite-form .checkbox {
     font-weight: normal;
   }
-  .form-signin .form-control {
+  .holerite-form #cpf, .holerite-form #password {
     position: relative;
     height: auto;
     -webkit-box-sizing: border-box;
@@ -40,12 +40,12 @@
     padding: 10px;
     font-size: 16px;
   }
-  .form-signin .form-control:focus {
+  .holerite-form #cpf:focus, .holerite-form #password:focus {
     z-index: 2;
-    box-shadow: 0px 0px 6px 2px #319dc87c;
-    outline: 1px solid #13b5da;
+    box-shadow: 0px 0px 10px 1px #00b7ffb5;
+    outline: 1px solid #5ac6de;
   }
-  .form-signin input[type="text"] {
+  .holerite-form input[type="text"] {
     display: block;
     margin: auto;
     margin-bottom: 5px;
@@ -57,7 +57,7 @@
     border: none;
     outline: 1px solid #b0b0b0;
   }
-  .form-signin input[type="password"] {
+  .holerite-form input[type="password"] {
     display: block;
     margin: 20px auto;
     margin-bottom: 16px;
@@ -69,7 +69,7 @@
     outline: 1px solid #b0b0b0;
   }
 
-  .form-signin input[type="password"]:focus {
+  .holerite-form input[type="password"]:focus {
     border-top-left-radius: 4px;
     border-top-right-radius: 4px;
     border-bottom-left-radius: 4px;

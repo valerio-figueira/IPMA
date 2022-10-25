@@ -201,8 +201,8 @@ function searchByName(){
     const medicos = [...Acupuntura, ...AlergiaEImunologia, ...Anestesiologia, ...Angiologia, ...Audiometria, ...Cardiologia, ...CirurgiaAparelhoDigestivo, ...CirurgiaGeral];
 
     input.addEventListener('keyup', (e) => {
-        const lowerCaseInput = e.target.value;
-        const filteredMedicos = medicos.filter(medico => {            
+        const lowerCaseInput = e.target.value.toLowerCase();
+        const filteredMedicos = medicos.filter(medico => {
             const lowerCaseName = medico.nome.toLowerCase();
             return lowerCaseName.includes(lowerCaseInput);
         });
