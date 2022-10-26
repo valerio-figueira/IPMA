@@ -147,7 +147,6 @@ if(selectionTag){
 }
 
 function searchDoctors(){
-    ;
     const categories = {
         Acupuntura : Acupuntura,
         AlergiaEImunologia: AlergiaEImunologia,
@@ -160,11 +159,16 @@ function searchDoctors(){
     };
 
     selectionTag.addEventListener('change', () => {
-        Object.keys(categories).forEach(category => {
-            if(selectionTag.value.match(category)){
-                renderSelectedCategory(categories[category]);
-            };
-        });
+        if(!(selectionTag.value === "")){
+            Object.keys(categories).forEach(category => {
+                if(selectionTag.value.match(category)){
+                    renderSelectedCategory(categories[category]);
+                };
+            });
+        } else{
+            document.querySelector('.table-head').innerHTML = '';
+            document.querySelector('.rendered-section').innerHTML = '';
+        }        
     });
     searchByName();
 };

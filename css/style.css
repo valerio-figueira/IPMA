@@ -901,6 +901,7 @@ GLOBE CODE:
 }
 .search-bar #search-input{
     outline: none;
+    border: 1px solid lightgray;
     margin: .7rem 0;
     transition: .3s linear;
 }
