@@ -35,6 +35,9 @@
 .slideshow-container img:hover{
     box-shadow: var(--blue-shadow);
 }
+.slideshow-container .slide{
+  display: none;
+}
 
 /* Hide the images by default */
 .slideshow-container img {
