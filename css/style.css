@@ -867,7 +867,6 @@ GLOBE CODE:
 }
 .unimed-container #search-unimed:focus{
     background-color: var(--fifth-color);
-
 }
 .unimed-container #search-unimed option{
     font-size: 1rem;
@@ -875,6 +874,7 @@ GLOBE CODE:
 }
 .medicos{
     overflow-x: scroll;
+    text-transform: capitalize;
 }
 .medicos table{
     font-family: 'Ubuntu', sans-serif;

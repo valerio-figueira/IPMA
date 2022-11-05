@@ -42,43 +42,91 @@ function setLinkInFooter(){
 CAROUSEL
 */
 if(document.querySelector(".slideshow-container")){
-    let index = 1;
-    const dots = document.querySelectorAll(".dot");
-    const prev = document.querySelector(".prev");
-    const next = document.querySelector(".next");
+    let slider = {
+        hero: document.querySelectorAll(".slide"),
+        dots: document.querySelectorAll(".dot"),
+        prev: document.querySelector(".prev"),
+        next: document.querySelector(".next"),
+        hover: document.querySelector(".slideshow-container"),
+        interval: 3500,
+        autorun: true,
+        timer: undefined,
+        idle: false,
+        index: 0
+    };
+    
+    displaySlider(slider);
 
-    displaySlides(index);
+    slider.prev.addEventListener('click', () => {
+        slider.autorun = false;
+        changeSlide('prev', slider);        
+    });
+    slider.next.addEventListener('click', () => {
+        slider.autorun = false;
+        changeSlide('next', slider);        
+    });
 
-    prev.addEventListener("click", () => displaySlides(--index));
-    next.addEventListener("click", () => displaySlides(++index));
+    slider.dots.forEach((dot, i) => {
+        dot.addEventListener('click', () => {
+            slider.autorun = false;
+            slider.index = i;
+            displaySlider(slider);
+        });
+    });
 
-    dots[0].addEventListener("click", () => displaySlides(index = 1));
-    dots[1].addEventListener("click", () => displaySlides(index = 2));
-    dots[2].addEventListener("click", () => displaySlides(index = 3));
+    slider.hover.addEventListener('mouseenter', () => {
+        slider.autorun = false;
+        slider.idle = true;
+        displaySlider(slider);
+    });
 
-    function displaySlides(indexPosition){
-        const slides = document.querySelectorAll(".slide");        
+    slider.hover.addEventListener('mouseleave', () => {
+        slider.autorun = false;
+        slider.idle = false;
+        displaySlider(slider);
+    });
+};
 
-        if(indexPosition > slides.length){
-            indexPosition = 1;
-        } else if(indexPosition < 1){
-            indexPosition = slides.length;
-        }
-
-        for(const slide of slides){
-            slide.style.display = "none";
-        }
-
-        for(const dot of dots){
-            dot.classList.remove("active");
-        }
-
-        slides[indexPosition - 1].style.display = "block";
-        dots[indexPosition - 1].classList.add("active");
-        return index = indexPosition;
+function changeSlide(direction, slider){
+    if(direction.match('prev')){
+        slider.index--;
+        displaySlider(slider)
+    } else if(direction.match('next')){
+        slider.index++;
+        displaySlider(slider)
     }
 }
 
+function displaySlider(slider){
+    if(slider.autorun){
+        slider.timer = setTimeout(() => changeSlide('next', slider), slider.interval);
+    } else{
+        clearTimeout(slider.timer)
+        if(!slider.idle){
+            slider.timer = setTimeout(() => changeSlide('next', slider), slider.interval);
+            slider.autorun = true;
+        }
+    }
+
+    if(slider.index < 0){
+        slider.index = slider.hero.length - 1;
+    } else if(slider.index > slider.hero.length - 1){
+        slider.index = 0;
+    }
+
+    for(let slide of slider.hero){
+        slide.style.display = 'none'
+    }
+
+    for(let dot of slider.dots){
+        if(dot.matches('.active')){
+            dot.classList.remove('active');
+        }
+    }
+
+    slider.hero[slider.index].style.display = 'block';
+    slider.dots[slider.index].classList.add('active');
+}
 
 
 /*
@@ -149,14 +197,14 @@ if(selectionTag){
 function searchDoctors(){
     ;
     const categories = {
-        Acupuntura : Acupuntura,
-        AlergiaEImunologia: AlergiaEImunologia,
-        Anestesiologia: Anestesiologia,
-        Angiologia: Angiologia,
-        Audiometria: Audiometria,
-        Cardiologia: Cardiologia,
-        CirurgiaAparelhoDigestivo: CirurgiaAparelhoDigestivo,
-        CirurgiaGeral: CirurgiaGeral,
+        Acupuntura,
+        AlergiaEImunologia,
+        Anestesiologia,
+        Angiologia,
+        Audiometria,
+        Cardiologia,
+        CirurgiaAparelhoDigestivo,
+        CirurgiaGeral,
     };
 
     selectionTag.addEventListener('change', () => {
@@ -170,30 +218,40 @@ function searchDoctors(){
 };
 
 function renderSelectedCategory(medicos){
-    console.log(medicos)
-    document.querySelector('.table-head')
-    .innerHTML = `
-        <tr>
-            <th>Médico</th>
-            <th>Especialidade</th>
-            <th>Endereço</th>
-            <th>Bairro</th>
-            <th>Telefone</th>
-        </tr>
-    `;
-
-    document.querySelector('.rendered-section')
-    .innerHTML = medicos.map(medico => {
-        return `
-        <tr>
-            <td>${medico.nome.toUpperCase()}</td>
-            <td>${medico.especialidade}</td>
-            <td>${medico.endereço}</td>
-            <td>${medico.bairro}</td>
-            <td>${medico.telefone}</td>
-        </tr>
+    if(medicos.length === 0){
+        document.querySelector('.medicos table')
+        .innerHTML = `<h3>Não encontrado...</h3>`;
+    } else{
+        document.querySelector('.medicos table')
+        .innerHTML = `
+        <thead class="table-head"></thead>
+        <tbody class="rendered-section"></tbody>
         `;
-    }).join('');
+
+        document.querySelector('.table-head')
+        .innerHTML = `
+            <tr>
+                <th>Médico</th>
+                <th>Especialidade</th>
+                <th>Endereço</th>
+                <th>Bairro</th>
+                <th>Telefone</th>
+            </tr>
+        `;
+    
+        document.querySelector('.rendered-section')
+        .innerHTML = medicos.map(medico => {
+            return `
+            <tr>
+                <td>${medico.nome.toLowerCase()}</td>
+                <td>${medico.especialidade.toLowerCase()}</td>
+                <td>${medico.endereço.toLowerCase()}</td>
+                <td>${medico.bairro.toLowerCase()}</td>
+                <td>${medico.telefone.toLowerCase()}</td>
+            </tr>
+            `;
+        }).join('');
+    };
 };
 
 function searchByName(){
