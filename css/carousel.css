@@ -28,6 +28,9 @@
     position: relative;
     margin-top: 6px;
 }
+.slideshow-container .slide{
+  display: none;
+}
 .slideshow-container img{
     transition: var(--transition-delay);
     box-shadow: var(--shadow);
