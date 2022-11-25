@@ -56,11 +56,17 @@ if(document.querySelector(".slideshow-container")){
     };
     
     displaySlider(slider);
+    addEvents(slider);
+};
 
+
+
+function addEvents(slider){
     slider.prev.addEventListener('click', () => {
         slider.autorun = false;
         changeSlide('prev', slider);        
     });
+
     slider.next.addEventListener('click', () => {
         slider.autorun = false;
         changeSlide('next', slider);        
@@ -85,7 +91,7 @@ if(document.querySelector(".slideshow-container")){
         slider.idle = false;
         displaySlider(slider);
     });
-};
+}
 
 function changeSlide(direction, slider){
     if(direction.match('prev')){

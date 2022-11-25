@@ -27,7 +27,8 @@
 /*#d4e3f6    (gray)*/
 /*#024959    (black blue)*/
 body{
-    font-family: Georgia, 'Times New Roman', Times, serif;
+    /*font-family: Georgia, 'Times New Roman', Times, serif;*/
+    font-family: 'Ubuntu', sans-serif;
     text-align: justify;
     max-width: var(--max-width);
     min-width: var(--min-width);
@@ -165,11 +166,9 @@ article{
     display: inline-block;
     transition: var(--short-delay);
 }
-article:hover{    
-    box-shadow: var(--blue-shadow);
-}
 article p{
     text-indent: 22px;
+    line-height: 1.4rem;
 }
 .main-column article img{
     float: left;
@@ -249,9 +248,6 @@ HOLERITE
     box-shadow: var(--shadow);
     display: inline-block;
     transition: var(--short-delay);
-}
-.holerite:hover{    
-    box-shadow: var(--blue-shadow);
 }
 
 
