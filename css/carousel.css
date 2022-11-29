@@ -35,9 +35,6 @@
     transition: var(--transition-delay);
     box-shadow: var(--shadow);
 }
-.slideshow-container img:hover{
-    box-shadow: var(--blue-shadow);
-}
 .slideshow-container .slide{
   display: none;
 }

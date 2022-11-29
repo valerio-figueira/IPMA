@@ -169,7 +169,7 @@ for (const folder of folders) {
         content.classList.add("open");
         content.style.maxHeight = "3000px";
         content.style.paddingBottom = "20px";
-        content.style.transition += "0.5s";
+        content.style.transition = "0.5s";
     } else {
         content.classList.remove("open");
         content.style.maxHeight = "0";

@@ -27,8 +27,8 @@
 /*#d4e3f6    (gray)*/
 /*#024959    (black blue)*/
 body{
-    /*font-family: Georgia, 'Times New Roman', Times, serif;*/
-    font-family: 'Ubuntu', sans-serif;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    /*font-family: 'Ubuntu', sans-serif;*/
     text-align: justify;
     max-width: var(--max-width);
     min-width: var(--min-width);
@@ -167,6 +167,7 @@ article{
     transition: var(--short-delay);
 }
 article p{
+    color: #242424;
     text-indent: 22px;
     line-height: 1.4rem;
 }
@@ -1011,7 +1012,7 @@ article > .active, .collapsible:hover {
     background-color: #f1f1f1;
     border: 1px solid #00000050;
     max-height: 0;
-    transition: max-height 0.7s;
+    /*transition: max-height .5s;*/
 }
 /*INSIDE THE FOLDER*/
 .folder_content > button{
