@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IPMA - Instituto de Previdência Municipal de Monte Alegre de Minas</title>
+    <link rel="shortcut icon" href="./imgs/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="script/index.js" defer type="module"></script>
+</head>
+<body>
+
+    <header id="header">
+        <div class="container">
+            <a href="index.html" target="_self">
+                <img src="imgs/brasão.png" alt="brasão" class="brasão">
+            </a>
+            <div class="title-container">
+                <a href="index.html" target="_self">
+                    <h1 class="main-title">IPMA</h1>
+                </a>
+                <a href="index.html" target="_self">
+                    <p class="subtitle">Instituto de Previdência Municipal de Monte Alegre de Minas</p>
+                </a>
+            </div>
+        </div>
+
+        <nav class="navbar">
+            <a href="index.html" class="fa fa-home" id="home"></a>
+            <a href="login.html" id="login">Login</a>
+            <a href="legislacao.html">Legislação</a>
+            <div class="dropdown">
+                <div class="dropbtn">Convênios
+                    <div class="arrow">&#9698;</div>
+                </div>
+                <div class="dropdown-content">
+                    <a href="convenios/unimed.html">Unimed</a>
+                    <a href="convenios/uniodonto.html">Uniodonto</a>
+                    <a href="convenios/odontocompany.html">Odonto Company</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <div class="dropbtn">Benefícios
+                    <div class="arrow">&#9698;</div>
+                    </div>
+                    <div class="dropdown-content">
+                        <a href="beneficios/pensao.html">Pensão</a>
+                        <a href="beneficios/aposentadoria.html">Aposentadoria</a>
+                        <a href="beneficios/dependentes.html">Dependentes</a>
+                    </div>
+                </div>
+            <a href="licitacoes.html">Licitações</a>
+            <a href="diretoria.html">Diretoria</a>
+            <a href="contato.html">Contato</a>
+
+            <button class="close-nav">&times;</button>
+        </nav>
+        
+        <a id="mobile" class="fa fa-bars"></a>
+    </header>
+
+
+
+
+    <main class="container">
+
+        <section class="main-column">
+            <!-- Slideshow container -->
+            <div class="slideshow-container">
+                <div class="slideshow">
+                        <div class="slides">
+                            <div class="slide fade">
+                                <img src="imgs/slide1.jpg">
+                                <div class="text">
+                                    <a href="postagens/prova-de-vida-2022.html" rel="next">O Instituto de Previdência Municipal de Monte Alegre de Minas informa aos aposentados e pensionistas que já está sendo feita a prova de vida na sede do IPMA.</a>
+                                </div>
+                            </div>
+                        
+                            <div class="slide fade">
+                                <img src="imgs/slide2.jpg">
+                                <div class="text">
+                                    <a href="convenios/odontocompany.html">Conheça nosso convênio odontológico, em parceria com a Odonto Company, para os funcionários públicos, ativos ou aposentados, pensionistas e dependentes, de Monte Alegre de Minas.</a>
+                                </div>
+                            </div>
+                    
+                            <div class="slide fade">
+                                <img src="imgs/slide3.jpg">
+                                <div class="text">
+                                    <a href="#"></a>
+                                </div>
+                            </div>
+
+                        </div>
+                        
+                        <!-- prev btn -->
+                        <a class="prev">&#10094;</a>
+                        <a class="next">&#10095;</a>
+                </div>
+                <br>
+                    
+                <!-- The dots/circles -->
+                <div style="text-align:center" class="dots">
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                </div>
+            </div>
+
+
+            <section class="sidebar">
+                <div class="transparencia">
+                    <a href="#" rel="next">Transparência Pública</a>
+                </div>
+    
+                <div class="login">
+                    <h2>Holerite</h2>
+                    <div class="login-form">
+                        <form class="form-signin" method="POST" name="WFRLogon" action="https://aspprevweb.com.br:8097/logon.do"  target="_blank" >
+                          <input name="dataConnection" type="hidden" value="MonteAlegreDeMinas" />
+                          <input name="sys" type="hidden" value="AUT" />
+                          <input type="text" id="cpf" name="user" class="form-control" placeholder="Digite o CPF" required aria-label="Digite o CPF">
+                          <input type="password" name="password" class="form-control" placeholder="Digite a Senha" required aria-label="Digite a Senha">
+                          <button class="button" type="submit">Acessar</button>
+                        </form>
+                    </div>
+                </div>
+            </section>
+
+        </section>
+
+
+        <section class="content-column">
+            <article class="post" id="post-03">
+                <a href="postagens/prova-de-vida.html" class="title" rel="next">
+                    <h2>Prova de Vida</h2>
+                </a>
+                <a href="postagens/prova-de-vida.html" rel="next">
+                    <img src="imgs/idoso-caminhando.jpg" alt="Um idoso andando com uma bengala">
+                </a>
+                <p class="paragraph">A Prova de Vida é uma exigência do Instituto Municipal de Previdência de Monte Alegre de Minas e deve ser feita todo ano por quem recebe um ou mais benefícios do IPMA. Atenção! Quem não faz a prova de vida, tem o benefício bloqueado. O objetivo desse procedimento é dar mais segurança ao cidadão, evitando fraudes e pagamento de benefícios indevidos.</p>
+                <a href="postagens/prova-de-vida.html" class="read-more">Continue Lendo...</a>
+            </article>
+
+            <article class="post" id="post-02">
+                <a href="postagens/primeira-parcela-decimo-terceiro.html" class="title" rel="next">
+                    <h2>1ª Parcela do Décimo Terceiro - 2022</h2>
+                </a>
+                <a href="postagens/primeira-parcela-decimo-terceiro.html" rel="next">
+                    <img src="imgs/idosa-com-celular.jpg" alt="Uma idosa sorrindo e mexendo em um celular">
+                </a>
+                <p class="paragraph">Devido aos efeitos da crise financeira ocorrida pela pandemia Covid-19, o Instituto Municipal de Monte Alegre de Minas irá antecipar o décimo terceiro salário de aposentados e pensionistas.</p>
+                <a href="postagens/primeira-parcela-decimo-terceiro.html" class="read-more">Continue Lendo...</a>
+            </article>
+
+            <article class="post" id="post-01">
+                <a href="postagens/carteira-do-aposentado.html" class="title" rel="next">
+                    <h2>Carteira do Idoso</h2>
+                </a>
+                <a href="postagens/carteira-do-aposentado.html" rel="next">
+                    <img src="imgs/idoso-entrando-no-onibus.jpg" alt="Idoso entrando em um ônibus">
+                </a>
+                <p class="paragraph">A carteira do Idoso ou de identificação dos segurados (aposentados e pensionistas), traz informações de identificação, o tipo e o número do  seu benefício.</p>
+                <a href="postagens/carteira-do-aposentado.html" class="read-more">Continue Lendo...</a>
+            </article>
+        </section>
+
+    </main>
+
+
+    <footer>
+        <div class="box">
+            <p class="copyright"></p>
+            <p class="developer-info">Desenvolvido por <a target="_blank" rel="external"> Valerio Figueira</a></p>
+        </div>
+        <a class="scrolltop fa fa-caret-up" href="#header"></a>
+    </footer>
+
+</body>
+</html>
