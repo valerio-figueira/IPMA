@@ -920,12 +920,12 @@ footer .scrolltop:hover{
         gap: 0;
 
         background-color: var(--dark-gray);
-        padding: 7rem 0;
+        padding: 6rem 0;
 
         transform: translateX(0);
     }
     nav.navbar.responsive #home{
-        font-size: 1.7rem;
+        font-size: 1.5rem;
     }
     nav.navbar.responsive a{
         display: flex;
@@ -934,7 +934,7 @@ footer .scrolltop:hover{
         font-size: 1.1rem;
         height: auto;
         width: 17rem;
-        padding: 1rem 2rem;
+        padding: .7rem 2rem;
     }
     nav.navbar.responsive a:hover{
         background-color: var(--navbar-hover);
@@ -955,14 +955,14 @@ footer .scrolltop:hover{
         display: flex;
         justify-content: center;
         align-items: stretch;
-        padding: 1rem 0;
+        padding: .7rem 0;
     }
     nav.navbar.responsive .dropdown .dropbtn{
         display: flex;
         justify-content: center;
 
         font-size: 1.1rem;
-        padding: 1rem 2rem;
+        padding: .7rem 2rem;
         width: 100%;
     }
     nav.navbar.responsive .dropdown .dropdown-content a:hover{
@@ -979,7 +979,7 @@ footer .scrolltop:hover{
 
         border: none;
         background: transparent;
-        font-size: 4rem;
+        font-size: 3.5rem;
 
         color: var(--light-gray);
 
@@ -1099,10 +1099,10 @@ footer .scrolltop:hover{
 
 
     footer{
-        padding: 4rem 4%;
+        padding: 4rem 2%;
     }
     footer p{
-        font-size: 1rem;
+        font-size: .9rem;
     }
     footer .scrolltop{
         font-size: 1.2rem;
@@ -1129,6 +1129,9 @@ footer .scrolltop:hover{
     }
 }
 
+
+
+/* RESPONSIVE HEADER AND TITLES */
 @media screen and (max-width: 600px) {
     header{
         gap: 2rem;
@@ -1141,6 +1144,19 @@ footer .scrolltop:hover{
         font-size: .9rem;
     }
 }
+@media screen and (max-width: 600px) {
+    header{
+        gap: 1rem;
+    }
+
+    header .title-container .main-title{
+        font-size: 1.7rem;
+    }
+    header .title-container .subtitle{
+        font-size: .7rem;
+    }
+}
+
 
 
 
