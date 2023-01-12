@@ -17,6 +17,10 @@
     --nav-dropdown-hover: #303645;
     --nav-dropdown-content-hover: #373f53;
 
+    --font-color: #373f53;
+    --font-hover: #222f52;
+    --sub-header-color: #646875;
+
     --mobile: 360px;
 }
 
@@ -59,6 +63,9 @@ html{
 
 body{
     min-width: var(--mobile);
+    max-width: 2000px;
+    margin: auto;
+    box-shadow: 0px 0px 10px 1px #0000006b;
 }
 
 
@@ -192,7 +199,7 @@ nav.navbar .dropdown:hover .dropbtn {
 
 /* MAIN CONTAINER */
 main.container{
-    padding: 1.5rem 3%;
+    padding: 2rem 3%;
 }
 
 
@@ -432,6 +439,229 @@ main.container{
 
 
 
+/* MAIN COLUMN CSS - PAGES AND FOLDERS */
+.main-column .page{
+    padding: 0 2rem;
+}
+.main-column .page h2{
+    color: var(--dark-gray);
+    font-size: 2rem;
+    margin: 2rem 0 2rem;
+}
+.main-column .page h3{
+    color: var(--sub-header-color);
+    font-size: 1.5rem;
+    margin: 2.5rem 0 1rem;
+}
+.main-column .page p{
+    color: var(--font-color);
+    font-size: 1.3rem;
+    line-height: 1.7rem;
+    margin: 1rem 0;
+}
+/* ANCHORS */
+.main-column .page p a{
+    color: #00684a;
+    text-decoration: underline;
+}
+.main-column .page a{
+    color: #00684a;
+}
+.main-column .page a:hover{
+    color: #0c513e;
+}
+
+
+/* IMAGES INSIDE PAGE */
+.main-column .page img{
+    float: left;
+
+    /*max-width: 400px;*/
+    width: 450px;
+    margin-right: 1rem;
+}
+.main-column .page img:hover{
+    box-shadow: 0px 0px 7px 1px #00000046;
+}
+
+
+/* LOCATION */
+.main-column .page .map-location{
+    margin-top: 2rem;
+    box-shadow: 0px 0px 10px 0px #00000050;
+}
+
+
+
+/* FOLDER CSS */
+.main-column .page button.folder{
+    display: block;
+    cursor: pointer;
+    font-size: 1.4rem;
+    color: var(--gray-color);
+    background: var(--dark-gray);
+    border: none;
+    padding: .5rem 1rem;
+    margin-top: 1rem;
+    width: 100%;
+}
+.main-column .page button.folder:hover{
+    color: var(--light-green);
+}
+.main-column .page .folder_content{
+    display: none;
+    background-color: var(--gray-color);
+    padding: 1rem 3rem;
+}
+.main-column .page .folder_content.open{
+    display: block;
+}
+
+
+
+/* TABLE CSS */
+.main-column .page table{
+    color: var(--font-color);
+    font-size: 1.3rem;
+    width: 100%;
+}
+.main-column .page th{
+    background-color: var(--dark-gray);
+    color: var(--white);
+    padding: .7rem 1rem;
+}
+.main-column .page td{
+    padding: .7rem .5rem;
+    border: 1px solid gray;
+    background-color: #e8e8e8;
+}
+.main-column .page tr td{
+    margin: 1rem;
+}
+.main-column .page td:hover{
+    background-color: var(--light-yellow);
+}
+
+/* CENTER DOWNLOAD ICON IN TABLE */
+.main-column .page .folder_content table td:nth-of-type(2){
+    text-align: center;
+}
+.main-column .page table.licitacoes td:nth-of-type(5){
+    text-align: center;
+}
+
+
+
+
+/* UNORDERED LIST CSS */
+ul{
+    padding: 0 0 0 2rem;
+    list-style-position: inside;
+}
+ul li{
+    font-size: 1.2rem;
+    padding: .4rem;
+    color: #555;
+}
+ul li:hover{
+    color: var(--font-hover);
+}
+
+/* ORDERED LIST CSS */
+ol{
+    padding: 0 0 0 2rem;
+    list-style-position: inside;
+}
+ol li{
+    font-size: 1.2rem;
+    padding: .4rem;
+    color: #555;
+}
+ol li:hover{
+    color: var(--font-hover);
+}
+
+
+
+
+
+
+/* SELECT TAG - UNIMED CSS */
+#search-unimed{
+    font-size: 1.5rem;
+    padding: .5rem 1rem;
+    width: 100%;
+
+    background: var(--dark-gray);
+    color: var(--white);
+    border: none;
+}
+.medicos table{
+    margin: 2rem 0;
+}
+.medicos .rendered-section{
+    text-transform: capitalize;
+}
+.main-column .page table.unimed-table th{
+    padding: .5rem .2rem;
+}
+.main-column .page table.unimed-table tr td{
+    padding: .5rem;
+}
+
+/* UNIMED SEARCH BAR CSS */
+.search-bar{
+    position: relative;
+
+    display: flex;
+    align-items: center;
+}
+#search-input{
+    font-size: 1.5rem;
+    color: var(--font-color);
+    padding: .5rem 1rem;
+    margin: 1rem 0;
+
+    outline: 2px solid transparent;
+    width: 100%;    
+}
+#search-input:focus{
+    outline: 2px solid var(--light-green);
+}
+.search-icon{
+    position: absolute;
+    right: 1rem;
+
+    font-size: 1.5rem;
+    color: var(--light-gray);
+}
+
+.unimed .box:nth-of-type(5){
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 4rem 0 .5rem;
+
+    width: 100%;
+}
+.unimed .box img{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 120px;
+    margin: 0;
+}
+.unimed .box img:hover{
+    box-shadow: none;
+}
+
+
+
+
+
+
+
 
 
 /* CONTENT COLUMN CSS - GRID LAYOUT */
@@ -505,6 +735,7 @@ footer{
     background: var(--dark-gray);
     color: var(--white);
 
+    margin-top: 7rem;
     padding: 4rem 7%;
 
     display: flex;
@@ -548,6 +779,14 @@ footer .scrolltop:hover{
 @media screen and (max-width: 1450px) {
     header{
         padding: 0 2%;
+    }
+}
+@media screen and (max-width: 1000px) {
+    main.container{
+        padding: 2rem .5%;
+    }
+    footer{
+        padding: 5rem 3%;
     }
 }
 @media screen and (max-width: 1350px) {
@@ -680,7 +919,8 @@ footer .scrolltop:hover{
     }
 
     .main-column{
-        grid-template-columns: 1fr;
+        display: flex;
+        flex-direction: column;
     }
     .main-column .sidebar{
         display: none;
@@ -700,12 +940,18 @@ footer .scrolltop:hover{
     .slideshow .slide img{    
         transform: translateY(20%) scale(1.5);
     }
+    .slideshow .slide:nth-of-type(2) img{    
+        transform: translateY(0%) scale(1.5) translateX(-15%);
+    }
 }
 
 @media screen and (max-width: 700px) {
     /* SLIDESHOW - SCALE IMAGE*/
     .slideshow .slide img{    
         transform: translateY(10%) scale(1.5);
+    }
+    .slideshow .slide:nth-of-type(2) img{    
+        transform: translateY(10%) scale(1.7) translateX(-15%);
     }
 
     /* TEXTS AND BUTTONS */
@@ -725,11 +971,16 @@ footer .scrolltop:hover{
         line-height: 1.8rem;
         color: lightgray;
     }
+
+
 }
 @media screen and (max-width: 600px){
     /* SLIDESHOW - SCALE IMAGE*/
     .slideshow .slide img{    
-        transform: translateY(10%) scale(1.7);
+        transform: translateY(20%) scale(1.7);
+    }
+    .slideshow .slide:nth-of-type(2) img{    
+        transform: translateY(20%) scale(1.5) translateX(-10%);
     }
 }
 
@@ -762,6 +1013,25 @@ footer .scrolltop:hover{
     }
 }
 
+
+@media screen and (max-width: 550px) {
+    /* SLIDESHOW - SCALE IMAGE*/
+    .slideshow .slide img{
+        transform: translateY(50%) scale(2.5) translateX(0);
+    }
+
+    /* ODONTO IMAGE CENTERED */
+    .slideshow .slide:nth-of-type(2) img{
+        transform: translateY(37%) scale(2) translateX(-15%);
+    }
+}
+@media screen and (max-width: 400px) {
+    /* ODONTO IMAGE CENTERED */
+    .slideshow .slide:nth-of-type(2) img{
+        transform: translateY(50%) scale(2.5) translateX(-15%);
+    }
+}
+
 @media screen and (max-width: 600px) {
     header{
         gap: 2rem;
@@ -776,14 +1046,208 @@ footer .scrolltop:hover{
 }
 
 
-@media screen and (max-width: 550px) {
-        /* SLIDESHOW - SCALE IMAGE*/
-        .slideshow .slide img{
-            transform: translateY(50%) scale(2.5) translateX(0);
-        }
 
-        /* ODONTO IMAGE CENTERED */
-        .slideshow .slide:nth-of-type(2) img{
-            transform: translateY(50%) scale(2.5) translateX(-15%);
-        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* MEDIA QUERIES - PAGE */
+@media screen and (max-width: 1200px) {
+    /* IMAGES INSIDE PAGE */
+    .main-column .page img{
+        float: left;
+
+        width: 350px;
+        margin-right: 1rem;
+    }
+}
+@media screen and (max-width: 850px) {
+    /* IMAGES INSIDE PAGE */
+    .main-column .page img{
+        float: left;
+
+        width: 350px;
+        margin-right: 1rem;
+    }
+}
+
+@media screen and (max-width: 750px) {
+    /* IMAGES INSIDE PAGE */
+    .main-column .page img{
+        float: none;
+        width: 100%;
+        margin: 0 0 1rem;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .main-column .page{
+        grid-template-columns: 100%;
+        
+        padding: 0 .2rem;
+    }
+
+    .main-column .page h2{
+        font-size: 2rem;
+    }
+
+}
+
+
+
+
+/* MEDIA QUERIES TABLES */
+@media screen and (max-width: 1250px) {
+    /* TABLE CSS */
+    .main-column .page table{
+        font-size: 1.2rem;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    /* TABLE CSS */
+    .main-column .page table{
+        color: var(--font-color);
+        font-size: 1rem;
+        width: 100%;
+        
+        overflow-x: scroll;
+    }
+    .main-column .page th{
+        background-color: var(--dark-gray);
+        color: var(--white);
+        padding: .7rem 1rem;
+    }
+    .main-column .page td{
+        line-height: 1.4rem;
+        padding: .7rem .5rem;
+        border: 1px solid gray;
+        background-color: #e8e8e8;
+    }
+    .main-column .page tr td{
+        margin: 0;
+    }
+    .main-column .page td:hover{
+        background-color: var(--light-yellow);
+    }
+
+    .main-column .page table.licitacoes td:nth-of-type(3){
+        min-width: 200px;
+    }
+
+
+    /* UNIMED TABLE */
+    .medicos{
+        overflow-x: scroll;
+    }
+    .main-column .page table.unimed-table{
+        font-size: 1rem;
+    }
+    .main-column .page table.unimed-table th:nth-of-type(2){
+        font-size: .8rem;
+    }
+    #search-input{
+        font-size: 1.2rem;
+        padding: .5rem;
+        margin: 1rem .5rem; 
+    }
+
+
+
+    /* FOLDER CSS */
+    .main-column .page button.folder{
+        display: block;
+        cursor: pointer;
+        font-size: 1.4rem;
+        color: var(--gray-color);
+        background: var(--dark-gray);
+        border: none;
+        padding: .5rem 1rem;
+        margin-top: 1rem;
+        width: 100%;
+    }
+    .main-column .page button.folder:hover{
+        color: var(--light-green);
+    }
+    .main-column .page .folder_content{
+        display: none;
+        background-color: var(--gray-color);
+        padding: 1rem .5rem;
+    }
+    .main-column .page .folder_content.open{
+        display: block;
+    }
+
+
+}
+
+@media screen and (max-width: 800px) {
+    .main-column .page table.unimed-table th{
+        padding: .3rem;
+    }
+    .main-column .page table.unimed-table tr td{
+        padding: .3rem;
+    }
+}
+
+@media screen and (max-width: 700px){
+    .main-column .page table{
+        font-size: .8rem;
+    }
+    .main-column .page table.unimed-table{
+        font-size: .8rem;
+        text-align: center;
+    }
+    .main-column .page table.unimed-table th{
+        padding: .5rem .2rem;
+    }
+    .main-column .page table.unimed-table tr td{
+        padding: .3rem .2rem;
+    }
+
+    .main-column .page table th{
+        padding: .5rem .2rem;
+    }
+    .main-column .page table tr td{
+        padding: .3rem .2rem;
+
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 500px){
+    .main-column .page table{
+        font-size: .8rem;
+    }
+    .main-column .page table.unimed-table{
+        font-size: .7rem;
+        text-align: center;
+    }
+    .main-column .page table.unimed-table th{
+        padding: .3rem;
+    }
+    .main-column .page table.unimed-table tr td{
+        padding: 0 .2rem;
+    }
+    .main-column .page table.unimed-table th:nth-of-type(2){
+        font-size: .7rem;
+    }
 }
