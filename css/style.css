@@ -742,7 +742,12 @@ ol li:hover{
 .content-column .post .read-more:hover{
     color: var(--light-green);
 }
-
+@media screen and (max-width: 450px) {
+    .content-column .post .paragraph{
+        font-size: 1.1rem;
+        line-height: 1.9rem;
+    }
+}
 
 
 
@@ -1081,6 +1086,13 @@ footer .scrolltop:hover{
     }
 
 
+    /* MOBILE NAV - ICON SIZE */
+    header #mobile{
+        font-size: 1.3rem;
+        height: 90px;
+    }
+
+
 }
 @media screen and (max-width: 600px){
     /* SLIDESHOW - SCALE IMAGE*/
@@ -1105,6 +1117,19 @@ footer .scrolltop:hover{
     }
     .slideshow .text a{
         line-height: 1.5rem;
+    }
+
+
+    /* TEXTS */
+    .slideshow .slide .text{
+        position: absolute;
+        bottom: 0; left: 0; right: 0;
+
+        font-size: .9rem;
+        text-align: center;
+
+        padding: .5rem .3rem;
+        background-color: #000000d4;
     }
 
 
@@ -1167,7 +1192,21 @@ footer .scrolltop:hover{
         font-size: .7rem;
     }
 }
+@media screen and (max-width: 420px) {
+    header{
+        gap: 1rem;
+    }
+    header{
+        padding: .2rem 2%;
+    }
 
+    header .title-container .main-title{
+        font-size: 1.4rem;
+    }
+    header .title-container .subtitle{
+        font-size: .7rem;
+    }
+}
 
 
 
