@@ -166,6 +166,17 @@ nav.navbar .close-nav{
     display: none;
 }
 
+/* ACTIVE STATUS IN NAVBAR */
+nav.navbar a.active{
+    color: var(--light-green);
+}
+nav.navbar .dropdown .dropbtn.active{
+    color: var(--light-green);
+}
+nav.navbar .dropdown .dropdown-content a.active{
+    background-color: var(--nav-dropdown-hover);
+}
+
 /* NAVBAR DROPDOWN */
 nav.navbar .dropdown{
     display: flex;
