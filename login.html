@@ -76,10 +76,8 @@
               <form class="holerite-form" method="POST" name="WFRLogon" action="https://aspprevweb.com.br:8097/logon.do"  target="_blank">
                   <input name="dataConnection" type="hidden" value="MonteAlegreDeMinas"/>
                   <input name="sys" type="hidden" value="AUT"/>
-                  <label for="cpf" class="cpf"></label>
-                  <input type="text" id="cpf" name="user" placeholder="Digite o CPF" required>
-                  <label for="password" class="password"></label>
-                  <input type="password" id="password" name="password" placeholder="Digite a Senha" required>
+                  <input type="text" id="cpf" name="user" placeholder="Digite o CPF" required aria-label="Digite o CPF">
+                  <input type="password" id="password" name="password" placeholder="Digite a Senha" required aria-label="Digite a Senha">
                   <button class="button" type="submit">Acessar</button>
               </form>
           </fieldset>

@@ -146,6 +146,9 @@ nav.navbar #home{
 nav.navbar #login{
     display: none;
 }
+nav.navbar #transparencia{
+    display: none;
+}
 nav.navbar .close-nav{
     display: none;
 }
@@ -726,6 +729,80 @@ ol li:hover{
 
 
 
+/* LOGIN PAGE - CSS */
+fieldset{
+    margin: auto;
+    width: 500px;
+    height: 400px;
+
+    padding: 3rem 3rem 0;
+    border: 1px solid lightgray;
+}
+fieldset legend{
+    font-size: 1.4rem;
+    color: var(--font-color);
+}
+form.holerite-form{
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    width: 100%;
+}
+form.holerite-form input{
+    padding: .7rem .5rem;
+
+    font-size: 1.2rem;
+    outline: 2px solid transparent;
+    width: 100%;
+    color: var(--font-color);
+}
+form.holerite-form input:focus{
+    outline: 2px solid var(--light-green);
+}
+form.holerite-form button{
+    cursor: pointer;
+    padding: .7rem .5rem;
+    width: 100%;
+
+    font-size: 1.2rem;
+
+    background: var(--light-green);
+    border: transparent;
+    color: var(--font-color);
+}
+form.holerite-form button:hover{
+    color: var(--font-hover);
+    background: #7eb72a;
+}
+/* LOGIN PAGE - CSS */
+@media screen and (max-width: 750px) {
+    fieldset{
+        width: 400px;
+        height: 400px;
+
+        padding: 3rem 2rem 0;
+        margin: 0 auto;
+    }
+}
+@media screen and (max-width: 550px) {
+    fieldset{
+        width: 400px;
+        height: 400px;
+    }
+}
+@media screen and (max-width: 450px) {
+    fieldset{
+        width: 300px;
+        height: 400px;
+    }
+}
+
+
+
+
+
+
+
 
 
 
@@ -800,6 +877,13 @@ footer .scrolltop:hover{
 @media screen and (max-width: 1160px) {
 
     /* MOBILE NAV */
+    nav.navbar #login{
+        display: flex;
+    }
+    nav.navbar #transparencia{
+        display: flex;
+    }
+
     nav.navbar{
         display: none;
         box-shadow: 0px 0px 10px 2px #00000074;
@@ -1044,8 +1128,6 @@ footer .scrolltop:hover{
         font-size: .9rem;
     }
 }
-
-
 
 
 

@@ -48,7 +48,7 @@ if(document.querySelector(".slideshow-container")){
         prev: document.querySelector(".prev"),
         next: document.querySelector(".next"),
         hover: document.querySelector(".slideshow-container"),
-        interval: 40000,
+        interval: 10000,
         autorun: true,
         timer: undefined,
         idle: false,
