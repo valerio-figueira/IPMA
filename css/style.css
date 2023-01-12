@@ -5,7 +5,8 @@
 
 
 :root{
-    --prime-color: #00684a;
+    --anchor-color: #699f18;
+    --anchor-hover: #306b08;
     --sooth-gray: #f1f9fc;
     --gray-color: #e3e3e3;
     --light-yellow: #D6D58E;
@@ -58,6 +59,18 @@ html{
     transition: .3s linear;
     box-sizing: border-box;
     text-decoration: none;
+}
+
+
+/*ICONS*/
+ul#email{
+    list-style-type: '\1F4E7\00A0';
+}
+ul#phone{
+    list-style-type: '\1F4DE\00A0';
+}
+ul#address{
+    list-style-type: '\1F4CC\00A0';
 }
 
 
@@ -464,14 +477,14 @@ main.container{
 }
 /* ANCHORS */
 .main-column .page p a{
-    color: #00684a;
+    color: var(--anchor-color);
     text-decoration: underline;
 }
 .main-column .page a{
-    color: #00684a;
+    color: var(--anchor-color);
 }
 .main-column .page a:hover{
-    color: #0c513e;
+    color: var(--anchor-hover);
 }
 
 
