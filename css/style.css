@@ -5,19 +5,20 @@
 
 
 :root{
-    --anchor-color: #699f18;
-    --anchor-hover: #306b08;
+    --anchor-color: #303c57;
+    --anchor-hover: #45ab55;
     --sooth-gray: #f1f9fc;
     --gray-color: #e3e3e3;
     --light-yellow: #D6D58E;
     --light-green: #9fdb44;
     --dark-green: #74c100;
-    --dark-gray: #3d4351;
+    --dark-gray: #303c57;
     --light-gray: #898d98;
     --white: #ffffff;
     --nav-hover: #444c5b;
-    --nav-dropdown-hover: #303645;
+    --nav-dropdown-hover: #283147;
     --nav-dropdown-content-hover: #373f53;
+    --active-color: #313846;
 
     --font-color: #373f53;
     --font-hover: #222f52;
@@ -131,7 +132,7 @@ header a:hover{
     color: var(--light-green);  
 }
 header .title-container h1{
-    color: var(--sooth-gray);
+    color: var(--light-green);
 }
 header .title-container *:hover{
     color: var(--light-green);
@@ -175,7 +176,7 @@ nav.navbar .dropdown .dropbtn.active{
     color: var(--light-green);
 }
 nav.navbar .dropdown .dropdown-content a.active{
-    background-color: var(--nav-dropdown-hover);
+    background-color: var(--active-color);
 }
 
 /* NAVBAR DROPDOWN */
@@ -872,13 +873,14 @@ footer .box{
 }
 footer .scrolltop{
     font-size: 2rem;
-    color: var(--light-gray);
-    background-color: #444c5b;
+    color: var(--font-color);
+    background-color: #9fdb44a8;
     padding: 1.1rem 1.3rem 1.3rem;
     border-radius: 5px;
 }
 footer .scrolltop:hover{
-    color: var(--light-green);
+    color: var(--font-hover);
+    background-color: #9fdb44;
 }
 
 
