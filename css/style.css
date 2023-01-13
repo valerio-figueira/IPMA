@@ -10,7 +10,8 @@
     --sooth-gray: #f1f9fc;
     --gray-color: #e3e3e3;
     --light-yellow: #D6D58E;
-    --light-green: #8ec53e;
+    --light-green: #9fdb44;
+    --dark-green: #74c100;
     --dark-gray: #3d4351;
     --light-gray: #898d98;
     --white: #ffffff;
@@ -376,6 +377,10 @@ main.container{
     background-color: var(--dark-gray);
 
     cursor: pointer;
+    outline: 3px solid transparent;
+}
+.main-column .transparencia:hover{
+    outline: 3px solid var(--light-green);
 }
 .main-column .transparencia a{
     display: flex;
@@ -410,6 +415,10 @@ main.container{
 
     width: 100%;
     background-color: var(--dark-gray);
+    outline: 3px solid transparent;
+}
+.main-column .login:hover{
+    outline: 3px solid var(--light-green);
 }
 .main-column .login h2{
     color: var(--white);
@@ -451,10 +460,12 @@ main.container{
     font-size: 1.2rem;
 
     cursor: pointer;
+    border: 4px solid transparent;
 }
 .main-column .form-signin button:hover{
-    color: #303645;
-    background-color: #7eb72a;
+    color: var(--font-hover);
+    background-color: var(--light-green);
+    border: 4px solid var(--dark-green);
 }
 
 
