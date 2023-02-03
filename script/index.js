@@ -6,6 +6,16 @@ import { Audiometria } from './guiamedico/Audiometria.js';
 import { Cardiologia } from './guiamedico/Cardiologia.js';
 import { CirurgiaAparelhoDigestivo } from './guiamedico/CirurgiaAparelhoDigestivo.js';
 import { CirurgiaGeral } from './guiamedico/CirurgiaGeral.js';
+import { CirurgiaCardioVascular } from './guiamedico/CirurgiaCardioVascular.js';
+import { CirurgiaCranioMaxiloFacial } from './guiamedico/CirurgiaCranioMaxiloFacial.js';
+import { CirurgiaDaMao } from './guiamedico/CirurgiaDaMao.js';
+import { CirurgiaDeCabecaEPescoco } from './guiamedico/CirurgiaDeCabecaEPescoco.js';
+import { CirurgiaOncologica } from './guiamedico/CirurgiaOncologica.js';
+import { CirurgiaPediatrica } from './guiamedico/CirurgiaPediatrica.js';
+import { CirurgiaPlastica } from './guiamedico/CirurgiaPlastica.js';
+import { CirurgiaVascular } from './guiamedico/CirurgiaVascular.js';
+import { CirurgiaVideoLaparoscopica } from './guiamedico/CirurgiaVideoLaparoscopica.js';
+
 
 /*COPYRIGHT DATE*/
 let year = new Date().getFullYear();
@@ -215,6 +225,15 @@ function searchDoctors(){
         Cardiologia,
         CirurgiaAparelhoDigestivo,
         CirurgiaGeral,
+        CirurgiaCardioVascular,
+        CirurgiaCranioMaxiloFacial,
+        CirurgiaDaMao,
+        CirurgiaDeCabecaEPescoco,
+        CirurgiaOncologica,
+        CirurgiaPediatrica,
+        CirurgiaPlastica,
+        CirurgiaVascular,
+        CirurgiaVideoLaparoscopica
     };
 
     selectionTag.addEventListener('change', () => {
@@ -271,7 +290,7 @@ function renderSelectedCategory(medicos){
 
 function searchByName(){
     const input = document.querySelector('#search-input');
-    const medicos = [...Acupuntura, ...AlergiaEImunologia, ...Anestesiologia, ...Angiologia, ...Audiometria, ...Cardiologia, ...CirurgiaAparelhoDigestivo, ...CirurgiaGeral];
+    const medicos = [...Acupuntura, ...AlergiaEImunologia, ...Anestesiologia, ...Angiologia, ...Audiometria, ...Cardiologia, ...CirurgiaAparelhoDigestivo, ...CirurgiaGeral, ...CirurgiaCardioVascular, ...CirurgiaCranioMaxiloFacial, ...CirurgiaDaMao, ...CirurgiaDeCabecaEPescoco, ...CirurgiaOncologica, ...CirurgiaPediatrica, ...CirurgiaPlastica, ...CirurgiaVascular, ...CirurgiaVideoLaparoscopica];
 
     input.addEventListener('keyup', (e) => {
         const lowerCaseInput = e.target.value.toLowerCase();
