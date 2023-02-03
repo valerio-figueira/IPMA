@@ -1273,6 +1273,9 @@ footer .scrolltop:hover{
 }
 
 @media screen and (max-width: 500px) {
+    .main-column{
+        padding: 0 .3rem;
+    }
     .main-column .page{
         grid-template-columns: 100%;
         
@@ -1281,6 +1284,11 @@ footer .scrolltop:hover{
 
     .main-column .page h2{
         font-size: 2rem;
+    }
+
+    .main-column .page p{
+    font-size: 1rem;
+    line-height: 1.7rem;
     }
 
 }
