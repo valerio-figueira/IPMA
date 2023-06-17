@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sobre - IPMA</title>
+    <link rel="shortcut icon" href="../imgs/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <script src="../script/index.js" defer type="module"></script>
+</head>
+
+<body>
+    <header id="header">
+        <div class="container">
+            <a href="../index.html" target="_self">
+                <img src="../imgs/brasão.png" alt="brasão" class="brasão">
+            </a>
+            <div class="title-container">
+                <a href="../index.html" target="_self">
+                    <h1 class="main-title">IPMA</h1>
+                </a>
+                <a href="../index.html" target="_self">
+                    <p class="subtitle">Instituto de Previdência Municipal de Monte Alegre de Minas</p>
+                </a>
+            </div>
+        </div>
+
+        <nav class="navbar">
+            <a href="../index.html" class="fa fa-home" id="home"></a>
+            <a href="../login.html" id="login">Login</a>
+            <a href="../legislacao.html">Legislação</a>
+            <div class="dropdown">
+                <div class="dropbtn">Convênios
+                    <div class="arrow">&#9698;</div>
+                </div>
+                <div class="dropdown-content">
+                    <a href="../convenios/unimed.html">Unimed</a>
+                    <a href="../convenios/uniodonto.html">Uniodonto</a>
+                    <a href="../convenios/odontocompany.html">Odonto Company</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <div class="dropbtn">Benefícios
+                    <div class="arrow">&#9698;</div>
+                </div>
+                <div class="dropdown-content">
+                    <a href="../beneficios/pensao.html">Pensão</a>
+                    <a href="../beneficios/aposentadoria.html">Aposentadoria</a>
+                    <a href="../beneficios/dependentes.html">Dependentes</a>
+                </div>
+            </div>
+            <a href="../licitacoes.html">Licitações</a>
+            <a href="../diretoria.html">Diretoria</a>
+            <a href="../transparencia-publica.html" id="transparencia">Transparência Pública</a>
+            <a href="../contato.html">Contato</a>
+
+            <button class="close-nav">&times;</button>
+        </nav>
+
+        <a id="mobile" class="fa fa-bars"></a>
+    </header>
+
+
+    <main class="container">
+
+        <section class="main-column">
+
+
+            <article class="page">
+                <h2>Sobre o Instituto de Previdência</h2>
+
+                <img src="../imgs/business.jpg" alt="">
+
+                <p>É com grande satisfação que lhe damos as boas-vindas ao nosso site, o <strong>portal oficial do <a href="../index.html" rel="next">Instituto de Previdência de Monte Alegre de Minas</a></strong>. Aqui, buscamos fornecer informações abrangentes e transparentes sobre nossa instituição e os serviços que oferecemos aos servidores públicos municipais e seus beneficiários.</p>
+
+                <p>Nosso objetivo principal é assegurar a tranquilidade financeira e a proteção social daqueles que contribuíram durante anos para o desenvolvimento de Monte Alegre de Minas. Com uma <strong>equipe dedicada</strong> e <strong>experiente</strong>, trabalhamos incansavelmente para garantir a <strong>gestão eficiente</strong> dos recursos previdenciários, visando o pagamento de benefícios de aposentadoria, pensão e outros direitos previdenciários de forma ágil e segura.</p>
+
+                <br>
+                <p>A <strong>transparência</strong> e a <strong>ética</strong> são valores fundamentais que norteiam todas as nossas atividades. Buscamos sempre fornecer <strong>informações claras</strong> e <strong>acessíveis</strong>, além de promover um relacionamento próximo e confiável com nossos segurados. Aqui, você encontrará orientações sobre os procedimentos previdenciários, <a href="../legislacao.html" rel="next">legislação</a>, notícias relevantes e respostas às suas <a href="../contato.html" rel="next">dúvidas</a> mais frequentes.</p>
+
+                <p>Nossa missão vai além de administrar recursos financeiros; <em>estamos comprometidos</em> em promover a <strong>qualidade de vida</strong> e o <strong>bem-estar</strong> daqueles que contribuíram para a construção do nosso município. Buscamos constantemente aprimorar nossos serviços, ouvindo sugestões e feedbacks, a fim de atender às necessidades de nossos segurados da melhor maneira possível.</p>
+
+                <p>Convidamos você a explorar nosso site e descobrir mais sobre o <a href="../index.html" rel="next">Instituto de Previdência de Monte Alegre de Minas</a>. Estamos aqui para atendê-lo e auxiliá-lo em suas demandas previdenciárias. Caso tenha alguma dúvida ou precise de informações adicionais, não hesite em entrar em <a href="../contato.html" rel="next">contato conosco</a>. Estamos prontos para <strong>servi-lo</strong> e contribuir para a sua <strong>segurança financeira</strong> e bem-estar.</p>
+                
+                <p><strong>Obrigado</strong> por visitar o <strong>Instituto de Previdência de Monte Alegre de Minas</strong>!</p>
+            </article>
+
+
+
+            <section class="sidebar">
+                <div class="transparencia">
+                    <a href="../transparencia-publica.html" rel="next">Transparência Pública</a>
+                </div>
+
+                <div class="login">
+                    <h2>Holerite</h2>
+                    <div class="login-form">
+                        <form class="form-signin" method="POST" name="WFRLogon"
+                            action="https://aspprevweb.com.br:8097/logon.do" target="_blank">
+                            <input name="dataConnection" type="hidden" value="MonteAlegreDeMinas" />
+                            <input name="sys" type="hidden" value="AUT" />
+                            <input type="text" id="cpf" name="user" class="form-control" placeholder="Digite o CPF"
+                                required aria-label="Digite o CPF">
+                            <input type="password" name="password" class="form-control" placeholder="Digite a Senha"
+                                required aria-label="Digite a Senha">
+                            <button class="button" type="submit">Acessar</button>
+                        </form>
+                    </div>
+                </div>
+            </section>
+
+
+        </section>
+
+
+
+
+    </main>
+
+
+    <footer>
+        <div class="box">
+            <p class="copyright"></p>
+            <p class="developer-info">Desenvolvido por <a target="_blank" rel="external"> Valerio Figueira</a></p>
+        </div>
+        <a class="scrolltop fa fa-caret-up" href="#header"></a>
+    </footer>
+</body>
+
+</html>
