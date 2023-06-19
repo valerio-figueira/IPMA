@@ -216,9 +216,11 @@ nav.navbar .dropdown:hover .dropdown-content{
 nav.navbar .dropdown .dropdown-content a{
     height: initial;
     padding: 1.5rem;
+    transition: 0s;
 }
 nav.navbar .dropdown .dropdown-content a:hover{
-    background-color: var(--nav-dropdown-hover);
+    background-color: var(--dark-green);
+    color: var(--font-color);
 }
 nav.navbar .dropdown:hover .dropbtn {
     color: var(--light-green);
@@ -996,6 +998,7 @@ footer .scrolltop:hover{
     }
     nav.navbar.responsive .dropdown .dropdown-content a:hover{
         background-color: var(--nav-dropdown-content-hover);
+        color: var(--light-green);
     }
     nav.navbar.responsive .dropdown:hover .dropbtn{
         background-color: var(--nav-dropdown-hover);
