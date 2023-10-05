@@ -207,7 +207,7 @@ nav.navbar .dropdown:hover .dropdown-content{
     display: flex;
     flex-direction: column;
 
-    background-color: var(--dark-gray);
+    background-color: #232c3f;
     
     position: absolute;
     top: 100%;
@@ -251,7 +251,6 @@ main.container{
 }
 .slideshow .slide{
     position: relative;
-
     display: flex;
     justify-content: center;
     flex-shrink: 0;
@@ -264,9 +263,9 @@ main.container{
     justify-content: stretch;
     align-items: stretch;
     flex-basis: content;
-
-    width: 100.1%;
-    transform: translateY(-20%);
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
 }
 
 /* STARTS WITH NO DISPLAY */
@@ -360,7 +359,7 @@ main.container{
 /* MAIN COLUMN CSS - GRID LAYOUT */
 .main-column{
     display: grid;
-    grid-template-columns: 1fr 300px;
+    grid-template-columns: 1fr minmax(300px, 360px);
 }
 .main-column .sidebar{
     grid-column: 2;
@@ -415,7 +414,6 @@ main.container{
     gap: .5rem;
 
     padding: 2rem 1.5rem;
-
     width: 100%;
     background-color: var(--dark-gray);
     outline: 3px solid transparent;
@@ -435,11 +433,13 @@ main.container{
     flex-direction: column;
     justify-content: center;
     align-items: stretch;
+    gap: 1rem;
+    margin: 1rem 0;
     width: 100%;
 }
 .main-column .form-signin input{
     display: block;
-    padding: .7rem .5rem;
+    padding: .9rem .5rem;
     margin: 1rem auto 0;
     border: none;
     outline: none;
@@ -1026,27 +1026,7 @@ footer .scrolltop:hover{
 }
 
 
-@media screen and (max-width: 1350px){
-    /* SLIDESHOW - SCALE IMAGE*/
-    .slideshow .slide img{    
-        transform: translateY(-10%) scale(1.2);
-    }
-}
-
-@media screen and (max-width: 1160px){
-    /* SLIDESHOW - SCALE IMAGE*/
-    .slideshow .slide img{    
-        transform: translateY(0) scale(1.2);
-    }
-
-}
-
 @media screen and (max-width: 1050px){
-    /* SLIDESHOW - SCALE IMAGE*/
-    .slideshow .slide img{    
-        transform: translateY(-10%) scale(1);
-    }
-
     .main-column{
         display: flex;
         flex-direction: column;
@@ -1056,32 +1036,8 @@ footer .scrolltop:hover{
     }
 
 }
-@media screen and (max-width: 900px){
-        /* SLIDESHOW - SCALE IMAGE*/
-        .slideshow .slide img{    
-            transform: translateY(0) scale(1.3);
-        }
-}
-
-
-@media screen and (max-width: 800px) {
-    /* SLIDESHOW - SCALE IMAGE*/
-    .slideshow .slide img{    
-        transform: translateY(20%) scale(1.5);
-    }
-    .slideshow .slide:nth-of-type(2) img{    
-        transform: translateY(0%) scale(1.5) translateX(-15%);
-    }
-}
 
 @media screen and (max-width: 700px) {
-    /* SLIDESHOW - SCALE IMAGE*/
-    .slideshow .slide img{    
-        transform: translateY(10%) scale(1.5);
-    }
-    .slideshow .slide:nth-of-type(2) img{    
-        transform: translateY(10%) scale(1.7) translateX(-15%);
-    }
 
     /* TEXTS AND BUTTONS */
     .slideshow .slide .text{
@@ -1110,22 +1066,9 @@ footer .scrolltop:hover{
 
 
 }
-@media screen and (max-width: 600px){
-    /* SLIDESHOW - SCALE IMAGE*/
-    .slideshow .slide img{    
-        transform: translateY(20%) scale(1.7);
-    }
-    .slideshow .slide:nth-of-type(2) img{    
-        transform: translateY(20%) scale(1.5) translateX(-10%);
-    }
-}
+@media screen and (max-width: 600px){ }
 
 @media screen and (max-width: 550px) {
-    /* SLIDESHOW - SCALE IMAGE*/
-    .slideshow .slide img{
-        transform: translateY(30%) scale(2) translateX(0);
-    }
-
     .slideshow .slide .text{
         font-size: 1rem;
         padding: 1rem;
@@ -1159,25 +1102,6 @@ footer .scrolltop:hover{
     footer .scrolltop{
         font-size: 1.2rem;
         padding: .8rem 1rem 1rem;
-    }
-}
-
-
-@media screen and (max-width: 550px) {
-    /* SLIDESHOW - SCALE IMAGE*/
-    .slideshow .slide img{
-        transform: translateY(50%) scale(2.5) translateX(0);
-    }
-
-    /* ODONTO IMAGE CENTERED */
-    .slideshow .slide:nth-of-type(2) img{
-        transform: translateY(37%) scale(2) translateX(-15%);
-    }
-}
-@media screen and (max-width: 400px) {
-    /* ODONTO IMAGE CENTERED */
-    .slideshow .slide:nth-of-type(2) img{
-        transform: translateY(50%) scale(2.5) translateX(-15%);
     }
 }
 
