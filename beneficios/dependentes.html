@@ -8,6 +8,7 @@
     <link rel="shortcut icon" href="../imgs/favicon.png" type="image/x-icon">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="../css/style.css">
+    <script src="https://unpkg.com/scrollreveal"></script>
     <script src="../script/index.js" defer type="module"></script>
 </head>
 
@@ -411,8 +412,16 @@
         </div>
       </div>
       <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
-      <script>
-        new window.VLibras.Widget('https://vlibras.gov.br/app');
+        <script>
+            new window.VLibras.Widget('https://vlibras.gov.br/app');
+        </script>
+    </div>
+
+    <script>
+        ScrollReveal().reveal('h1', { reset: true, delay: 200 })
+        ScrollReveal().reveal('h2', { reset: true, delay: 200 })
+        ScrollReveal().reveal('h3', { reset: true, delay: 200 })
+        ScrollReveal().reveal('p', { reset: true, delay: 200 })
     </script>
 </body>
 </html>

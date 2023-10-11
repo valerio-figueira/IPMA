@@ -7,30 +7,40 @@
 :root{
     --anchor-color: #303c57;
     --anchor-hover: #45ab55;
-    --sooth-gray: #f1f9fc;
-    --gray-color: #e3e3e3;
+    --sooth-gray: #222f52;
+    --gray-color: #222f52;
+    --medium-blue: #1e4dd8;
+    --light-blue: #56b3ff;
+    --indigo: #182a5a;
     --light-yellow: #D6D58E;
-    --light-green: #9fdb44;
-    --dark-green: #74c100;
-    --dark-gray: #303c57;
-    --light-gray: #898d98;
+    --light-green: #52d7ff;
+    --dark-green: #0074c1;
+    --dark-green2: #0f8300;
     --white: #ffffff;
+    --light-gray: #898d98;
     --nav-hover: #444c5b;
     --nav-dropdown-hover: #283147;
     --nav-dropdown-content-hover: #373f53;
     --active-color: #313846;
+    --border-color: #d8e0e4;
+    --folder-bg: #23345e;
 
-    --font-color: #373f53;
+    --header-color: #222f52;
+    --font-color: #222f52;
     --font-hover: #222f52;
     --sub-header-color: #646875;
 
     --mobile: 360px;
 }
-
+/*
+indigo: #3754ac
+#23345e
+*/
 /* 
 COLORS
     --dark-gray: #3d4351;
     --light-gray: #898d98;
+    --light-green: #9fdb44;
 */
 
 
@@ -46,7 +56,7 @@ html{
     background-color: var(--light-gray);
 }
 ::-webkit-scrollbar-thumb{
-    background-color: var(--dark-gray);
+    background-color: var(--white);
 }
 ::-webkit-scrollbar-thumb:hover{
     background-color: var(--light-green);
@@ -90,10 +100,13 @@ header{
     display: flex;
     align-items: stretch;
     justify-content: space-between;
-    background: var(--dark-gray);
+    background: var(--white);
 
     padding: 0 3%;
+    margin-bottom: 5rem;
+    border-bottom: 1px solid var(--border-color);
 }
+header:hover{ box-shadow: 0px 0px 15px #0c4a7c2c; }
 header .container{
     display: flex;
     align-items: center;
@@ -108,13 +121,13 @@ header .title-container{
 header .title-container .subtitle{
     font-family: Georgia, 'Times New Roman', Times, serif;
     font-size: 1rem;
-    color: var(--sooth-gray);
+    color: var(--font-color);
 }
 header img.brasão{
     display: flex;
     align-items: center;
     background-color: #ffffff99;
-    padding: .3rem;
+    padding: 0;
 
     width: 55px;
     height: 50px;
@@ -125,17 +138,16 @@ header img.brasão{
 
 /* COLOR OF THE LINKS INSIDE HEADER */
 header a{
-    color: var(--gray-color);
-    color: var(--light-gray);
+    color: var(--font-color);
 }
 header a:hover{
-    color: var(--light-green);  
+    color: var(--dark-green);
 }
 header .title-container h1{
-    color: var(--light-green);
+    color: var(--indigo);
 }
 header .title-container *:hover{
-    color: var(--light-green);
+    color: var(--dark-green);
 }
 
 header #mobile{
@@ -155,6 +167,7 @@ nav.navbar a{
     font-size: 1.1rem;
     padding: 1.4rem 0;
 }
+nav.navbar a:hover { color: var(--dark-green); }
 nav.navbar #home{
     font-size: 1.5rem;
 }
@@ -170,13 +183,14 @@ nav.navbar .close-nav{
 
 /* ACTIVE STATUS IN NAVBAR */
 nav.navbar a.active{
-    color: var(--light-green);
+    color: var(--dark-green);
 }
 nav.navbar .dropdown .dropbtn.active{
-    color: var(--light-green);
+    color: var(--dark-green);
 }
 nav.navbar .dropdown .dropdown-content a.active{
     background-color: var(--active-color);
+    color: var(--light-blue);
 }
 
 /* NAVBAR DROPDOWN */
@@ -187,7 +201,7 @@ nav.navbar .dropdown{
 nav.navbar .dropdown .dropbtn{
     display: flex;
     gap: .2rem;
-    color: var(--light-gray);
+    color: var(--font-color);
     font-size: 1.1rem;
 }
 nav.navbar .dropdown .dropbtn:hover{
@@ -207,8 +221,8 @@ nav.navbar .dropdown:hover .dropdown-content{
     display: flex;
     flex-direction: column;
 
-    background-color: #232c3f;
-    
+    background-color: var(--white);
+    border: 1px solid var(--border-color);
     position: absolute;
     top: 100%;
     z-index: 1000;
@@ -219,18 +233,19 @@ nav.navbar .dropdown .dropdown-content a{
     transition: 0s;
 }
 nav.navbar .dropdown .dropdown-content a:hover{
-    background-color: var(--dark-green);
-    color: var(--font-color);
+    background-color: var(--indigo);
+    /*#3D5B81*/
+    color: var(--white);
 }
 nav.navbar .dropdown:hover .dropbtn {
-    color: var(--light-green);
+    color: var(--dark-green);
 }
 
 
 
 /* MAIN CONTAINER */
 main.container{
-    padding: 2rem 3%;
+    padding: 2rem 10%;
 }
 
 
@@ -293,7 +308,7 @@ main.container{
 }
 .slideshow .text a{
     line-height: 1.8rem;
-    color: lightgray;
+    color: var(--white);
 }
 
 /* NEXT AND PREV BTN */
@@ -344,7 +359,7 @@ main.container{
     background-color: var(--light-green);
 }
 .slideshow-container .dot.active{
-    background-color: var(--light-green);
+    background-color: var(--light-blue);
 }
 
 
@@ -376,13 +391,13 @@ main.container{
     margin: 0 0 1rem;
     width: 100%;
     height: 100px;
-    background-color: var(--dark-gray);
-
+    background-color: var(--indigo);
+    /*#3754ac*/
     cursor: pointer;
     outline: 3px solid transparent;
 }
 .main-column .transparencia:hover{
-    outline: 3px solid var(--light-green);
+    transform: translateY(-3px);
 }
 .main-column .transparencia a{
     display: flex;
@@ -394,7 +409,7 @@ main.container{
     height: 100%;
     width: 100%;
 }
-.main-column .transparencia a:hover{
+.main-column .transparencia a:hover {
     color: var(--light-green);
 }
 
@@ -415,14 +430,15 @@ main.container{
 
     padding: 2rem 1.5rem;
     width: 100%;
-    background-color: var(--dark-gray);
+    background-color: var(--white);
     outline: 3px solid transparent;
+    border: 1px solid var(--border-color);
 }
 .main-column .login:hover{
-    outline: 3px solid var(--light-green);
+    outline: 1px solid var(--light-blue);
 }
 .main-column .login h2{
-    color: var(--white);
+    color: var(--font-color);
 }
 .main-column .login .login-form{
     display: flex;
@@ -445,11 +461,12 @@ main.container{
     outline: none;
     font-size: 1.2rem;
     outline: 3px solid transparent;
+    border: 1px solid var(--border-color);
 
     width: 100%;
 }
 .main-column .form-signin input:focus{
-    outline: 3px solid var(--light-green);
+    outline: 1px solid var(--light-blue);
 }
 .main-column .form-signin button{
     display: block;
@@ -457,18 +474,13 @@ main.container{
     padding: .7rem 3rem;
     border: none;
 
-    background-color: var(--light-green);
-    color: var(--dark-gray);
+    background-color: var(--indigo);
+    color: var(--white);
 
     font-size: 1.2rem;
 
     cursor: pointer;
     border: 4px solid transparent;
-}
-.main-column .form-signin button:hover{
-    color: var(--font-hover);
-    background-color: var(--light-green);
-    border: 4px solid var(--dark-green);
 }
 
 
@@ -485,12 +497,12 @@ main.container{
     padding: 0 2rem;
 }
 .main-column .page h2{
-    color: var(--dark-gray);
+    color: var(--font-color);
     font-size: 2rem;
-    margin: 2rem 0 2rem;
+    margin: 0 0 2rem;
 }
 .main-column .page h3{
-    color: var(--sub-header-color);
+    color: #4b5063;
     font-size: 1.5rem;
     margin: 2.5rem 0 1rem;
 }
@@ -509,7 +521,7 @@ main.container{
     color: var(--anchor-color);
 }
 .main-column .page a:hover{
-    color: var(--anchor-hover);
+    color: var(--dark-green);
 }
 
 
@@ -539,19 +551,19 @@ main.container{
     display: block;
     cursor: pointer;
     font-size: 1.4rem;
-    color: var(--gray-color);
-    background: var(--dark-gray);
+    color: var(--white);
+    background: var(--folder-bg);
     border: none;
     padding: .5rem 1rem;
     margin-top: 1rem;
     width: 100%;
 }
 .main-column .page button.folder:hover{
-    color: var(--light-green);
+    color: #c0e8ff;
 }
 .main-column .page .folder_content{
     display: none;
-    background-color: var(--gray-color);
+    background-color: #e3e3e3;
     padding: 1rem 3rem;
 }
 .main-column .page .folder_content.open{
@@ -567,7 +579,7 @@ main.container{
     width: 100%;
 }
 .main-column .page th{
-    background-color: var(--dark-gray);
+    background-color: var(--folder-bg);
     color: var(--white);
     padding: .7rem 1rem;
 }
@@ -633,7 +645,7 @@ ol li:hover{
     padding: .5rem 1rem;
     width: 100%;
 
-    background: var(--dark-gray);
+    background: var(--folder-bg);
     color: var(--white);
     border: none;
 }
@@ -667,7 +679,7 @@ ol li:hover{
     width: 100%;    
 }
 #search-input:focus{
-    outline: 2px solid var(--light-green);
+    outline: 2px solid var(--indigo);
 }
 .search-icon{
     position: absolute;
@@ -709,7 +721,7 @@ ol li:hover{
 .content-column{
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-
+    column-gap: 3rem;
     margin-top: 5rem;
 }
 
@@ -717,10 +729,10 @@ ol li:hover{
     display: flex;
     flex-direction: column;
 
-    margin: 2rem 1rem;
+    margin: 2rem 0;
     padding: .7rem;
 
-    border: 1px solid #e6e6e6;
+    border: 1px solid var(--border-color);
 }
 .content-column .post:hover{
     box-shadow: 0px 0px 10px 1px #00000033;
@@ -728,7 +740,7 @@ ol li:hover{
 
 .content-column .post .title{
     color: var(--white);
-    background-color: var(--dark-gray);
+    background-color: var(--indigo);
     padding: .7rem 1rem;
     margin: 0;
 }
@@ -739,7 +751,7 @@ ol li:hover{
     width: 100%;
 }
 .content-column .post .paragraph{
-    color: var(--dark-gray);
+    color: var(--font-color);
     font-size: 1.3rem;
     line-height: 1.9rem;
     text-align: justify;
@@ -749,7 +761,7 @@ ol li:hover{
 }
 .content-column .post .read-more{
     color: var(--white);
-    background-color: var(--dark-gray);
+    background-color: var(--indigo);
     font-size: 1.3rem;
     padding: .5rem 1rem;
 }
@@ -774,11 +786,11 @@ ol li:hover{
 
 /* LOGIN PAGE - CSS */
 fieldset{
-    margin: auto;
-    width: 500px;
-    height: 400px;
+    max-inline-size: 400px;
+    block-size: 400px;
 
-    padding: 3rem 3rem 0;
+    padding: 4rem 3rem 0;
+    margin: 2rem 0;
     border: 1px solid lightgray;
 }
 fieldset legend{
@@ -809,38 +821,13 @@ form.holerite-form button{
 
     font-size: 1.2rem;
 
-    background: var(--light-green);
+    background: var(--indigo);
     border: transparent;
-    color: var(--font-color);
+    color: var(--white);
 }
 form.holerite-form button:hover{
-    color: var(--font-hover);
-    background: #7eb72a;
+    color: var(--light-green);
 }
-/* LOGIN PAGE - CSS */
-@media screen and (max-width: 750px) {
-    fieldset{
-        width: 400px;
-        height: 400px;
-
-        padding: 3rem 2rem 0;
-        margin: 0 auto;
-    }
-}
-@media screen and (max-width: 550px) {
-    fieldset{
-        width: 400px;
-        height: 400px;
-    }
-}
-@media screen and (max-width: 450px) {
-    fieldset{
-        width: 300px;
-        height: 400px;
-    }
-}
-
-
 
 
 
@@ -852,11 +839,11 @@ form.holerite-form button:hover{
 
 /* FOOTER CSS */
 footer{
-    background: var(--dark-gray);
+    background: var(--indigo);
     color: var(--white);
 
     margin-top: 7rem;
-    padding: 4rem 7%;
+    padding: 6rem 7%;
 
     display: flex;
     justify-content: space-between;
@@ -876,13 +863,13 @@ footer .box{
 footer .scrolltop{
     font-size: 2rem;
     color: var(--font-color);
-    background-color: #9fdb44a8;
+    background-color: var(--light-blue);
     padding: 1.1rem 1.3rem 1.3rem;
     border-radius: 5px;
 }
 footer .scrolltop:hover{
     color: var(--font-hover);
-    background-color: #9fdb44;
+    background-color: var(--dark-green);
 }
 
 
@@ -900,6 +887,14 @@ footer .scrolltop:hover{
 @media screen and (max-width: 1450px) {
     header{
         padding: 0 2%;
+    }
+}
+@media screen and (max-width: 1300px) {
+    main.container{
+        padding: 2rem 1%;
+    }
+    footer{
+        padding: 5rem 3%;
     }
 }
 @media screen and (max-width: 1000px) {
@@ -950,7 +945,7 @@ footer .scrolltop:hover{
         align-items: center;
         gap: 0;
 
-        background-color: var(--dark-gray);
+        background-color: var(--white);
         padding: 6rem 0;
 
         transform: translateX(0);
@@ -968,7 +963,7 @@ footer .scrolltop:hover{
         padding: .7rem 2rem;
     }
     nav.navbar.responsive a:hover{
-        background-color: var(--navbar-hover);
+        background-color: var(--white);
     }
     nav.navbar.responsive .dropdown{
         display: flex;
@@ -980,13 +975,15 @@ footer .scrolltop:hover{
         display: flex;
         flex-direction: column;
         width: 100%;
-        background-color: var(--nav-hover);
+        background-color: var(--indigo);
+        border: none;
     }
     nav.navbar.responsive .dropdown .dropdown-content a{
         display: flex;
         justify-content: center;
         align-items: stretch;
         padding: .7rem 0;
+        color: var(--white);
     }
     nav.navbar.responsive .dropdown .dropbtn{
         display: flex;
@@ -998,10 +995,14 @@ footer .scrolltop:hover{
     }
     nav.navbar.responsive .dropdown .dropdown-content a:hover{
         background-color: var(--nav-dropdown-content-hover);
-        color: var(--light-green);
+        color: var(--white);
+    }
+    nav.navbar.responsive .dropdown .dropdown-content a.active {
+        color: var(--light-blue);
     }
     nav.navbar.responsive .dropdown:hover .dropbtn{
         background-color: var(--nav-dropdown-hover);
+        color: var(--white);
     }
     nav.navbar{
         position: relative;
@@ -1013,7 +1014,7 @@ footer .scrolltop:hover{
         background: transparent;
         font-size: 3.5rem;
 
-        color: var(--light-gray);
+        color: var(--indigo);
 
         position: absolute;
         top: 0; left: 1.5rem;
@@ -1044,17 +1045,9 @@ footer .scrolltop:hover{
         font-size: 1.2rem;
 
         padding: 1rem 2rem;
-        background-color: #000000d4;
-    }
-    .slideshow .slide .text:hover{
-        background-color: #000000e8;
-    }
-    .slideshow .slide .text:hover a{
-        color: var(--light-yellow);
     }
     .slideshow .text a{
         line-height: 1.8rem;
-        color: lightgray;
     }
 
 
@@ -1066,7 +1059,6 @@ footer .scrolltop:hover{
 
 
 }
-@media screen and (max-width: 600px){ }
 
 @media screen and (max-width: 550px) {
     .slideshow .slide .text{
@@ -1214,8 +1206,8 @@ footer .scrolltop:hover{
     }
 
     .main-column .page p{
-    font-size: 1rem;
-    line-height: 1.7rem;
+        font-size: 1rem;
+        line-height: 1.7rem;
     }
 
 }
@@ -1234,28 +1226,21 @@ footer .scrolltop:hover{
 @media screen and (max-width: 900px) {
     /* TABLE CSS */
     .main-column .page table{
-        color: var(--font-color);
         font-size: 1rem;
         width: 100%;
         
         overflow-x: scroll;
     }
     .main-column .page th{
-        background-color: var(--dark-gray);
-        color: var(--white);
         padding: .7rem 1rem;
     }
     .main-column .page td{
         line-height: 1.4rem;
         padding: .7rem .5rem;
         border: 1px solid gray;
-        background-color: #e8e8e8;
     }
     .main-column .page tr td{
         margin: 0;
-    }
-    .main-column .page td:hover{
-        background-color: var(--light-yellow);
     }
 
     .main-column .page table.licitacoes td:nth-of-type(3){
@@ -1286,19 +1271,13 @@ footer .scrolltop:hover{
         display: block;
         cursor: pointer;
         font-size: 1.4rem;
-        color: var(--gray-color);
-        background: var(--dark-gray);
         border: none;
         padding: .5rem 1rem;
         margin-top: 1rem;
         width: 100%;
     }
-    .main-column .page button.folder:hover{
-        color: var(--light-green);
-    }
     .main-column .page .folder_content{
         display: none;
-        background-color: var(--gray-color);
         padding: 1rem .5rem;
     }
     .main-column .page .folder_content.open{
