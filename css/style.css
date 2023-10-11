@@ -5,31 +5,25 @@
 
 
 :root{
-    --anchor-color: #303c57;
-    --anchor-hover: #45ab55;
-    --sooth-gray: #222f52;
-    --gray-color: #222f52;
-    --medium-blue: #1e4dd8;
-    --light-blue: #56b3ff;
-    --indigo: #182a5a;
-    --light-yellow: #D6D58E;
-    --light-green: #52d7ff;
-    --dark-green: #0074c1;
-    --dark-green2: #0f8300;
-    --white: #ffffff;
-    --light-gray: #898d98;
-    --nav-hover: #444c5b;
-    --nav-dropdown-hover: #283147;
-    --nav-dropdown-content-hover: #373f53;
-    --active-color: #313846;
-    --border-color: #d8e0e4;
-    --folder-bg: #23345e;
-
-    --header-color: #222f52;
-    --font-color: #222f52;
-    --font-hover: #222f52;
-    --sub-header-color: #646875;
-
+    --color1: #303c57;
+    --color2: #45ab55;
+    --color3: #222f52;
+    --color5: #1e4dd8;
+    --color6: #56b3ff;
+    --main-color: #182a5a;
+    --color8: #D6D58E;
+    --color9: #52d7ff;
+    --color10: #0074c1;
+    --color11: #0f8300;
+    --color12: #ffffff;
+    --color13: #898d98;
+    --color14: #444c5b;
+    --color15: #283147;
+    --color16: #373f53;
+    --color17: #313846;
+    --color18: #d8e0e4;
+    --color19: #23345e;
+    --color20: #222f52;
     --mobile: 360px;
 }
 /*
@@ -53,13 +47,13 @@ html{
     width: 10px;
 }
 ::-webkit-scrollbar-track{
-    background-color: var(--light-gray);
+    background-color: var(--color13);
 }
 ::-webkit-scrollbar-thumb{
-    background-color: var(--white);
+    background-color: var(--color12);
 }
 ::-webkit-scrollbar-thumb:hover{
-    background-color: var(--light-green);
+    background-color: var(--color9);
 }
 
 
@@ -100,11 +94,11 @@ header{
     display: flex;
     align-items: stretch;
     justify-content: space-between;
-    background: var(--white);
+    background: var(--color12);
 
     padding: 0 3%;
     margin-bottom: 5rem;
-    border-bottom: 1px solid var(--border-color);
+    border-bottom: 1px solid var(--color18);
 }
 header:hover{ box-shadow: 0px 0px 15px #0c4a7c2c; }
 header .container{
@@ -121,7 +115,7 @@ header .title-container{
 header .title-container .subtitle{
     font-family: Georgia, 'Times New Roman', Times, serif;
     font-size: 1rem;
-    color: var(--font-color);
+    color: var(--color20);
 }
 header img.brasão{
     display: flex;
@@ -138,16 +132,16 @@ header img.brasão{
 
 /* COLOR OF THE LINKS INSIDE HEADER */
 header a{
-    color: var(--font-color);
+    color: var(--color20);
 }
 header a:hover{
-    color: var(--dark-green);
+    color: var(--color10);
 }
 header .title-container h1{
-    color: var(--indigo);
+    color: var(--main-color);
 }
 header .title-container *:hover{
-    color: var(--dark-green);
+    color: var(--color10);
 }
 
 header #mobile{
@@ -167,7 +161,7 @@ nav.navbar a{
     font-size: 1.1rem;
     padding: 1.4rem 0;
 }
-nav.navbar a:hover { color: var(--dark-green); }
+nav.navbar a:hover { color: var(--color10); }
 nav.navbar #home{
     font-size: 1.5rem;
 }
@@ -183,14 +177,14 @@ nav.navbar .close-nav{
 
 /* ACTIVE STATUS IN NAVBAR */
 nav.navbar a.active{
-    color: var(--dark-green);
+    color: var(--color10);
 }
 nav.navbar .dropdown .dropbtn.active{
-    color: var(--dark-green);
+    color: var(--color10);
 }
 nav.navbar .dropdown .dropdown-content a.active{
-    background-color: var(--active-color);
-    color: var(--light-blue);
+    background-color: var(--color17);
+    color: var(--color6);
 }
 
 /* NAVBAR DROPDOWN */
@@ -201,11 +195,11 @@ nav.navbar .dropdown{
 nav.navbar .dropdown .dropbtn{
     display: flex;
     gap: .2rem;
-    color: var(--font-color);
+    color: var(--color20);
     font-size: 1.1rem;
 }
 nav.navbar .dropdown .dropbtn:hover{
-    color: var(--light-green);
+    color: var(--color9);
 }
 nav.navbar .dropdown .arrow{
     transform: rotate(45deg);
@@ -221,8 +215,8 @@ nav.navbar .dropdown:hover .dropdown-content{
     display: flex;
     flex-direction: column;
 
-    background-color: var(--white);
-    border: 1px solid var(--border-color);
+    background-color: var(--color12);
+    border: 1px solid var(--color18);
     position: absolute;
     top: 100%;
     z-index: 1000;
@@ -233,12 +227,12 @@ nav.navbar .dropdown .dropdown-content a{
     transition: 0s;
 }
 nav.navbar .dropdown .dropdown-content a:hover{
-    background-color: var(--indigo);
+    background-color: var(--main-color);
     /*#3D5B81*/
-    color: var(--white);
+    color: var(--color12);
 }
 nav.navbar .dropdown:hover .dropbtn {
-    color: var(--dark-green);
+    color: var(--color10);
 }
 
 
@@ -304,11 +298,11 @@ main.container{
     background-color: #000000e8;
 }
 .slideshow .slide .text:hover a{
-    color: var(--light-yellow);
+    color: var(--color8);
 }
 .slideshow .text a{
     line-height: 1.8rem;
-    color: var(--white);
+    color: var(--color12);
 }
 
 /* NEXT AND PREV BTN */
@@ -337,7 +331,7 @@ main.container{
 }
 .slideshow .next:hover, .slideshow .prev:hover{
     background: #000000c1;
-    color: var(--white);
+    color: var(--color12);
 }
 
 
@@ -353,13 +347,13 @@ main.container{
     height: 20px;
     width: 20px;
     border-radius: 50%;
-    background-color: var(--light-gray);
+    background-color: var(--color13);
 }
 .slideshow-container .dot:hover{
-    background-color: var(--light-green);
+    background-color: var(--color9);
 }
 .slideshow-container .dot.active{
-    background-color: var(--light-blue);
+    background-color: var(--color6);
 }
 
 
@@ -391,7 +385,7 @@ main.container{
     margin: 0 0 1rem;
     width: 100%;
     height: 100px;
-    background-color: var(--indigo);
+    background-color: var(--main-color);
     /*#3754ac*/
     cursor: pointer;
     outline: 3px solid transparent;
@@ -404,13 +398,13 @@ main.container{
     align-items: center;
     justify-content: center;
 
-    color: var(--white);
+    color: var(--color12);
     font-size: 1.3rem;
     height: 100%;
     width: 100%;
 }
 .main-column .transparencia a:hover {
-    color: var(--light-green);
+    color: var(--color9);
 }
 
 
@@ -430,15 +424,15 @@ main.container{
 
     padding: 2rem 1.5rem;
     width: 100%;
-    background-color: var(--white);
+    background-color: var(--color12);
     outline: 3px solid transparent;
-    border: 1px solid var(--border-color);
+    border: 1px solid var(--color18);
 }
 .main-column .login:hover{
-    outline: 1px solid var(--light-blue);
+    outline: 1px solid var(--color6);
 }
 .main-column .login h2{
-    color: var(--font-color);
+    color: var(--color20);
 }
 .main-column .login .login-form{
     display: flex;
@@ -461,12 +455,12 @@ main.container{
     outline: none;
     font-size: 1.2rem;
     outline: 3px solid transparent;
-    border: 1px solid var(--border-color);
+    border: 1px solid var(--color18);
 
     width: 100%;
 }
 .main-column .form-signin input:focus{
-    outline: 1px solid var(--light-blue);
+    outline: 1px solid var(--color6);
 }
 .main-column .form-signin button{
     display: block;
@@ -474,8 +468,8 @@ main.container{
     padding: .7rem 3rem;
     border: none;
 
-    background-color: var(--indigo);
-    color: var(--white);
+    background-color: var(--main-color);
+    color: var(--color12);
 
     font-size: 1.2rem;
 
@@ -497,7 +491,7 @@ main.container{
     padding: 0 2rem;
 }
 .main-column .page h2{
-    color: var(--font-color);
+    color: var(--color20);
     font-size: 2rem;
     margin: 0 0 2rem;
 }
@@ -507,21 +501,21 @@ main.container{
     margin: 2.5rem 0 1rem;
 }
 .main-column .page p{
-    color: var(--font-color);
+    color: var(--color20);
     font-size: 1.3rem;
     line-height: 1.7rem;
     margin: 1rem 0;
 }
 /* ANCHORS */
 .main-column .page p a{
-    color: var(--anchor-color);
+    color: var(--color1);
     text-decoration: underline;
 }
 .main-column .page a{
-    color: var(--anchor-color);
+    color: var(--color1);
 }
 .main-column .page a:hover{
-    color: var(--dark-green);
+    color: var(--color10);
 }
 
 
@@ -551,8 +545,8 @@ main.container{
     display: block;
     cursor: pointer;
     font-size: 1.4rem;
-    color: var(--white);
-    background: var(--folder-bg);
+    color: var(--color12);
+    background: var(--color19);
     border: none;
     padding: .5rem 1rem;
     margin-top: 1rem;
@@ -574,13 +568,13 @@ main.container{
 
 /* TABLE CSS */
 .main-column .page table{
-    color: var(--font-color);
+    color: var(--color20);
     font-size: 1.3rem;
     width: 100%;
 }
 .main-column .page th{
-    background-color: var(--folder-bg);
-    color: var(--white);
+    background-color: var(--color19);
+    color: var(--color12);
     padding: .7rem 1rem;
 }
 .main-column .page td{
@@ -592,7 +586,7 @@ main.container{
     margin: 1rem;
 }
 .main-column .page td:hover{
-    background-color: var(--light-yellow);
+    background-color: var(--color8);
 }
 
 /* CENTER DOWNLOAD ICON IN TABLE */
@@ -645,8 +639,8 @@ ol li:hover{
     padding: .5rem 1rem;
     width: 100%;
 
-    background: var(--folder-bg);
-    color: var(--white);
+    background: var(--color19);
+    color: var(--color12);
     border: none;
 }
 .medicos table{
@@ -671,7 +665,7 @@ ol li:hover{
 }
 #search-input{
     font-size: 1.5rem;
-    color: var(--font-color);
+    color: var(--color20);
     padding: .5rem 1rem;
     margin: 1rem 0;
 
@@ -679,14 +673,14 @@ ol li:hover{
     width: 100%;    
 }
 #search-input:focus{
-    outline: 2px solid var(--indigo);
+    outline: 2px solid var(--main-color);
 }
 .search-icon{
     position: absolute;
     right: 1rem;
 
     font-size: 1.5rem;
-    color: var(--light-gray);
+    color: var(--color13);
 }
 
 .unimed .box:nth-of-type(5){
@@ -732,26 +726,26 @@ ol li:hover{
     margin: 2rem 0;
     padding: .7rem;
 
-    border: 1px solid var(--border-color);
+    border: 1px solid var(--color18);
 }
 .content-column .post:hover{
     box-shadow: 0px 0px 10px 1px #00000033;
 }
 
 .content-column .post .title{
-    color: var(--white);
-    background-color: var(--indigo);
+    color: var(--color12);
+    background-color: var(--main-color);
     padding: .7rem 1rem;
     margin: 0;
 }
 .content-column .post .title:hover{
-    color: var(--light-green);
+    color: var(--color9);
 }
 .content-column .post img{
     width: 100%;
 }
 .content-column .post .paragraph{
-    color: var(--font-color);
+    color: var(--color20);
     font-size: 1.3rem;
     line-height: 1.9rem;
     text-align: justify;
@@ -760,13 +754,13 @@ ol li:hover{
     margin: 1.5rem 0;
 }
 .content-column .post .read-more{
-    color: var(--white);
-    background-color: var(--indigo);
+    color: var(--color12);
+    background-color: var(--main-color);
     font-size: 1.3rem;
     padding: .5rem 1rem;
 }
 .content-column .post .read-more:hover{
-    color: var(--light-green);
+    color: var(--color9);
 }
 @media screen and (max-width: 450px) {
     .content-column .post .paragraph{
@@ -795,7 +789,7 @@ fieldset{
 }
 fieldset legend{
     font-size: 1.4rem;
-    color: var(--font-color);
+    color: var(--color20);
 }
 form.holerite-form{
     display: flex;
@@ -809,10 +803,10 @@ form.holerite-form input{
     font-size: 1.2rem;
     outline: 2px solid transparent;
     width: 100%;
-    color: var(--font-color);
+    color: var(--color20);
 }
 form.holerite-form input:focus{
-    outline: 2px solid var(--light-green);
+    outline: 2px solid var(--color9);
 }
 form.holerite-form button{
     cursor: pointer;
@@ -821,12 +815,12 @@ form.holerite-form button{
 
     font-size: 1.2rem;
 
-    background: var(--indigo);
+    background: var(--main-color);
     border: transparent;
-    color: var(--white);
+    color: var(--color12);
 }
 form.holerite-form button:hover{
-    color: var(--light-green);
+    color: var(--color9);
 }
 
 
@@ -839,8 +833,8 @@ form.holerite-form button:hover{
 
 /* FOOTER CSS */
 footer{
-    background: var(--indigo);
-    color: var(--white);
+    background: var(--main-color);
+    color: var(--color12);
 
     margin-top: 7rem;
     padding: 7rem 7%;
@@ -853,7 +847,7 @@ footer p{
     font-size: 1.4rem;
 }
 footer a{
-    color: var(--light-green);
+    color: var(--color9);
 }
 footer .box{
     display: flex;
@@ -862,14 +856,14 @@ footer .box{
 }
 footer .scrolltop{
     font-size: 2rem;
-    color: var(--font-color);
-    background-color: var(--light-blue);
+    color: var(--color20);
+    background-color: var(--color6);
     padding: 1.1rem 1.3rem 1.3rem;
     border-radius: 5px;
 }
 footer .scrolltop:hover{
     color: var(--font-hover);
-    background-color: var(--dark-green);
+    background-color: var(--color10);
 }
 
 
@@ -946,7 +940,7 @@ footer .scrolltop:hover{
         align-items: center;
         gap: 0;
 
-        background-color: var(--white);
+        background-color: var(--color12);
         padding: 6rem 0;
 
         transform: translateX(0);
@@ -964,7 +958,7 @@ footer .scrolltop:hover{
         padding: .7rem 2rem;
     }
     nav.navbar.responsive a:hover{
-        background-color: var(--white);
+        background-color: var(--color12);
     }
     nav.navbar.responsive .dropdown{
         display: flex;
@@ -976,7 +970,7 @@ footer .scrolltop:hover{
         display: flex;
         flex-direction: column;
         width: 100%;
-        background-color: var(--indigo);
+        background-color: var(--main-color);
         border: none;
     }
     nav.navbar.responsive .dropdown .dropdown-content a{
@@ -984,7 +978,7 @@ footer .scrolltop:hover{
         justify-content: center;
         align-items: stretch;
         padding: .7rem 0;
-        color: var(--white);
+        color: var(--color12);
     }
     nav.navbar.responsive .dropdown .dropbtn{
         display: flex;
@@ -995,15 +989,15 @@ footer .scrolltop:hover{
         width: 100%;
     }
     nav.navbar.responsive .dropdown .dropdown-content a:hover{
-        background-color: var(--nav-dropdown-content-hover);
-        color: var(--white);
+        background-color: var(--color16);
+        color: var(--color12);
     }
     nav.navbar.responsive .dropdown .dropdown-content a.active {
-        color: var(--light-blue);
+        color: var(--color6);
     }
     nav.navbar.responsive .dropdown:hover .dropbtn{
-        background-color: var(--nav-dropdown-hover);
-        color: var(--white);
+        background-color: var(--color15);
+        color: var(--color12);
     }
     nav.navbar{
         position: relative;
@@ -1015,14 +1009,14 @@ footer .scrolltop:hover{
         background: transparent;
         font-size: 3.5rem;
 
-        color: var(--indigo);
+        color: var(--main-color);
 
         position: absolute;
         top: 0; left: 1.5rem;
         cursor: pointer;
     }
     nav.navbar.responsive .close-nav:hover{
-        color: var(--light-green);
+        color: var(--color9);
     }
 
 }
