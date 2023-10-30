@@ -110,12 +110,15 @@ header .title-container{
     display: flex;
     justify-content: center;
     flex-direction: column;
-    gap: .2rem;
+    gap: 0;
 }
 header .title-container .subtitle{
     font-family: Georgia, 'Times New Roman', Times, serif;
     font-size: 1rem;
     color: var(--color20);
+}
+header .title-container .main-title {
+    font-size: 1.5rem;
 }
 header img.brasão{
     display: flex;
@@ -123,8 +126,8 @@ header img.brasão{
     background-color: #ffffff99;
     padding: 0;
 
-    width: 55px;
-    height: 50px;
+    width: 45px;
+    height: 40px;
 
     border-radius: 8px;
 }
@@ -159,7 +162,7 @@ nav.navbar a{
     display: flex;
     align-items: center;
     font-size: 1.1rem;
-    padding: 1.4rem 0;
+    padding: .8rem 0;
 }
 nav.navbar a:hover { color: var(--color10); }
 nav.navbar #home{
@@ -878,15 +881,20 @@ footer .scrolltop:hover{
 
 
 /* MEDIA QUERIES */
+@media screen and (max-width: 1500px) {
+    main.container{
+        padding: 0 7%;
+    }
+}
 @media screen and (max-width: 1450px) {
     header{
         padding: 0 2%;
     }
+    main.container{
+        padding: 0 5%;
+    }
 }
 @media screen and (max-width: 1300px) {
-    main.container{
-        padding: 2rem 1%;
-    }
     footer{
         padding: 5rem 3%;
     }
@@ -908,6 +916,9 @@ footer .scrolltop:hover{
     }
 }
 @media screen and (max-width: 1160px) {
+    main.container{
+        padding: 0 .5%;
+    }
 
     /* MOBILE NAV */
     nav.navbar #login{
@@ -926,8 +937,7 @@ footer .scrolltop:hover{
         align-items: center;
         font-size: 1.8rem;
         cursor: pointer;
-        height: 90px;
-        padding: 0 1rem;
+        padding: 1rem;
     }
 
     nav.navbar.responsive {
