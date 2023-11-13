@@ -371,7 +371,7 @@ main.container{
 /* MAIN COLUMN CSS - GRID LAYOUT */
 .main-column{
     display: grid;
-    grid-template-columns: 1fr minmax(300px, 360px);
+    grid-template-columns: 1fr minmax(250px, 320px);
 }
 .main-column .sidebar{
     grid-column: 2;
