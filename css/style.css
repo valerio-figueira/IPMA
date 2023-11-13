@@ -253,7 +253,7 @@ main.container{
 /* SLIDESHOW CSS - FLEXBOX */
 .slideshow{
     position: relative;
-    height: 500px;
+    height: 450px;
     overflow: hidden;
     box-shadow: 0px 0px 10px 2px #00000054;
 }
@@ -387,7 +387,7 @@ main.container{
 .main-column .transparencia{
     margin: 0 0 1rem;
     width: 100%;
-    height: 100px;
+    height: 70px;
     background-color: var(--main-color);
     /*#3754ac*/
     cursor: pointer;
