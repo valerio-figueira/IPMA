@@ -100,7 +100,6 @@ header{
     margin-bottom: 5rem;
     border-bottom: 1px solid var(--color18);
 }
-header:hover{ box-shadow: 0px 0px 15px #0c4a7c2c; }
 header .container{
     display: flex;
     align-items: center;
@@ -384,17 +383,17 @@ main.container{
 
 
 /* TRANSPARÊNCIA PÚBLICA - CSS */
-.main-column .transparencia{
+.main-column .transparencia {
     margin: 0 0 1rem;
     width: 100%;
     height: 70px;
     background-color: var(--main-color);
     /*#3754ac*/
     cursor: pointer;
-    outline: 3px solid transparent;
+    border: 2px solid transparent;
 }
-.main-column .transparencia:hover{
-    transform: translateY(-3px);
+.main-column .transparencia:hover {
+    border: 2px solid var(--color6);
 }
 .main-column .transparencia a{
     display: flex;
@@ -428,7 +427,7 @@ main.container{
     padding: 2rem 1.5rem;
     width: 100%;
     background-color: var(--color12);
-    outline: 3px solid transparent;
+    outline: 1px solid transparent;
     border: 1px solid var(--color18);
 }
 .main-column .login:hover{
