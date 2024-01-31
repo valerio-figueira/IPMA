@@ -124,11 +124,11 @@ header img.brasão{
     align-items: center;
     background-color: #ffffff99;
     padding: 0;
+    margin: .1rem 0;
+    width: 57px;
+    height: 55px;
 
-    width: 45px;
-    height: 40px;
-
-    border-radius: 8px;
+    /*border-radius: 8px;*/
 }
 
 
